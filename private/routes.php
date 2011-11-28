@@ -25,10 +25,8 @@ class Pigeon {
               array('blog')
             ),
             'Blog_Single_Controller' => array(
-              array('blog', '{is_string:post_slug}||{is_int:post_id}')
+              array('blog', '{is_numeric:post_id}')
             ),
-            
-            
             
             //admin
             
@@ -115,10 +113,16 @@ class Pigeon {
         
         $this->uri = explode('/', $this->uri_string);
         
+		/*
+		 
+		 removed this because it was messing up long ints/floats in the url
+		 
         foreach ($this->uri as $key=>$value) {
             if ((int)$value != null) $this->uri[$key] = (int)$value;
             else if ((float)$value != null) $this->uri[$key] = (float)$value;
+			else $this->uri[$key] = $value;
         }
+		*/
         
         $match = false;
         foreach ($this->controllers as $controller=>$patterns) {

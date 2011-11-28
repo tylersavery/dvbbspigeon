@@ -5,23 +5,52 @@ class Blog_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         if(PLEASE_CACHE){
-            $alex = new Read_Tumblr_Cache('tylerdevelopment','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
+            $tumblr = new Read_Tumblr_Cache('tylerdevelopment','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
         } else {
-            $alex = new Read_Tumblr('tylerdevelopment');
+            $tumblr = new Read_Tumblr('tylerdevelopment');
         }
+		
         
-        $alex->getPosts(0, 20, null, null);
-        $data_alex = $alex->dumpArray();
-        $posts_alex = $data_alex['posts'];
+        $tumblr->getPosts(0, 20, null, null);
+        $post_data = $tumblr->dumpArray();
+        $posts = $post_data['posts'];
+
+		$post_html = array();
+		
+		foreach($posts as $post){
+			
+			$this->content_view->post = $post;
+			
+			switch($post['type']){
+				case 'regular':
+					$post_html = $this->content_view->capture('post_regular.php');
+					break;
+				case 'photo':
+					$post_html = $this->content_view->capture('post_photo.php');
+					break;
+				case 'link':
+					$post_html = $this->content_view->capture('post_link.php');
+					break;
+				case 'audio':
+					$post_html = $this->content_view->capture('post_audio.php');
+					break;
+				case 'video':
+					$post_html = $this->content_view->capture('post_video.php');
+					break;
+				default:
+					$post_html = $this->content_view->capture('post_regular.php');
+					break;
+			}
+
+			$posts_html[] = $post_html;	
+			
+		}
+				
         
-        $this->content_view->posts_alex = $posts_alex;
+        $this->content_view->posts_html = $posts_html;
         
-        if(isset($_GET['debug'])){
-            debug($posts_alex);
-        }
         
     }
-    
     
     protected function content_view() {
         return $this->content_view->capture('blog_view.php');

@@ -93,9 +93,19 @@ function is_email($email) {
     return $isValid;
 }
 
-function time_to_friendly_date($time, $format = 'Y-m-d'){
+
+function _isset($num){
+
+	return true;
+
+}
+
+function time_to_friendly_date($time, $convert_from_GMT = true, $format = 'g:i a | M jS'){
 	if($time == 0) { return '-'; }	
 	
+	if($convert_from_GMT){
+		$time = $time - (4 * 60 * 60);
+	}
 	return date($format, $time);
 }
 

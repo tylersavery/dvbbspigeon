@@ -196,7 +196,7 @@ class Read_Tumblr {
 				foreach ($v as $post) {
 					if ($this->bIgnorePosts) { break; }
 					$pid = $post['unix-timestamp'].'|'.$post['id'];
-					$aPosts[$pid]['id'] = (int) $post['id'];
+					$aPosts[$pid]['id'] = $post['id'];
 					$aPosts[$pid]['url'] = (string) $post['url'];
 					$aPosts[$pid]['type'] = (string) $post['type'];
 					$aPosts[$pid]['time'] = (int) $post['unix-timestamp'];

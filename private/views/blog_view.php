@@ -1,9 +1,11 @@
 <h1>Blog</h1>
 
-<h2>Alex's Posts</h3>
-<? foreach($this->posts_alex as $post): ?>
+<div class="posts_alex">
+<? foreach($this->posts_html as $post_template): ?>
 
-    <h3><?= $post['content']['title'];?></h3>
-    <p><?= $post['content']['body']; ?></p>
+<?= $post_template; ?>
 
+<hr />
 <? endforeach; ?>
+
+</div>
