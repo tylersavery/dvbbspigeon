@@ -1,0 +1,44 @@
+<?php
+
+// define enviroment specific constants
+switch(ENVIROMENT) {
+
+    case 'dvbbs':
+        define('MODE', 'DEVELOPMENT');
+        define('DB_HOST', '127.0.0.1');
+        define('DB_USER', 'root');
+        define('DB_PASS', '');
+        define('DB_NAME', 'dvbbs');
+        define('DB_SALT', '184eb8106b887c6928b11c6d29b5cda4');
+        define('DEBUG', TRUE);
+        define('MIN_JS', FALSE);
+        define('URL', 'http://dvbbs/');
+        define('FB_APP_ID', '');
+        define('PLEASE_CACHE', false);
+        
+        break;
+}
+
+// define ROOT directories
+
+//private
+define('PRIVATE_ROOT', DOCUMENT_ROOT.'private'.DS);
+define('PUBLIC_ROOT', DOCUMENT_ROOT.'public'.DS);
+define('CORE_ROOT', PRIVATE_ROOT.'core'.DS);
+define('CORE_MODEL_ROOT', CORE_ROOT.'models'.DS);
+define('CORE_CONTROLLER_ROOT', CORE_ROOT.'controllers'.DS);
+define('MODEL_ROOT', PRIVATE_ROOT.'models'.DS);
+define('VIEW_ROOT', PRIVATE_ROOT.'views'.DS);
+define('CONTROLLER_ROOT', PRIVATE_ROOT.'controllers'.DS);
+define('STATIC_CONTROLLER_ROOT', CONTROLLER_ROOT.'static'.DS);
+define('LIBRARY_ROOT', PRIVATE_ROOT.'libraries'.DS);
+define('IMAGE_UPLOAD_ROOT', PUBLIC_ROOT.'images'.DS.'uploads'.DS);
+define('CACHE_DIRECTORY', PRIVATE_ROOT.'cache'.DS);
+define('CACHE_TIME', 3600);
+
+//public
+define('IMAGE_ROOT', '/images/');
+define('CSS_ROOT', '/css/');
+define('JS_ROOT', '/js/')
+
+?>
