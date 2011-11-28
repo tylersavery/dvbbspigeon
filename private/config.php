@@ -47,6 +47,8 @@ define('LIBRARY_ROOT', PRIVATE_ROOT.'libraries'.DS);
 define('IMAGE_UPLOAD_ROOT', PUBLIC_ROOT.'images'.DS.'uploads'.DS);
 define('CACHE_DIRECTORY', PRIVATE_ROOT.'cache'.DS);
 define('CACHE_TIME', 3600);
+define('AUDIO_DIRECTORY', PUBLIC_ROOT.'audio'.DS);
+define('UPLOAD_DIRECTORY', PUBLIC_ROOT.'images'.DS.'uploads'.DS);
 
 //public
 define('IMAGE_ROOT', '/images/');

@@ -92,6 +92,31 @@ $(document).ready(function() {
        return false; 
     });
  
+ 
+ /*
+	$("#submit_audio_button").click(function(){
+		
+		var id = $("#id").val();
+		var title = $("#title").val();
+		
+        var datastring = "id="+ id + "&title=" + title;
+        
+        $.ajax({
+            url: "/ajax/post/audio",
+            type: "POST",
+            data: datastring,
+            success: function(d) {
+				window.location = '/admin/audio';   
+            }
+        });
+        
+       return false; 
+		
+		
+	});
+	
+ */
+ 
     
 });
 function generateSlug() {

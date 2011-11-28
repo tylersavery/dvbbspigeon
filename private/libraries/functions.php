@@ -231,4 +231,24 @@ function debug($obj){
 	
 }
 
+
+function safe_filename($SafeFile) {
+	
+	$SafeFile = str_replace("#", "No.", $SafeFile); 
+	$SafeFile = str_replace("$", "Dollar", $SafeFile); 
+	$SafeFile = str_replace("%", "Percent", $SafeFile); 
+	$SafeFile = str_replace("^", "", $SafeFile); 
+	$SafeFile = str_replace("&", "and", $SafeFile); 
+	$SafeFile = str_replace("*", "", $SafeFile); 
+	$SafeFile = str_replace("?", "", $SafeFile);
+	$SafeFile = str_replace(" ", "", $SafeFile);
+	$SafeFile = str_replace("'", "", $SafeFile);
+	$SafeFile = str_replace('"', "", $SafeFile);
+	$SafeFile = strtolower($SafeFile);
+	
+	
+
+	return $SafeFile;
+}
+
 ?>

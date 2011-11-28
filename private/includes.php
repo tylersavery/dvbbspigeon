@@ -14,6 +14,10 @@ require_once(LIBRARY_ROOT.'tumblr/clearbricks/_common.php');
 require_once(LIBRARY_ROOT.'tumblr/read_tumblr_model.php');
 require_once(LIBRARY_ROOT.'tumblr/read_tumblr_cache_model.php');
 
+require_once(LIBRARY_ROOT.'audioinfo_model.php');
+
+
+
 // include routes.php
 require_once(PRIVATE_ROOT.'routes.php');
 

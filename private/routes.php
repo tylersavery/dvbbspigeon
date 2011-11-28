@@ -11,7 +11,7 @@ class Pigeon {
         $this->controllers = array(
            
             
-            //frontend
+            // *** FRONT END ***
             
             'Home_Controller' => array(
                 array()
@@ -27,8 +27,14 @@ class Pigeon {
             'Blog_Single_Controller' => array(
               array('blog', '{is_numeric:post_id}')
             ),
+			
+			//blog
+            'Audio_Controller' => array(
+              array('tracks')
+            ),
+			
             
-            //admin
+            // *** ADMIN ***
             
             'Admin_Controller' => array(
                 array('admin')
@@ -78,7 +84,47 @@ class Pigeon {
             'Admin_User_Edit_Controller' => array(
                 array('admin', 'user', 'edit', '{is_int:user_id}'),         
             ),
+			
+			//audio
+			
+			'Admin_Audio_Controller' => array(
+                array('admin', 'audio'),         
+            ),
+            'Admin_Audio_Add_Controller' => array(
+                array('admin', 'audio', 'add'),         
+            ),
+            'Admin_Audio_Edit_Controller' => array(
+                array('admin', 'audio', 'edit', '{is_int:audio_id}'),         
+            ),
+			'Admin_Audio_Delete_Controller' => array(
+                array('admin', 'audio', 'delete', '{is_int:audio_id}'),         
+            ),
+			
+			//images
+			
+			'Admin_Image_Controller' => array(
+                array('admin', 'images'),         
+            ),
+            'Admin_Image_Add_Controller' => array(
+                array('admin', 'images', 'add'),         
+            ),
+            'Admin_Image_Edit_Controller' => array(
+                array('admin', 'images', 'edit', '{is_int:image_id}'),         
+            ),
+			'Admin_Image_Delete_Controller' => array(
+                array('admin', 'images', 'delete', '{is_int:image_id}'),         
+            ),
             
+			// *** UTILITY ***
+			
+			// post
+			
+			'Post_Audio_Controller' => array(
+                array('post', 'audio')
+            ),
+			'Post_Image_Controller' => array(
+                array('post', 'image')
+            ),
              
             //ajax
             
@@ -113,16 +159,13 @@ class Pigeon {
         
         $this->uri = explode('/', $this->uri_string);
         
-		/*
-		 
-		 removed this because it was messing up long ints/floats in the url
-		 
+	
         foreach ($this->uri as $key=>$value) {
             if ((int)$value != null) $this->uri[$key] = (int)$value;
             else if ((float)$value != null) $this->uri[$key] = (float)$value;
 			else $this->uri[$key] = $value;
         }
-		*/
+		
         
         $match = false;
         foreach ($this->controllers as $controller=>$patterns) {
