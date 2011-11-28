@@ -12,6 +12,9 @@ switch(ENVIROMENT) {
     case 'dvbbs':
         define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'dvbbspigeon'.DS);
         break;
+	case 'dvbbs.mac':
+        define('DOCUMENT_ROOT', DS.'Users'.DS.'John'.DS.'Sites'.DS.'dvbbspigeon'.DS);
+        break;
     
 }
 

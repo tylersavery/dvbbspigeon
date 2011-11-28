@@ -15,7 +15,19 @@ switch(ENVIROMENT) {
         define('URL', 'http://dvbbs/');
         define('FB_APP_ID', '');
         define('PLEASE_CACHE', false);
-        
+        break;
+	case 'dvbbs.mac':
+        define('MODE', 'DEVELOPMENT');
+        define('DB_HOST', '127.0.0.1');
+        define('DB_USER', 'root');
+        define('DB_PASS', '');
+        define('DB_NAME', 'dvbbs');
+        define('DB_SALT', '184eb8106b887c6928b11c6d29b5cda4');
+        define('DEBUG', TRUE);
+        define('MIN_JS', FALSE);
+        define('URL', 'http://dvbbs.mac/');
+        define('FB_APP_ID', '');
+        define('PLEASE_CACHE', false);
         break;
 }
 
