@@ -15,6 +15,7 @@ switch(ENVIROMENT) {
         define('URL', 'http://dvbbs/');
         define('FB_APP_ID', '');
         define('PLEASE_CACHE', false);
+		define('FFMPEG', null);
         break;
 	case 'dvbbs.mac':
         define('MODE', 'DEVELOPMENT');
@@ -28,6 +29,7 @@ switch(ENVIROMENT) {
         define('URL', 'http://dvbbs.mac/');
         define('FB_APP_ID', '');
         define('PLEASE_CACHE', false);
+		define('FFMPEG', '/opt/local/bin/ffmpeg');
         break;
 }
 

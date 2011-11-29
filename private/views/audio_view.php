@@ -1,21 +1,62 @@
 <script type="text/javascript">
-
+	
+$(document).ready(function(){
+		
+	loadPlayer();	
+	//playPause();
+		
+});
+	
+	var urls = new Array();
+    var mp3_urls = new Array();
+	var ogg_urls = new Array();
+	
+	var next = 0;
+	
+	<?php
+	$i = 0;
+	foreach($this->audios as $audio){
+		echo "mp3_urls[". $i ."] = '". $audio->get_permalink() ."';\n\t\t";
+		echo "ogg_urls[". $i ."] = '". $audio->get_ogg_permalink() ."';\n\t\t";
+		$i++;
+	}
+	?>
+	
+	
 	function loadPlayer() {
         var audioPlayer = new Audio();
         audioPlayer.controls="controls";
         audioPlayer.addEventListener('ended',nextSong,false);
         audioPlayer.addEventListener('error',errorFallback,true);
         document.getElementById("player").appendChild(audioPlayer);
-        nextSong();
+        
+		var canPlayMp3 = !!audioPlayer.canPlayType && "" != audioPlayer.canPlayType('audio/mpeg');
+		var canPlayOgg = !!audioPlayer.canPlayType && "" != audioPlayer.canPlayType('audio/ogg; codecs="vorbis"');
+		
+		if(canPlayMp3){
+			urls = mp3_urls;
+		} else if(canPlayOgg){
+			urls = ogg_urls;
+		} else {
+			alert("CAN'T PLAY AUDIO");
+		}
+		
+		//nextSong();
+		
     }
+	
     function nextSong() {
+		
         if(urls[next]!=undefined) {
             var audioPlayer = document.getElementsByTagName('audio')[0];
             if(audioPlayer!=undefined) {
+				
                 audioPlayer.src=urls[next];
-                audioPlayer.load();
+                
+				audioPlayer.load();
                 audioPlayer.play();
                 next++;
+				
             } else {
                 loadPlayer();
             }
@@ -25,9 +66,12 @@
 		
 		return false;
     }
+	
     function errorFallback() {
-            nextSong();
+		//alert("ERROR");
+        // nextSong();
     }
+	
     function playPause() {
         var audioPlayer = document.getElementsByTagName('audio')[0];
         if(audioPlayer!=undefined) {
@@ -43,26 +87,16 @@
 		return false;
 	
     }
+	
     function pickSong(num) {
         next = num;
+		//playPause();
         nextSong();
 		
 		return false;
-    }
- 
-    var urls = new Array();
-		
-		<?
-		$i = 0;
-		foreach($this->audios as $audio):
-			
-		echo "urls[". $i ."] = '". $audio->get_permalink() ."';\n\t\t";
-			
-			$i++;
-		endforeach; ?>
+    }	
 	
-		var next = 0;
-
+	
 </script>
 
 
@@ -74,7 +108,11 @@
 
 
 
-<a href="#" onclick="pickSong(0)">Sample 1</a>
-<a href="#" onclick="pickSong(1)">Sample 2</a>
-<a href="#" onclick="pickSong(2)">Missing File</a>
-<a href="#" onclick="pickSong(3)">Sample 3</a>
+<?
+$i = 0;
+foreach($this->audios as $audio): ?>
+	<div onclick="pickSong(<?= $i; ?>)"><?= $audio->get_title();?></div>
+<?
+$i++;
+endforeach; ?>
+
