@@ -79,11 +79,11 @@
     <div class="bottom_right">
         <div class="logo"></div>
         <div class="social">
-            <div class="social_item"><a href="#"><img src="/images/social/facebook.gif" /></a></div>
-            <div class="social_item"><a href="#"><img src="/images/social/twitter.gif" /></a></div>
-            <div class="social_item"><a href="#"><img src="/images/social/youtube.gif" /></a></div>
-            <div class="social_item"><a href="#"><img src="/images/social/soundcloud.gif" /></a></div>
-            <div class="social_item last"><a href="#"><img src="/images/social/tumblr.gif" /></a></div>
+            <div class="social_item"><a href="#" id="social_facebook" target="_blank">facebook</a></div>
+            <div class="social_item"><a href="#" id="social_twitter" target="_blank">twitter</a></div>
+            <div class="social_item"><a href="#" id="social_youtube" target="_blank">youtube</a></div>
+            <div class="social_item"><a href="#" id="social_soundcloud" target="_blank">soundcloud</a></div>
+            <div class="social_item last"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
         </div>
     </div><!-- ./bottom_right -->
     

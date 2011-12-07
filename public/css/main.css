@@ -75,6 +75,59 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     text-align:center;
 }
 
+.bottom_right .social .social_item a{
+    background-image:url(/images/social.png);
+    text-indent:-9999px;
+    display:block;
+    width:34px;
+    height:17px;
+    background-repeat:no-repeat;
+}
+
+#social_facebook{
+    background-position: -9px -26px;
+}
+
+#social_facebook:hover{
+    background-position: -9px -3px;
+}
+
+#social_twitter{
+    background-position: -49px -26px;
+}
+
+#social_twitter:hover{
+    background-position: -49px -3px;
+}
+
+#social_youtube{
+    background-position: -89px -26px;
+}
+
+#social_youtube:hover{
+    background-position: -89px -3px;
+}
+
+#social_soundcloud{
+    background-position: -129px -26px;
+}
+
+#social_soundcloud:hover{
+    background-position: -129px -3px;
+}
+
+#social_tumblr{
+    background-position: -168px -26px;
+}
+
+#social_tumblr:hover{
+    background-position: -168px -3px;
+}
+
+
+
+
+
 
 .bottom_right .social .social_item.last{
     margin-right:0;
