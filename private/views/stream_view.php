@@ -1,6 +1,7 @@
+<div class="splash"><img src="/images/dvbbs1.gif" /></div>
 <div class="page">
     <div class="wrap">
-        <div id="background"><img src="/images/backgrounds/background1_small.jpg" /></div>
+        <div id="background"><img src="" /></div>
     
         <div class="track_menu">
             <div class="menu_item">

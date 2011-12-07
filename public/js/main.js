@@ -38,6 +38,8 @@ $(document).ready(function () {
     set_constants();
     //updateOrientation();
     
+    init_splash();
+    
     set_sizes_and_positions();
     set_can_play();
 
@@ -501,6 +503,62 @@ function hide_menu_bar() {
      }
 }
 
+
+function init_splash(){
+     
+     var $splash_img = $(".splash img");
+     
+     var src = '/images/dvbbs1.gif';
+     
+     $splash_img.attr('src', src).load(function(){
+        
+        setTimeout(hide_splash, 4500);  
+          
+     });
+     
+     
+     
+     
+}
+
+
+function hide_splash(){
+     
+     $(".splash").fadeOut(500, function(){
+          
+          enter_player();
+          
+          });
+     
+}
+
+
+function enter_player() {
+     
+      
+     
+     $(".player").animate({
+     
+          bottom : 0
+          
+     }, 700, 'easeInOutSine', function(){
+     
+            
+          
+     });
+     
+     
+     $(".bottom_right").animate({
+     
+          bottom : 0
+          
+     }, 700, 'easeInOutSine', function(){
+     
+            
+          
+     });
+     
+}
 
   
 
