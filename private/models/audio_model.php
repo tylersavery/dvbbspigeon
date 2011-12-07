@@ -28,6 +28,11 @@ class Audio_Model extends Core_Audio_Model {
 		return '/audio/' . $this->get_filename();
 	}
 	
+	public function get_ogg_permalink() {
+		
+		return '/audio/' . str_replace('.mp3', '.ogg', $this->get_filename());
+		
+	}
     
 }
 ?>

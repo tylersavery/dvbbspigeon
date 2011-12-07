@@ -60,6 +60,16 @@ class Post_Audio_Controller extends Post_Controller {
 				
 				$audio->set_length($length);
 				
+				/* FFMPEG */
+				/* Convert MP3 to OGG */
+				$newfile = str_replace('.mp3', '.ogg', $file);
+				
+				
+				if(FFMPEG != null){
+					$cmd = FFMPEG . " -i ". $file ." -ab 48000 -acodec libvorbis " . $newfile . "  2>&1";
+					$exec = shell_exec($cmd);
+				}
+				
 				$audio->save();
 				redirect_to('/admin/audio');
 				
