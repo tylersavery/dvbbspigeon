@@ -13,9 +13,7 @@ class Pigeon {
            
             // *** FRONT END ***
             
-            'Home_Controller' => array(
-                array()
-            ),
+
             'Article_Controller' => array(
               array('article', '{is_string:article_slug}||{is_numeric:article_id}')
             ),
@@ -36,7 +34,7 @@ class Pigeon {
             ),
 			
 			'Stream_Controller' => array(
-				array('stream')
+				array('')
 			),
 			
             // *** ADMIN ***
