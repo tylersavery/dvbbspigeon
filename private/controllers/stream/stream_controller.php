@@ -5,6 +5,9 @@ class Stream_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         $this->css[] = CSS_ROOT . 'stream.css';
+        $this->meta[] = 'name="apple-mobile-web-app-capable" content="yes"';
+        $this->meta[] = 'name="apple-mobile-web-app-status-bar-style" content="black"';
+
 
 
     }

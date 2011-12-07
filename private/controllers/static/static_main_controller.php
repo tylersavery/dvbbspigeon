@@ -8,7 +8,9 @@ class Static_Main_Controller extends Static_Base_Controller {
         $this->css[] = CSS_ROOT . 'main.css';
 		$this->js_head[] = JS_ROOT . 'jquery.ui.js';
 		$this->js_head[] = JS_ROOT . 'libraries/jquery.easing.js';
+		$this->js_head[] = JS_ROOT . 'libraries/modernizr.js';
         $this->js_head[] = JS_ROOT . 'main.js';
+		
         
 	}
     

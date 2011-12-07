@@ -12,7 +12,9 @@ body {
 }
 
 
-
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+    -webkit-text-size-adjust:none;
+}
 
 /* bottom right */
 
@@ -57,3 +59,9 @@ body {
 .bottom_right .social .social_item.last{
     margin-right:0;
 }
+
+
+
+/* media queries */
+
+

@@ -1,6 +1,6 @@
 <div class="page">
     <div class="wrap">
-        <div id="background"><img src="/images/background.jpg" /></div>
+        <div id="background"><img src="/images/backgrounds/background1_small.jpg" /></div>
     
         <div class="track_menu">
             <div class="menu_item">
@@ -16,9 +16,7 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head">DRVGS</div>
                 <div class="menu_foot coming">
-                    <div class="menu_foot_item">Download</div>
-                    <div class="menu_foot_item">Play</div>
-                    <div class="menu_foot_item">Stems</div>
+                    <div class="menu_foot_item">Coming Soon</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             <div class="clear"></div>

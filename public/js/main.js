@@ -2,6 +2,8 @@
 var window_width;
 var window_height;
 var window_aspect;
+var screen_width;
+var screen_height;
 
 var live_img_width;
 var live_img_height;
@@ -11,12 +13,15 @@ var loaded;
 var positionIndicator;
 var audio;
 var is_playing = false;
+var can_play;
+var is_mobile;
 
 /* constants */
 
 var IMG_WIDTH;
 var IMG_HEIGHT;
 var IMG_ASPECT;
+var BG_SRC;
 
 /* jQuery Objects */
 var $bg;
@@ -29,11 +34,18 @@ var $menu_items;
 $(document).ready(function () {
 
     get_objects();
+    check_if_mobile();
     set_constants();
+    //updateOrientation();
+    
     set_sizes_and_positions();
-
+    set_can_play();
 
     init_audio();
+
+     hide_menu_bar();
+     
+
 
     /* events */
 
@@ -134,16 +146,7 @@ $(document).ready(function () {
     });
     
     
-    $("#play_track").click(function(){
-     
-          if(!is_playing){
-               audio.currentTime = 0;
-               audio.play();
-               audio.volume = .5;
-               $(".player_play").addClass('pause');
-          }
-     
-    });
+   
     
     $("#download_track").click(function(){
      
@@ -161,8 +164,8 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-
     set_sizes_and_positions();
+    scrollTo(0,1);
 
 });
 
@@ -181,11 +184,38 @@ function get_objects() {
 }
 
 function set_constants() {
+     
+     
+    screen_width = screen.width;
+    screen_height = screen.height;
+    
+    if(screen_width <= 1000){
+     //small
+          IMG_WIDTH = 1000;
+          IMG_HEIGHT = 667;
+          
+          BG_SRC = '/images/backgrounds/background1_small.jpg';
 
-    IMG_WIDTH = 2300;
-    IMG_HEIGHT = 1533;
-    IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
+    } else if(screen_width > 1000 && screen_width < 1600){
+     //medium
+          IMG_WIDTH = 1600;
+          IMG_HEIGHT = 1066;
+          
+          BG_SRC = '/images/backgrounds/background1_medium.jpg';
+     
+     
+    } else if(screen_width >= 1600){
+     // large
+          IMG_WIDTH = 2300;
+          IMG_HEIGHT = 1533;
+          
+          BG_SRC = '/images/backgrounds/background1_large.jpg';
+     
+    }
 
+    
+     IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
+     $bg_img.attr('src', BG_SRC);
 }
 
 
@@ -194,7 +224,13 @@ function set_sizes_and_positions() {
     /* get window w/h */
     window_width = $(window).width();
     window_height = $(window).height();
+    
+    
+    hide_menu_bar();
+    
     window_aspect = window_width / window_height;
+    
+    
 
 
     /* set background w/h */
@@ -240,6 +276,11 @@ function set_sizes_and_positions() {
      
      var padding_left = 274;
      var padding_right = 202;
+     
+     if(is_mobile){
+          padding_right = 100;
+     }
+     
      var gutter_border = 10;
      
      var gutter_width = window_width - padding_left - padding_right - gutter_border;
@@ -330,6 +371,14 @@ function init_audio() {
 
 
         $(".player_play").click(function () {
+          
+          if(!can_play){
+               
+               alert('Your browser does not support audio. Please download the track instead.');
+               
+               return false;
+          }
+          
 
           if(!is_playing){
             audio.play();
@@ -342,6 +391,38 @@ function init_audio() {
           }
 
         });
+        
+        
+        
+         $("#play_track").click(function(){
+     
+          if(!can_play){
+               
+               alert('Your browser does not support audio. Please download the track instead.');
+               
+               return false;
+          }
+          
+          
+          if(!is_playing){
+            audio.play();
+            $(".player_play").addClass('pause');
+            is_playing = true;
+          } else {
+               audio.pause();
+               $(".player_play").removeClass('pause');
+               is_playing = false;
+          }
+     /*
+          //if(!is_playing){
+          audio.currentTime = 0;
+          audio.play();
+          audio.volume = .5;
+          $(".player_play").addClass('pause');
+          //}
+     */
+     
+      });
         
         
         
@@ -364,6 +445,86 @@ function init_audio() {
           });
  
     }
+}
+
+
+
+function set_can_play() {
+     
+     if($("html").hasClass('audio')){
+          can_play = true;
+     } else {
+          can_play = false;
+     }
+     
+     
+     
+}
+
+function check_if_mobile() { 
+
+     if( navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPod/i)
+      ){
+          is_mobile = true;
+          return true;
+     }
+     
+     is_mobile = false;
+     
+     return false;
+
+}
+
+function hide_menu_bar() {
+     
+     if(is_mobile){
+          
+          //alert(updateOrientation());
+          
+          if(screen_height > screen_width){
+       
+               window_height = screen_height + 65;
+       
+          } else {
+               
+               window_height = screen_width;
+          
+               
+          }
+       
+       window.scrollTo(0,1);
+       
+     }
+}
+
+
+  
+
+function updateOrientation(){
+    var contentType = "show_";
+    switch(window.orientation){
+        case 0:
+	contentType += "normal";
+	break;
+
+	case -90:
+	contentType += "right";
+	break;
+
+	case 90:
+	contentType += "left";
+	break;
+
+	case 180:
+	contentType += "flipped";
+	break;
+    }
+    document.getElementById("html").setAttribute("class", contentType);
+    
+    return contentType;
 }
 
 
