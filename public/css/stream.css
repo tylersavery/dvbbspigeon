@@ -28,19 +28,23 @@
 
 
 
+
 .track_menu {
     height:285px;
     width: 500px;
     position:fixed;
     top:50%;
     left:0;
-    margin-top: -143px;
+    margin-top: -147px;
 }
 
 .track_menu .menu_item{
     position:relative;
-    margin-bottom: 22px;
+    margin-bottom: 8px;
+    padding-top:8px;
+    padding-bottom:8px;
     height:28px;
+    left:-135px;
     
 }
 
@@ -109,7 +113,7 @@
     background-color:#e1e1e1;
     border-top: 1px solid #878787;
     left: 6px;
-    top: 13px;
+    top: 20px;
     display:none;
 }
 
@@ -125,6 +129,7 @@
     background-color:#2a2a2a;
     position:fixed;
     bottom:-65px;
+    z-index:100;
 
 }
 
@@ -152,11 +157,12 @@
     margin-top:2px;
     width: 100px;
     height:20px;
-    font-size: 11px;
+    font-size: 13px;
     line-height:20px;
     color: #fff;
     text-transform:uppercase;
     letter-spacing:1px;
+    text-align:center;
 }
 
 .player_volume_container{
@@ -173,6 +179,11 @@
     position:relative;
     float:left;
     background-image:url(/images/player/volume.gif);
+    cursor:pointer;
+}
+
+.player_volume_icon.mute{
+    background-image:url(/images/player/mute.gif);
 }
 
 .player_time{
@@ -427,6 +438,7 @@ and (max-device-width : 480px) {
     position:relative;
     margin-bottom: 22px;
     height:40px;
+    
     
 }
 

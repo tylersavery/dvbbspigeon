@@ -386,11 +386,13 @@ function init_audio() {
           if(!is_playing){
             audio.play();
             $(".player_play").addClass('pause');
+            $("#play_track").text('Pause');
             is_playing = true;
           } else {
                audio.pause();
                $(".player_play").removeClass('pause');
                is_playing = false;
+               $("#play_track").text('Play');
           }
 
         });
@@ -410,23 +412,35 @@ function init_audio() {
           if(!is_playing){
             audio.play();
             $(".player_play").addClass('pause');
+            $(this).text('Pause');
             is_playing = true;
           } else {
                audio.pause();
                $(".player_play").removeClass('pause');
                is_playing = false;
+               $(this).text('Play');
           }
-     /*
-          //if(!is_playing){
-          audio.currentTime = 0;
-          audio.play();
-          audio.volume = .5;
-          $(".player_play").addClass('pause');
-          //}
-     */
+
      
       });
         
+        
+          $(".player_volume_icon").click(function(){
+  
+             
+             if($(this).hasClass('mute')){
+               
+               audio.volume = .5;  
+               
+               $(this).removeClass('mute');
+               
+             } else {
+               
+               audio.volume = 0;  
+               $(this).addClass('mute');
+             
+             }
+          });
         
         
         $('.player_volume_gutter').slider({
@@ -506,13 +520,14 @@ function hide_menu_bar() {
 
 function init_splash(){
      
-     var $splash_img = $(".splash img");
+     var $splash_img = $("#splash_img");
      
      var src = '/images/dvbbs1.gif';
      
      $splash_img.attr('src', src).load(function(){
         
-        setTimeout(hide_splash, 4500);  
+        setTimeout(hide_splash, 3000);
+        setTimeout(hide_logo, 4500);
           
      });
      
@@ -524,39 +539,94 @@ function init_splash(){
 
 function hide_splash(){
      
-     $(".splash").fadeOut(500, function(){
+     $(".splash").fadeTo(100, .8, function(){
           
-          enter_player();
+          
           
           });
      
 }
 
 
+function hide_logo(){
+     
+     $("#splash_img").fadeOut(500, function(){
+          
+         
+          
+     });
+     
+      $(".splash").fadeOut(800, function(){
+          
+         
+         enter_player();
+          
+     });
+     
+}
+
+
 function enter_player() {
+     
+     
+     
+     var i = 500;
+          var items = $(".track_menu .menu_item");
+          
+          $(items[0]).animate({ left: 0 }, 300, 'easeOutSine', function(){
+               $(items[1]).animate({ left: 0 }, 300, 'easeOutSine', function(){
+                    $(items[2]).animate({ left: 0 }, 300, 'easeOutSine', function(){
+                         $(items[3]).animate({ left: 0 }, 300, 'easeOutSine', function(){
+                              $(items[4]).animate({ left: 0 }, 300, 'easeOutSine', function(){
+                                   $(items[5]).animate({ left: 0 }, 300, 'easeOutSine', function(){
+               
+               
+                                        $(".player").animate({
+     
+                                             bottom : 0
+                                             
+                                        }, 700, 'easeInOutSine', function(){
+                                     
+                                        });
+                                        
+                                        
+                                        $(".bottom_right").animate({
+                                        
+                                             bottom : 0
+                                             
+                                        }, 700, 'easeInOutSine', function(){
+                                        
+                                        
+                                             
+                                             
+                                        });
+               
+                                   });
+                              });
+                         });
+                    });
+               });
+          }); // end crazy animation loop
+     
      
       
      
-     $(".player").animate({
-     
-          bottom : 0
-          
-     }, 700, 'easeInOutSine', function(){
-     
-            
-          
-     });
+   
      
      
-     $(".bottom_right").animate({
      
-          bottom : 0
-          
-     }, 700, 'easeInOutSine', function(){
      
-            
+}
+
+
+function load_contact(){
+     
+     $(".blind").fadeTo(1000, .8, function(){
+     
+          $("#contact").fadeIn();
           
      });
+     
      
 }
 

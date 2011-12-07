@@ -1,4 +1,18 @@
-<div class="splash"><img src="/images/dvbbs1.gif" /></div>
+<div class="splash"></div>
+<div class="blind"></div>
+<!--
+<div class="contact">
+    
+    <h3>For all bookings and booking inquires:</h3>
+    <a href="mailto:colinlewis@theagencygroup.com">colinlewis@theagencygroup.com</a>
+    
+    <h3>Legals</h3>
+    <a href="#" target="_blank">EB Reinbergs</a>
+    
+</div>
+
+-->
+<img src="/images/dvbbs1.gif" id="splash_img" />
 <div class="page">
     <div class="wrap">
         <div id="background"><img src="" /></div>
