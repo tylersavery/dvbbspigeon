@@ -164,9 +164,10 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
+     
     set_sizes_and_positions();
     scrollTo(0,1);
-
+     setTimeout('set_sizes_and_positions()', 1000);
 });
 
 
@@ -428,7 +429,7 @@ function init_audio() {
         
         $('.player_volume_gutter').slider({
                     value: .5,
-                    step: .1,
+                    step: 0.01,
                     orientation: "horizontal",
                     range: "min",
                     max: 1,
