@@ -24,6 +24,13 @@ if($this->audio) {
 
 	<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
 	
+	<?php if($this->audio): ?>
+		<?php if($this->audio->get_permalink()): ?>
+		<h3>Preview</h3>
+			<audio src="<?= $this->audio->get_permalink();?>" controls="controls"></audio>
+		<?php endif; ?>
+	<?php endif; ?>
+	
 	 <?php if($this->images): ?>
 		<h3>Image</h3>
 			<table width="300" style="width:300px; clear:both;">

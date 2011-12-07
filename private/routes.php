@@ -8,32 +8,37 @@ class Pigeon {
     private $controller_data;
     
     function __construct() {
-        $this->controllers = array(
+		
+		$this->controllers = array(
            
-            
             // *** FRONT END ***
             
             'Home_Controller' => array(
                 array()
             ),
             'Article_Controller' => array(
-              array('article', '{is_string:article_slug}||{is_int:article_id}')
+              array('article', '{is_string:article_slug}||{is_numeric:article_id}')
             ),
             
             //blog
-            'Blog_Controller' => array(
+			
+			'Blog_Controller' => array(
               array('blog')
             ),
-            'Blog_Single_Controller' => array(
+			'Blog_Single_Controller' => array(
               array('blog', '{is_numeric:post_id}')
             ),
 			
-			//blog
+			
+			//audio
             'Audio_Controller' => array(
               array('tracks')
             ),
 			
-            
+			'Stream_Controller' => array(
+				array('stream')
+			),
+			
             // *** ADMIN ***
             
             'Admin_Controller' => array(
@@ -56,7 +61,7 @@ class Pigeon {
                 array('admin', 'article', 'add'),         
             ),
             'Admin_Article_Edit_Controller' => array(
-                array('admin', 'article', 'edit', '{is_int:article_id}'),         
+                array('admin', 'article', 'edit', '{is_numeric:article_id}'),         
             ),
             
             //categories
@@ -69,7 +74,7 @@ class Pigeon {
                 array('admin', 'category', 'add'),         
             ),
             'Admin_Category_Edit_Controller' => array(
-                array('admin', 'category', 'edit', '{is_int:category_id}'),         
+                array('admin', 'category', 'edit', '{is_numeric:category_id}'),         
             ),
             
             //users
@@ -82,7 +87,7 @@ class Pigeon {
                 array('admin', 'user', 'add'),         
             ),
             'Admin_User_Edit_Controller' => array(
-                array('admin', 'user', 'edit', '{is_int:user_id}'),         
+                array('admin', 'user', 'edit', '{is_numeric:user_id}'),         
             ),
 			
 			//audio
@@ -94,10 +99,10 @@ class Pigeon {
                 array('admin', 'audio', 'add'),         
             ),
             'Admin_Audio_Edit_Controller' => array(
-                array('admin', 'audio', 'edit', '{is_int:audio_id}'),         
+                array('admin', 'audio', 'edit', '{is_numeric:audio_id}'),         
             ),
 			'Admin_Audio_Delete_Controller' => array(
-                array('admin', 'audio', 'delete', '{is_int:audio_id}'),         
+                array('admin', 'audio', 'delete', '{is_numeric:audio_id}'),         
             ),
 			
 			//images
@@ -109,10 +114,10 @@ class Pigeon {
                 array('admin', 'images', 'add'),         
             ),
             'Admin_Image_Edit_Controller' => array(
-                array('admin', 'images', 'edit', '{is_int:image_id}'),         
+                array('admin', 'images', 'edit', '{is_numeric:image_id}'),         
             ),
 			'Admin_Image_Delete_Controller' => array(
-                array('admin', 'images', 'delete', '{is_int:image_id}'),         
+                array('admin', 'images', 'delete', '{is_numeric:image_id}'),         
             ),
             
 			// *** UTILITY ***
@@ -159,14 +164,15 @@ class Pigeon {
         
         $this->uri = explode('/', $this->uri_string);
         
-	
+		
         foreach ($this->uri as $key=>$value) {
-            if ((int)$value != null) $this->uri[$key] = (int)$value;
+            if(is_numeric($value)) $this->uri[$key] = $value;
+			else if ((int)$value != null) $this->uri[$key] = (int)$value;
             else if ((float)$value != null) $this->uri[$key] = (float)$value;
 			else $this->uri[$key] = $value;
         }
 		
-        
+	
         $match = false;
         foreach ($this->controllers as $controller=>$patterns) {
             

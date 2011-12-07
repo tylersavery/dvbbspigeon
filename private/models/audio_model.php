@@ -21,6 +21,10 @@ class Audio_Model extends Core_Audio_Model {
 	
 	public function get_permalink(){
 		
+		if($this->get_filename() == ''){
+			return false;
+		}
+		
 		return '/audio/' . $this->get_filename();
 	}
 	

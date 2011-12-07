@@ -1,0 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Geo);
+
+.clear {
+    clear:both;
+}
+
+body {
+    font-size:14px;
+    font-family: Geo, sans-serif;
+    background-color:#696969;
+    background-color: #000;
+}
+
+
+
+
+/* bottom right */
+
+.bottom_right{
+    width:200px;
+    height:72px;
+    position:fixed;
+    right:0px;
+    bottom:0px;
+    background-color:#2a2a2a;
+}
+
+
+.bottom_right .logo{
+    width:185px;
+    height:34px;
+    background-image: url(/images/logo.gif);
+    position:absolute;
+    left: 8px;
+    top: 8px;
+}
+
+.bottom_right .social{
+    width:188px;
+    height:18px;
+    position:absolute;
+    top: 50px;
+    left:8px;
+}
+
+.bottom_right .social .social_item{
+    position:relative;
+    width:34px;
+    height:17px;
+    float:left;
+    margin-right: 4px;
+    background-color:#000;
+    text-align:center;
+}
+
+
+.bottom_right .social .social_item.last{
+    margin-right:0;
+}

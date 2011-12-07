@@ -13,7 +13,6 @@ class Static_Base_Controller extends Core_Controller {
         $this->title = 'D V B B S';
         
         $this->css[] = CSS_ROOT.'reset.css';        
-        
         $this->meta[] = 'content="text/html; charset=utf-8" http-equiv="Content-Type"';    
         
         $this->js_head[] = JS_ROOT.'libraries/jquery.min.js';

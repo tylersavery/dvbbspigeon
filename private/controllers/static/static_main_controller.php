@@ -6,6 +6,8 @@ class Static_Main_Controller extends Static_Base_Controller {
         parent::__construct($uri, $data);
         
         $this->css[] = CSS_ROOT . 'main.css';
+		$this->js_head[] = JS_ROOT . 'jquery.ui.js';
+		$this->js_head[] = JS_ROOT . 'libraries/jquery.easing.js';
         $this->js_head[] = JS_ROOT . 'main.js';
         
 	}

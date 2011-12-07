@@ -6,6 +6,7 @@ class Audio_Controller extends Static_Main_Controller {
 		
 		$audios = Audio_Model::find_all();
 		$this->content_view->audios = $audios;
+		$this->js_head[] = '/js/jquery.ui.js';
 		
 	}
 	

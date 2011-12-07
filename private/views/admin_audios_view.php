@@ -6,6 +6,7 @@
 				<th>id</th>
 				<th>Image</th>
 				<th>Title</th>
+				<th>Preiew</th>
 				<th>Filename</th>
 				<th>Filetype</th>
 				<th>Filesize</th>
@@ -25,6 +26,9 @@
 						<? endif; ?>
 					</td>
 					<td class="title"><?php echo $audio->get_title();?></td>
+					<td class="preview">
+						<audio src="<?= $audio->get_permalink();?>" controls="controls"></audio>
+					</td>
 					<td class="filename"><?php echo $audio->get_filename();?></td>
 					<td class="filetype"><?php echo $audio->get_filetype();?></td>
 					<td class="filesize"><?php echo $audio->get_filesize();?></td>
