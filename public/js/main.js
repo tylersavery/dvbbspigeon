@@ -296,9 +296,9 @@ function init_audio() {
     if ( !! document.createElement('audio').canPlayType) {
 
         var player = '<audio id="audio_player">\
-		  <source src="/audio/theshore.mp3" type="audio/ogg"></source>\
+		  <source src="/audio/theshore.ogg" type="audio/ogg"></source>\
 		  <source src="/audio/theshore.mp3" type="audio/mpeg"></source>\
-		  <source src="/audio/theshore.mp3" type="audio/x-wav"></source>\
+		  <source src="/audio/theshore.wav" type="audio/x-wav"></source>\
 		</audio>';
 
         $(player).insertAfter(".player");
