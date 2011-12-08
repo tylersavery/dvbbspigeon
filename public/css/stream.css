@@ -40,9 +40,9 @@
 
 .track_menu .menu_item{
     position:relative;
-    margin-bottom: 2px;
-    padding-top:8px;
-    padding-bottom:8px;
+    margin-bottom: 0px;
+    padding-top:7px;
+    padding-bottom:7px;
     height:28px;
     left:-135px;
     
