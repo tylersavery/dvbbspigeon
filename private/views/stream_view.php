@@ -1,6 +1,6 @@
 <div class="splash"></div>
-<div class="blind"></div>
-<!--
+<div class="blind"><div class="close"></div></div>
+
 <div class="contact">
     
     <h3>For all bookings and booking inquires:</h3>
@@ -11,7 +11,7 @@
     
 </div>
 
--->
+
 <img src="/images/dvbbs1.gif" id="splash_img" />
 <div class="page">
     <div class="wrap">
@@ -89,6 +89,12 @@
         </div>
 
     </div><!-- /.player -->
+    
+    <ul class="top_menu">
+        <li id="blog_link">Blog</li>
+        <li id="contact_link">Contact</li>
+        <li id="credits_link">Credits</li>
+    </ul>
     
     <div class="bottom_right">
         <div class="logo"></div>

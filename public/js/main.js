@@ -161,6 +161,21 @@ $(document).ready(function () {
           window.location = '/downloads/stems.zip';
      
     });
+    
+    
+    $(".close").click(function(){
+     
+          $(".contact").fadeOut(500);
+          $(".blind").fadeOut(500);
+     
+    });
+    
+    
+    $("#contact_link").click(function(){
+     
+          load_contact();
+     
+    });
 
 
 });
@@ -197,14 +212,14 @@ function set_constants() {
           IMG_WIDTH = 1000;
           IMG_HEIGHT = 667;
           
-          BG_SRC = '/images/backgrounds/background1_small.jpg';
+          BG_SRC = '/images/backgrounds/animated_small.gif';
 
     } else if(screen_width > 1000 && screen_width < 1600){
      //medium
           IMG_WIDTH = 1600;
           IMG_HEIGHT = 1066;
           
-          BG_SRC = '/images/backgrounds/background1_medium.jpg';
+          BG_SRC = '/images/backgrounds/animated.gif';
      
      
     } else if(screen_width >= 1600){
@@ -212,7 +227,7 @@ function set_constants() {
           IMG_WIDTH = 2300;
           IMG_HEIGHT = 1533;
           
-          BG_SRC = '/images/backgrounds/background1_large.jpg';
+          BG_SRC = '/images/backgrounds/animated.gif';
      
     }
 
@@ -623,7 +638,7 @@ function load_contact(){
      
      $(".blind").fadeTo(1000, .8, function(){
      
-          $("#contact").fadeIn();
+          $(".contact").fadeIn();
           
      });
      
