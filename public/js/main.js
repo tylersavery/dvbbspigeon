@@ -234,6 +234,9 @@ function set_constants() {
      BG_SRC += '?time=' + new Date().getTime();
     
      IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
+  
+  
+  
      
      
      img = new Image();
