@@ -26,6 +26,7 @@
                     <div class="menu_foot_item" id="download_stem">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
+            
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
@@ -34,6 +35,7 @@
                     <div class="menu_foot_item">Coming Soon</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
+            
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
@@ -42,14 +44,8 @@
                     <div class="menu_foot_item">Coming Soon</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
-            <div class="clear"></div>
-            <div class="menu_item">
-                <div class="strikethrough"></div>
-                <div class="menu_head">Here We Go</div>
-                <div class="menu_foot coming">
-                    <div class="menu_foot_item">Coming Soon</div>
-                </div><!-- /.menu_foot -->
-            </div><!-- /.menu_item -->
+            
+              
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
@@ -58,6 +54,17 @@
                     <div class="menu_foot_item">Coming Soon</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
+            
+            
+            <div class="clear"></div>
+            <div class="menu_item">
+                <div class="strikethrough"></div>
+                <div class="menu_head">Here We Go</div>
+                <div class="menu_foot coming">
+                    <div class="menu_foot_item">Coming Soon</div>
+                </div><!-- /.menu_foot -->
+            </div><!-- /.menu_item -->
+          
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>

@@ -337,7 +337,7 @@ function init_audio() {
         //timeleft = $('.player #timeleft');
         manualSeek = false;
         loaded = false;
-        audio.volume = 0.5;
+        audio.volume = 0.8;
 
 
      /*     
