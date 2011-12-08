@@ -230,7 +230,8 @@ function set_constants() {
           BG_SRC = '/images/backgrounds/background2_medium.gif';
      
     }
-
+    
+     BG_SRC += '?time=' + new Date().getTime();
     
      IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
      
@@ -548,7 +549,7 @@ function init_splash(){
      
      var $splash_img = $("#splash_img");
      
-     var src = '/images/dvbbs1.gif';
+     var src = '/images/dvbbs1.gif?time=' + new Date().getTime();
      
      $splash_img.attr('src', src).load(function(){
         

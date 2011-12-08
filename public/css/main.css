@@ -112,7 +112,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
 }
 
 #social_facebook:hover{
-    background-position: -9px -3px;
+    background-position: -9px -2px;
 }
 
 #social_twitter{
@@ -120,7 +120,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
 }
 
 #social_twitter:hover{
-    background-position: -49px -3px;
+    background-position: -49px -2px;
 }
 
 #social_youtube{
@@ -128,23 +128,25 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
 }
 
 #social_youtube:hover{
-    background-position: -89px -3px;
+    background-position: -89px -2px;
 }
 
 #social_soundcloud{
-    background-position: -129px -26px;
+    background-position: -130px -26px;
+    width: 33px;
+    
 }
 
 #social_soundcloud:hover{
-    background-position: -129px -3px;
+    background-position: -130px -2px;
 }
 
 #social_tumblr{
-    background-position: -168px -26px;
+    background-position: -169px -26px;
 }
 
 #social_tumblr:hover{
-    background-position: -168px -3px;
+    background-position: -169px -2px;
 }
 
 
