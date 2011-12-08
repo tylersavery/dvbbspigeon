@@ -552,7 +552,7 @@ function init_splash(){
      
      var $splash_img = $("#splash_img");
      
-     var src = '/images/dvbbs1.gif?time=' + new Date().getTime();
+     var src = '/images/dvbbs1.gif';
      
      $splash_img.attr('src', src).load(function(){
         
