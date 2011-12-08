@@ -220,7 +220,7 @@ function set_constants() {
           IMG_HEIGHT = 1066;
           
           BG_SRC = '/images/backgrounds/animated.gif';
-     
+          
      
     } else if(screen_width >= 1600){
      // large
@@ -237,6 +237,8 @@ function set_constants() {
      
      img = new Image();
      img.src = BG_SRC;
+     
+     $bg_img.attr('src', '/images/backgrounds/frame1.gif')
      
      img.onload=function(){
           $bg_img.attr('src', BG_SRC);
