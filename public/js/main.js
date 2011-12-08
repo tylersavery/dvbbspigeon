@@ -239,9 +239,7 @@ function set_constants() {
      img.src = BG_SRC;
      
      img.onload=function(){
-          console.log('loaded');
           $bg_img.attr('src', BG_SRC);
-          
      }
      
      
