@@ -51,7 +51,7 @@ $(document).ready(function () {
 
     /* events */
 
-    $(".menu_item .menu_head").mouseenter(function () {
+    $(".menu_item .menu_head").mouseenter(function() {
 
         var $foot = $(this).next('.menu_foot');
         var foot_width = $foot.width();
@@ -233,7 +233,18 @@ function set_constants() {
 
     
      IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
-     $bg_img.attr('src', BG_SRC);
+     
+     
+     img = new Image();
+     img.src = BG_SRC;
+     
+     img.onload=function(){
+          
+          $bg_img.attr('src', BG_SRC);
+          
+     }
+     
+     
 }
 
 

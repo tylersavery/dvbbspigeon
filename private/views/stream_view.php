@@ -15,7 +15,7 @@
 <img src="/images/dvbbs1.gif" id="splash_img" />
 <div class="page">
     <div class="wrap">
-        <div id="background"><img src="" /></div>
+        <div id="background"><img src="/images/frame1.gif" /></div>
     
         <div class="track_menu">
             <div class="menu_item">
