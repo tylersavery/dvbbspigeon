@@ -5,11 +5,14 @@
 <div class="contact">
     
     <h3>D V B B S</h3>
-    <h4>Alex Andre [<a href="http://twitter.com/alexdubbs" target="_blank">@alexdubbs</a>]<br>
-    Chris Andre [<a href="http://twitter.com/chrisdubbs" target="_blank">@chrisdubbs</a>]
+    <h4>Alex Andre [<a href="http://twitter.com/alexdubbs" target="_blank"><span class="up">@</span>alexdubbs</a>]<br>
+    Chris Andre [<a href="http://twitter.com/chrisdubbs" target="_blank"><span class="up">@</span>chrisdubbs</a>]
     
     <h3>For all media inquiries/press/interviews/support please email</h3>
-    <a href="mailto:info@dvbbs.com">info@dvbbs.com</a>
+    <a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a>
+    
+    <h3>For all bookings and booking inquires:</h3>
+    <a href="mailto:colinlewis@theagencygroup.com">colinlewis<span class="up">@</span>theagencygroup.com</a>
     
     <h6>Legals</h6>
     <a href="#" target="_blank" class="small">EB Reinbergs</a>

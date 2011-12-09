@@ -236,7 +236,7 @@ function set_constants() {
      // large
           IMG_WIDTH = 1920;
           IMG_HEIGHT = 1280;
-          LOAD_TIME = 7000;
+          LOAD_TIME = 10000;
           
           BG_SRC = '/images/backgrounds/background2_large.gif';
      
@@ -253,7 +253,7 @@ function set_constants() {
      
      img.onload=function(){
           $bg_img.attr('src', BG_SRC);
-          $("#loader").fadeOut(300);
+          $("#loader").stop().fadeOut(300);
      }
      
      
@@ -566,14 +566,17 @@ function init_splash(){
         
         setTimeout(hide_splash, 3000);
         setTimeout(hide_logo, LOAD_TIME);
+        setTimeout(ensure_loader_is_gone, LOAD_TIME + 2000);
           
      });
      
-     
-     
-     
+
 }
 
+
+function ensure_loader_is_gone(){
+     $("#loader").stop().fadeOut(300);
+}
 
 function hide_splash(){
      
