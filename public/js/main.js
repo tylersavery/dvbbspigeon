@@ -209,23 +209,23 @@ function set_constants() {
     
     if(screen_width <= 1000){
      //small
-          IMG_WIDTH = 1000;
-          IMG_HEIGHT = 667;
+          IMG_WIDTH = 1200;
+          IMG_HEIGHT = 800;
           
           BG_SRC = '/images/backgrounds/background1_medium.gif';
 
     } else if(screen_width > 1000 && screen_width < 1600){
      //medium
-          IMG_WIDTH = 1600;
-          IMG_HEIGHT = 1066;
+          IMG_WIDTH = 1200;
+          IMG_HEIGHT = 800;
           
           BG_SRC = '/images/backgrounds/background1_medium.gif';
           
      
     } else if(screen_width >= 1600){
      // large
-          IMG_WIDTH = 2300;
-          IMG_HEIGHT = 1533;
+          IMG_WIDTH = 1920;
+          IMG_HEIGHT = 1280;
           
           BG_SRC = '/images/backgrounds/background1_large.gif';
      
@@ -328,8 +328,8 @@ function init_audio() {
     if ( !! document.createElement('audio').canPlayType) {
 
         var player = '<audio id="audio_player">\
-		  <source src="/audio/dancebitch.ogg" type="audio/ogg"></source>\
 		  <source src="/audio/dancebitch.mp3" type="audio/mpeg"></source>\
+          <source src="/audio/dancebitch.ogg" type="audio/ogg"></source>\
 		  <source src="/audio/dancebitch.wav" type="audio/x-wav"></source>\
 		</audio>';
 
