@@ -213,13 +213,13 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     color: #fff;
     text-align:center;
-    line-height: 32px;
+    line-height: 24px;
     z-index: 95;
     text-transform:uppercase;
 }
 
 .contact h3{
-    font-size: 20px;
+    font-size: 14px;
     opacity: .5;
 }
 
@@ -228,9 +228,10 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     opacity: .8;
     -webkit-transition-duration:.5sec;
     display:block;
-    margin-bottom:30px;
+    margin-bottom:10px;
     position:relative;
     text-decoration:none;
+    font-size:16px; 
 }
 
 .contact a:hover{

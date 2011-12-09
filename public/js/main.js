@@ -163,7 +163,7 @@ $(document).ready(function () {
     });
     
     
-    $(".close").click(function(){
+    $(".close, .blind").click(function(){
      
           $(".contact").fadeOut(500);
           $(".blind").fadeOut(500);
@@ -212,14 +212,14 @@ function set_constants() {
           IMG_WIDTH = 1000;
           IMG_HEIGHT = 667;
           
-          BG_SRC = '/images/backgrounds/background2_medium.gif';
+          BG_SRC = '/images/backgrounds/background1_medium.gif';
 
     } else if(screen_width > 1000 && screen_width < 1600){
      //medium
           IMG_WIDTH = 1600;
           IMG_HEIGHT = 1066;
           
-          BG_SRC = '/images/backgrounds/background2_medium.gif';
+          BG_SRC = '/images/backgrounds/background1_large.gif';
           
      
     } else if(screen_width >= 1600){
@@ -227,7 +227,7 @@ function set_constants() {
           IMG_WIDTH = 2300;
           IMG_HEIGHT = 1533;
           
-          BG_SRC = '/images/backgrounds/background2_medium.gif';
+          BG_SRC = '/images/backgrounds/background1_large.gif';
      
     }
     
