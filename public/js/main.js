@@ -611,7 +611,7 @@ function hide_logo(){
 
 function enter_player() {
      
-     $("#loader").fadeOut(500);
+     //$("#loader").fadeOut(500);
      
      var i = 500;
           var items = $(".track_menu .menu_item");
