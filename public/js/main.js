@@ -219,7 +219,7 @@ function set_constants() {
           IMG_WIDTH = 1600;
           IMG_HEIGHT = 1066;
           
-          BG_SRC = '/images/backgrounds/background1_large.gif';
+          BG_SRC = '/images/backgrounds/background1_medium.gif';
           
      
     } else if(screen_width >= 1600){
