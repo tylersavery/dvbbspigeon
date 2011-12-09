@@ -1,4 +1,5 @@
 <div class="splash"></div>
+<div id="loader"><img src="/images/loader.gif" width="16" height="16" /></div>
 <div class="blind"><div class="close">x</div></div>
 
 <div class="contact">

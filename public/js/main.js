@@ -22,6 +22,7 @@ var IMG_WIDTH;
 var IMG_HEIGHT;
 var IMG_ASPECT;
 var BG_SRC;
+var LOAD_TIME;
 
 /* jQuery Objects */
 var $bg;
@@ -189,8 +190,8 @@ $(document).ready(function () {
 
 $(window).resize(function () {
      
-    set_sizes_and_positions();
-    scrollTo(0,1);
+     set_sizes_and_positions();
+     scrollTo(0,1);
      setTimeout('set_sizes_and_positions()', 1000);
 });
 
@@ -218,6 +219,7 @@ function set_constants() {
      //small
           IMG_WIDTH = 1200;
           IMG_HEIGHT = 800;
+          LOAD_TIME = 3500;
           
           BG_SRC = '/images/backgrounds/background2_medium.gif';
 
@@ -225,6 +227,7 @@ function set_constants() {
      //medium
           IMG_WIDTH = 1200;
           IMG_HEIGHT = 800;
+          LOAD_TIME = 4500;
           
           BG_SRC = '/images/backgrounds/background2_medium.gif';
           
@@ -233,6 +236,7 @@ function set_constants() {
      // large
           IMG_WIDTH = 1920;
           IMG_HEIGHT = 1280;
+          LOAD_TIME = 7000;
           
           BG_SRC = '/images/backgrounds/background2_large.gif';
      
@@ -241,11 +245,7 @@ function set_constants() {
      BG_SRC += '?time=' + new Date().getTime();
     
      IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
-  
-  
-  
-     
-     
+ 
      img = new Image();
      img.src = BG_SRC;
      
@@ -253,6 +253,7 @@ function set_constants() {
      
      img.onload=function(){
           $bg_img.attr('src', BG_SRC);
+          $("#loader").fadeOut(300);
      }
      
      
@@ -564,7 +565,7 @@ function init_splash(){
      $splash_img.attr('src', src).load(function(){
         
         setTimeout(hide_splash, 3000);
-        setTimeout(hide_logo, 4500);
+        setTimeout(hide_logo, LOAD_TIME);
           
      });
      
@@ -576,6 +577,9 @@ function init_splash(){
 
 function hide_splash(){
      
+     $("#loader").fadeIn(300);
+     
+     
      $(".splash").fadeTo(100, .8, function(){
           
           
@@ -586,6 +590,8 @@ function hide_splash(){
 
 
 function hide_logo(){
+     
+     //$("#loader").fadeOut(500);
      
      $("#splash_img").fadeOut(500, function(){
           
@@ -605,7 +611,7 @@ function hide_logo(){
 
 function enter_player() {
      
-     
+     $("#loader").fadeOut(500);
      
      var i = 500;
           var items = $(".track_menu .menu_item");
