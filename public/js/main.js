@@ -129,7 +129,7 @@ $(document).ready(function () {
                 $strike.css('width', '0px');
                 $strike.show();
                 $strike.animate({
-                    width: 126 + 'px'
+                    width: 100 + 'px'
 
                 }, 200);
 
@@ -166,6 +166,7 @@ $(document).ready(function () {
     $(".close, .blind").click(function(){
      
           $(".contact").fadeOut(500);
+          $(".credits").stop().fadeOut(500);
           $(".blind").fadeOut(500);
      
     });
@@ -174,6 +175,12 @@ $(document).ready(function () {
     $("#contact_link").click(function(){
      
           load_contact();
+     
+    });
+    
+    $("#credits_link").click(function(){
+     
+          load_credits();
      
     });
 
@@ -212,14 +219,14 @@ function set_constants() {
           IMG_WIDTH = 1200;
           IMG_HEIGHT = 800;
           
-          BG_SRC = '/images/backgrounds/background1_medium.gif';
+          BG_SRC = '/images/backgrounds/background2_medium.gif';
 
     } else if(screen_width > 1000 && screen_width < 1600){
      //medium
           IMG_WIDTH = 1200;
           IMG_HEIGHT = 800;
           
-          BG_SRC = '/images/backgrounds/background1_medium.gif';
+          BG_SRC = '/images/backgrounds/background2_medium.gif';
           
      
     } else if(screen_width >= 1600){
@@ -227,7 +234,7 @@ function set_constants() {
           IMG_WIDTH = 1920;
           IMG_HEIGHT = 1280;
           
-          BG_SRC = '/images/backgrounds/background1_large.gif';
+          BG_SRC = '/images/backgrounds/background2_large.gif';
      
     }
     
@@ -654,6 +661,24 @@ function load_contact(){
      $(".blind").fadeTo(1000, .8, function(){
      
           $(".contact").fadeIn();
+          
+     });
+     
+     
+}
+
+function load_credits(){
+     
+     $(".credits").css('top', window_height - 20 + 'px');
+     
+     $(".blind").fadeTo(1000, .8, function(){
+     
+          $(".credits").show();
+          $(".credits").animate({
+          
+               top: '0px'
+               
+          }, 12000, 'easeInOutQuad');
           
      });
      

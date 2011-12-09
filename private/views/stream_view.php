@@ -1,13 +1,36 @@
 <div class="splash"></div>
-<div class="blind"><div class="close"></div></div>
+<div class="blind"><div class="close">x</div></div>
 
 <div class="contact">
     
-    <h3>For all bookings and booking inquires:</h3>
-    <a href="mailto:colinlewis@theagencygroup.com">colinlewis@theagencygroup.com</a>
+    <h3>D V B B S</h3>
+    <h4>Alex Andre [<a href="http://twitter.com/alexdubbs" target="_blank">@alexdubbs</a>]<br>
+    Chris Andre [<a href="http://twitter.com/chrisdubbs" target="_blank">@chrisdubbs</a>]
     
-    <h3>Legals</h3>
-    <a href="#" target="_blank">EB Reinbergs</a>
+    <h3>For all media inquiries/press/interviews/support please email</h3>
+    <a href="mailto:info@dvbbs.com">info@dvbbs.com</a>
+    
+    <h6>Legals</h6>
+    <a href="#" target="_blank" class="small">EB Reinbergs</a>
+    
+</div>
+
+<div class="credits">
+    <h3>Web Design and Development</h3>
+    <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
+    
+    <h3>Photography</h3>
+    <h4>Matthew Guido [Dance Bitch]<br>
+    William Nguyen</h4>
+    
+    <h3>Music by DVBBS</h3>
+    <h4>Alex Andre<br />
+    Chris Andre</h4>
+    
+    <h3>Animation and Production</h3>
+    <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
+    
+    <img src="/images/ya.png" />
     
 </div>
 

@@ -51,7 +51,7 @@
 .track_menu .menu_head{
     position:relative;
     height: 28px;
-    width:138px;
+    width:110px;
     line-height: 28px;
     font-size: 18px;
     color: rgba(241,241,241, .5);
@@ -81,6 +81,7 @@
 .track_menu .menu_foot.coming{
     width: 102px;
     overflow:hidden;
+   
 }
 
 
@@ -104,11 +105,12 @@
 .track_menu .menu_foot.coming .menu_foot_item{
     width: 94px;
     color:rgba(255,255,255, .5);
+     font-size:12px;
 }
 
 .strikethrough{
     position:absolute;
-    width: 126px;
+    width: 90px;
     height:1px;
     background-color:#e1e1e1;
     border-top: 1px solid #878787;
@@ -437,9 +439,7 @@ and (max-device-width : 480px) {
 .track_menu .menu_item{
     position:relative;
     margin-bottom: 22px;
-    height:40px;
-    
-    
+    height:40px;    
 }
 
 .track_menu .menu_head{
