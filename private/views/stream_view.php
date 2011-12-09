@@ -104,12 +104,18 @@
     </ul>
     
     <div class="bottom_right">
-        <div class="logo"></div>
+        <div class="logo">
+            <div class="logo_part d"></div>
+            <div class="logo_part v"></div>
+            <div class="logo_part b"></div>
+            <div class="logo_part b"></div>
+            <div class="logo_part s last"></div>
+        </div>
         <div class="social">
-            <div class="social_item"><a href="#" id="social_facebook" target="_blank">facebook</a></div>
-            <div class="social_item"><a href="#" id="social_twitter" target="_blank">twitter</a></div>
-            <div class="social_item"><a href="#" id="social_youtube" target="_blank">youtube</a></div>
-            <div class="social_item"><a href="#" id="social_soundcloud" target="_blank">soundcloud</a></div>
+            <div class="social_item"><a href="http://www.facebook.com/pages/DUBBS/449657210522" id="social_facebook" target="_blank">facebook</a></div>
+            <div class="social_item"><a href="http://twitter.com/dvbbs" id="social_twitter" target="_blank">twitter</a></div>
+            <div class="social_item"><a href="http://youtube.com/dvbbs" id="social_youtube" target="_blank">youtube</a></div>
+            <div class="social_item"><a href="http://soundcloud.com/DVBBS" id="social_soundcloud" target="_blank">soundcloud</a></div>
             <div class="social_item last"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
         </div>
     </div><!-- ./bottom_right -->
