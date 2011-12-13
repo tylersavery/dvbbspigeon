@@ -1,4 +1,4 @@
-<div class="splash"></div>
+
 <div id="loader"><img src="/images/loader.gif" width="16" height="16" /></div>
 <div class="blind"><div class="close">x</div></div>
 
@@ -9,10 +9,10 @@
     Chris Andre [<a href="http://twitter.com/chrisdubbs" target="_blank"><span class="up">@</span>chrisdubbs</a>]
     
     <h3>For all media inquiries/press/interviews/support please email</h3>
-    <a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a>
-    
+    <h4><a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a></h4>
+    <p>&nbsp;</p>
     <h3>For all bookings and booking inquires:</h3>
-    <a href="mailto:colinlewis@theagencygroup.com">colinlewis<span class="up">@</span>theagencygroup.com</a>
+    <h4><a href="mailto:colinlewis@theagencygroup.com">colinlewis<span class="up">@</span>theagencygroup.com</a></h4>
     
     <h6>Legals</h6>
     <a href="#" target="_blank" class="small">EB Reinbergs</a>
@@ -28,8 +28,7 @@
     William Nguyen</h4>
     
     <h3>Music by DVBBS</h3>
-    <h4>Alex Andre<br />
-    Chris Andre</h4>
+    <h4></h4>
     
     <h3>Animation and Production</h3>
     <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
@@ -42,33 +41,38 @@
 <img src="/images/dvbbs1.gif" id="splash_img" />
 <div class="page">
     <div class="wrap">
-        <div id="background"><img src="/images/frame1.gif" /></div>
+        <div id="background"><img id="bg_image" src="/images/black.gif" /></div>
     
         <div class="track_menu">
             <div class="menu_item">
-                <div class="menu_head">Dance Bitch</div>
+                <div class="strikethrough"></div>
+                <div class="menu_head" id="menu_head_1">Dance Bitch</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item" id="download_track">Download</div>
-                    <div class="menu_foot_item" id="play_track">Play</div>
-                    <div class="menu_foot_item" id="download_stem">Stems</div>
+                    <div class="menu_foot_item download_track" rel="1">Download</div>
+                    <div class="menu_foot_item play_track" rel="1" id="play_track_1">Play</div>
+                    <div class="menu_foot_item download_stem"  rel="1">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head">DRVGS</div>
-                <div class="menu_foot coming">
-                    <div class="menu_foot_item">Coming Soon</div>
+                <div class="menu_head" id="menu_head_2">DRVGS</div>
+                <div class="menu_foot">
+                    <div class="menu_foot_item download_track" rel="2">Download</div>
+                    <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
+                    <div class="menu_foot_item download_stem" rel="2">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head">Come Alive</div>
-                <div class="menu_foot coming">
-                    <div class="menu_foot_item">Coming Soon</div>
+                <div class="menu_head" id="menu_head_3">Come Alive</div>
+               <div class="menu_foot">
+                    <div class="menu_foot_item download_track" rel="3">Download</div>
+                    <div class="menu_foot_item play_track" rel="3" id="play_track_3">Play</div>
+                    <div class="menu_foot_item download_stem" rel="3">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -76,9 +80,11 @@
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head">Sugar Coated</div>
-                <div class="menu_foot coming">
-                    <div class="menu_foot_item">Coming Soon</div>
+                <div class="menu_head" id="menu_head_4">Sugar Coated</div>
+               <div class="menu_foot">
+                    <div class="menu_foot_item download_track" rel="4">Download</div>
+                    <div class="menu_foot_item play_track" rel="4" id="play_track_4">Play</div>
+                    <div class="menu_foot_item download_stem" rel="4">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -86,19 +92,22 @@
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head">Here We Go</div>
-                <div class="menu_foot coming">
-                    <div class="menu_foot_item">Coming Soon</div>
+                <div class="menu_head" id="menu_head_5">Flashing Lights</div>
+                <div class="menu_foot">
+                    <div class="menu_foot_item download_track" rel="5">Download</div>
+                    <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
+                    <div class="menu_foot_item download_stem" rel="5">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
           
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head">Till I Die</div>
-                
-                <div class="menu_foot coming">
-                    <div class="menu_foot_item">Coming Soon</div> 
+                <div class="menu_head" id="menu_head_6">Its Been a Long Time</div>
+               <div class="menu_foot">
+                    <div class="menu_foot_item download_track" rel="6">Download</div>
+                    <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
+                    <div class="menu_foot_item download_stem" rel="6">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             

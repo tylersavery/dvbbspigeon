@@ -26,5 +26,6 @@
             <script type="text/javascript" src="<?= $js; ?>"></script>
         <? endforeach; ?>
     <? endif; ?>
+    
 </head>
 <body>
