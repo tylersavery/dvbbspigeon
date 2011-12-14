@@ -5,9 +5,9 @@
 <div class="contact">
     
     <h3>D V B B S</h3>
-    <h4>Alex Andre [<a href="http://twitter.com/alexdubbs" target="_blank"><span class="up">@</span>alexdubbs</a>]<br>
-    Chris Andre [<a href="http://twitter.com/chrisdubbs" target="_blank"><span class="up">@</span>chrisdubbs</a>]
-    
+    <h4>Alex Andre [<a href="http://twitter.com/alexdvbbs" target="_blank"><span class="up">@</span>alexdvbbs</a>]<br>
+    Chris Andre [<a href="http://twitter.com/chrisdvbbs" target="_blank"><span class="up">@</span>chrisdvbbs</a>]
+    <p>&nbsp;</p>
     <h3>For all media inquiries/press/interviews/support please email</h3>
     <h4><a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a></h4>
     <p>&nbsp;</p>
@@ -20,15 +20,15 @@
 </div>
 
 <div class="credits">
+    <h3>Music by DVBBS</h3>
+    <h4></h4>
+    
     <h3>Web Design and Development</h3>
     <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
     
     <h3>Photography</h3>
     <h4>Matthew Guido [Dance Bitch]<br>
     William Nguyen</h4>
-    
-    <h3>Music by DVBBS</h3>
-    <h4></h4>
     
     <h3>Animation and Production</h3>
     <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>

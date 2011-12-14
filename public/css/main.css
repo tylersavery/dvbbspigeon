@@ -311,14 +311,16 @@ span.up{
 
 .credits h4{
     margin-bottom:50px;
-    font-size:18px;
+    font-size:16px;
 }
 
 .credits a{
+    display:block;
+}
+.credits a, .credits{
     color:#fff;
     opacity: .8;
     -webkit-transition-duration:.5sec;
-    display:block;
     margin-bottom:10px;
     position:relative;
     text-decoration:none;
