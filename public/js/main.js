@@ -650,6 +650,11 @@ function init_splash(){
      var time = new Date();
      time = time.getTime();
      
+     
+     /* src[0] should be src[rand] */
+     
+     rand = 0;
+     
      $splash_img.attr('src', src[rand] + '?time=' + time).load(function(){
           var margin_top = 0 - Math.round(h[rand] / 2);
           var margin_left = 0 - Math.round(w[rand] / 2);
