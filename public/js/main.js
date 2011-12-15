@@ -408,7 +408,7 @@ function init_bg(){
           
           $("#background").fadeOut(500, function(){
                
-               $bg_img.attr('src', '/images/backgrounds/track'+ current_track +'first_frame.gif');
+               $bg_img.attr('src', '/images/backgrounds/track'+ current_track +'/first_frame.gif');
                
                set_sizes_and_positions();
         
