@@ -116,7 +116,9 @@
     </div><!-- /.wrap -->
     
     <div class="player">
+        <div class="player_back"></div>
         <div class="player_play"></div>
+        <div class="player_next"></div>
         <div class="player_title">Dance Bitch</div>
         <div class="player_volume_container">
             <div class="player_volume_icon"></div>
@@ -130,7 +132,15 @@
         <div class="player_gutter">
             <div class="player_handle ui-slider-handle"></div>
         </div>
-
+        
+         <div class="social">
+            <div class="social_item"><a href="http://www.facebook.com/pages/DUBBS/449657210522" id="social_facebook" target="_blank">facebook</a></div>
+            <div class="social_item"><a href="http://twitter.com/dvbbs" id="social_twitter" target="_blank">twitter</a></div>
+            <div class="social_item"><a href="http://youtube.com/dvbbs" id="social_youtube" target="_blank">youtube</a></div>
+            <div class="social_item"><a href="http://soundcloud.com/DVBBS" id="social_soundcloud" target="_blank">soundcloud</a></div>
+            <div class="social_item last"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
+        </div>
+        
     </div><!-- /.player -->
     
     <ul class="top_menu">
@@ -138,22 +148,11 @@
         <li id="contact_link">Contact</li>
         <li id="credits_link">Credits</li>
     </ul>
-    
-    <div class="bottom_right">
-        <div class="logo">
-            <div class="logo_part d"></div>
-            <div class="logo_part v"></div>
-            <div class="logo_part b"></div>
-            <div class="logo_part b"></div>
-            <div class="logo_part s last"></div>
-        </div>
-        <div class="social">
-            <div class="social_item"><a href="http://www.facebook.com/pages/DUBBS/449657210522" id="social_facebook" target="_blank">facebook</a></div>
-            <div class="social_item"><a href="http://twitter.com/dvbbs" id="social_twitter" target="_blank">twitter</a></div>
-            <div class="social_item"><a href="http://youtube.com/dvbbs" id="social_youtube" target="_blank">youtube</a></div>
-            <div class="social_item"><a href="http://soundcloud.com/DVBBS" id="social_soundcloud" target="_blank">soundcloud</a></div>
-            <div class="social_item last"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
-        </div>
-    </div><!-- ./bottom_right -->
-    
+ 
+    <div class="header">
+        
+        <div class="logo">DVBBS</div>
+        
+       
+    </div><!-- ./header -->
 </div><!-- /.page -->

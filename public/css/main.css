@@ -97,6 +97,27 @@ span.up{
     top:-2px;
 }
 
+.header{
+    position:absolute;
+    left:0px;
+    top:0px;
+    height:81px;
+    width:242px;
+    display:none;
+
+
+}
+
+
+.header .logo{
+    width:242px;
+    height:81px;
+    background-image:url(/images/logo/logo.png);
+    position:relative;
+    text-indent:-9999px;
+
+}
+
 
 
 
@@ -111,78 +132,26 @@ span.up{
 }
 
 
-.bottom_right .logo{
-    width:185px;
-    height:34px;
-    position:absolute;
-    left: 8px;
-    top: 8px;
 
-}
-
-.bottom_right .logo .logo_part{
+.social{
+    width:190px;
+    height:18px;
     position:relative;
     float:left;
-    width:31px;
-    height:32px;
-    margin-right:7px;
-    background-repeat: no-repeat;
-    
-    -webkit-transition-property: -webkit-transform, background;
-    -webkit-transition-duration: .3s, 0;
-    -webkit-transition-delay: 0, 0;
-    transform:rotate + backface-visibility + transition;
-    
-    
+    margin-top:3px;
+    margin-left:10px;
 }
 
-.bottom_right .logo .logo_part:hover{
-  /*  
-   -webkit-transform: rotateY(180deg);
-  */
-  
-    
-}
-
-.bottom_right .logo .logo_part.last{
-    margin-right:0px;
-}
-
-.bottom_right .logo .logo_part.d{
-    background-image:url(/images/logo/d.gif);
-}
-
-.bottom_right .logo .logo_part.v{
-    background-image:url(/images/logo/v.gif);
-}
-
-.bottom_right .logo .logo_part.b{
-    background-image:url(/images/logo/b.gif);
-}
-
-.bottom_right .logo .logo_part.s{
-    background-image:url(/images/logo/s.gif);
-}
-
-.bottom_right .social{
-    width:188px;
-    height:18px;
-    position:absolute;
-    top: 50px;
-    left:8px;
-}
-
-.bottom_right .social .social_item{
+.social .social_item{
     position:relative;
     width:34px;
     height:17px;
     float:left;
     margin-right: 4px;
-    background-color:#000;
     text-align:center;
 }
 
-.bottom_right .social .social_item a{
+.social .social_item a{
     background-image:url(/images/social.png);
     text-indent:-9999px;
     display:block;
@@ -193,6 +162,7 @@ span.up{
 
 #social_facebook{
     background-position: -9px -26px;
+    width:33px;
 }
 
 #social_facebook:hover{

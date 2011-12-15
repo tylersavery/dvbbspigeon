@@ -157,36 +157,89 @@
 
 .player{
     width: 100%;
-    height: 22px;
-    background-color:#2a2a2a;
+    height: 34px;
+    background-color:#515151;
     position:fixed;
     bottom:-65px;
     z-index:100;
+    padding-top:8px;
 
 }
 
+
+
+.player_back{
+    position:relative;
+    float:left;
+    margin-left:5px;
+    width:28px;
+    height:24px;
+    background-image:url(/images/player_controls.png);
+    background-position:2px -2px;
+    cursor:pointer;
+
+    
+}
+
+.player_back:hover{
+    background-position: 2px -33px;
+}
 
 .player_play{
     position:relative;
     float:left;
-    height:20px;
-    width:30px;
-    margin-left:3px;
-    margin-right:3px;
-    margin-top:2px;
-    background-image:url(/images/player/play.gif);
+    margin-left:5px;
+    width:28px;
+    height:24px;
+    background-image:url(/images/player_controls.png);
+    background-position:-28px -2px;
     cursor:pointer;
+    
 }
 
-.player_play.pause{
-    background-image:url(/images/player/pause.gif);
+.player_play:hover{
+    background-position: -28px -32px;
+}
+
+
+.player_next{
+    position:relative;
+    float:left;
+    margin-left:5px;
+    width:28px;
+    height:24px;
+    background-image:url(/images/player_controls.png);
+    background-position:-60px -2px;
+    cursor:pointer;
     
+}
+
+.player_next:hover{
+    background-position: -60px -33px;
+}
+
+
+
+.player_play.pause{
+    position:relative;
+    float:left;
+    margin-left:5px;
+    width:28px;
+    height:24px;
+    background-image:url(/images/player_controls.png);
+    background-position:-130px -1px;
+    cursor:pointer;
+    
+}
+
+.player_play.pause:hover{
+    background-position: -130px -33px;
 }
 
 .player_title{
     position:relative;
     float:left;
-    margin-top:2px;
+    margin-top:3px;
     width: 130px;
     height:20px;
     font-size: 13px;
@@ -202,7 +255,7 @@
     float:left;
     margin-top:2px;
     width:70px;
-    height:20px;
+    height:24px;
 }
 
 .player_volume_icon{
@@ -210,12 +263,13 @@
     height:20px;
     position:relative;
     float:left;
-    background-image:url(/images/player/volume.gif);
+    background-image:url(/images/player_controls.png);
+    background-position:-100px -4px;
     cursor:pointer;
 }
 
 .player_volume_icon.mute{
-    background-image:url(/images/player/mute.gif);
+    background-position:-100px -35px;
 }
 
 .player_time{
@@ -226,7 +280,7 @@
     text-align:center;
     line-height:20px;
     color: #989898;
-    font-size:10px;
+    font-size:12px;
     margin-top:2px;
 }
 
@@ -239,9 +293,9 @@
     position:relative;
     float:left;
     width:300px;
-    height: 4px;
+    height: 8px;
     border:5px solid #000;
-    margin-top:5px;
+    margin-top:3px;
     background-color:#fff;
     overflow:hidden;
 }
@@ -249,7 +303,7 @@
 .player_handle{
     position:relative;
     width:6px;
-    height:4px;
+    height:8px;
     background-image:url(/images/player/handle.gif);
     cursor:pointer;
     left:-10px;
@@ -258,7 +312,7 @@
 .player_handle:before{
     content:"";
     width:3000px;
-    height:4px;
+    height:8px;
     background-color: #ece94e;
     position:absolute;
     right:6px;
@@ -271,8 +325,8 @@
     float:left;
  
     width:30px;
-    height: 4px;
-    margin-top:7px;
+    height: 8px;
+    margin-top:5px;
     background-color:#fff;
     overflow-x:hidden;
     padding-right:3px;
@@ -282,7 +336,7 @@
 .player_volume_handle{
     position:relative;
     width:3px;
-    height:4px;
+    height:8px;
 
     background-color:#000;
     cursor:pointer;
@@ -293,7 +347,7 @@
 .player_volume_handle:before{
     content:"";
     width:3000px;
-    height:4px;
+    height:8px;
     background-color: #ece94e;
     position:absolute;
     right:3px;

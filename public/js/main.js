@@ -14,6 +14,7 @@ var positionIndicator;
 var audio;
 var is_playing = false;
 var can_play;
+var player_showing = false;
 var is_mobile;
 var sources = new Array();
 var titles = new Array();
@@ -237,6 +238,10 @@ $(document).ready(function () {
               $(this).text('Play');
          
          }
+         
+         
+         
+          show_player_and_header();
  
       
     });
@@ -480,7 +485,7 @@ function set_sizes_and_positions() {
      //media player
      
      var padding_left = 304;
-     var padding_right = 202;
+     var padding_right = 280;
      
      if(is_mobile){
           padding_right = 100;
@@ -500,7 +505,7 @@ function init_audio() {
     if ( !! document.createElement('audio').canPlayType) {
      
           if($("#audio_player").length > 0){
-               console.log('removed');
+           
                audio.pause();
                $("#audio_player").remove();
                $(".play_track").text('play');
@@ -599,6 +604,31 @@ function check_if_mobile() {
      
      return false;
 
+}
+
+function show_player_and_header(){
+     
+       if(!player_showing){
+          
+               $(".player").animate({
+     
+                    bottom : 0
+                    
+               }, 700, 'easeInOutSine', function(){
+            
+                    $(".header").css("top", '-100px');
+                    $(".header").show();
+                    $(".header").animate({
+                         
+                         top: 0
+                         
+                         }, 650, 'easeInOutSine');
+            
+               });
+                    
+         }
+     
+     
 }
 
 function hide_menu_bar() {
@@ -725,25 +755,10 @@ function enter_player() {
                                    $(items[5]).animate({ left: 0 }, 300, 'easeOutSine', function(){
                
                
-                                        $(".player").animate({
-     
-                                             bottom : 0
-                                             
-                                        }, 700, 'easeInOutSine', function(){
-                                     
-                                        });
                                         
                                         
-                                        $(".bottom_right").animate({
                                         
-                                             bottom : 0
-                                             
-                                        }, 700, 'easeInOutSine', function(){
-                                        
-                                        
-                                             
-                                             
-                                        });
+               
                
                                    });
                               });
