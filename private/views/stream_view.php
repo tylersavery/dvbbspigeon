@@ -150,9 +150,7 @@
     </ul>
  
     <div class="header">
-        
         <div class="logo">DVBBS</div>
-        
-       
     </div><!-- ./header -->
+    
 </div><!-- /.page -->

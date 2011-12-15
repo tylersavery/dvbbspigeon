@@ -321,6 +321,18 @@ $(document).ready(function () {
                         //audio.currentTime = ui.value;
                     }
           });
+        
+          $(".player_next").click(function(){
+             
+             next_track();
+               
+          });
+          
+          $(".player_back").click(function(){
+             
+             previous_track();
+               
+          });
  
 
 
@@ -571,6 +583,7 @@ function init_audio() {
 
 
      audio.play();
+     $(".player_title").text(titles[current_track]);
 
     }
 }
@@ -807,7 +820,30 @@ function load_credits(){
      
 }
 
-  
+
+function next_track(){
+     
+     if(current_track < (sources.length - 1)){
+          current_track++;
+     } else {
+          current_track = 1;
+     }
+     
+     init_audio();
+     
+}
+
+function previous_track(){
+     
+     if(current_track > 1){
+          current_track--;
+     } else {
+          current_track = sources.length - 1;
+     }
+     
+     init_audio();
+     
+}
 
 function updateOrientation(){
     var contentType = "show_";
