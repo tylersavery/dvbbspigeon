@@ -298,6 +298,7 @@
     margin-top:3px;
     background-color:#fff;
     overflow:hidden;
+    cursor:pointer;
 }
 
 .player_handle{

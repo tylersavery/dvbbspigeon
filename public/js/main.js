@@ -580,6 +580,13 @@ function init_audio() {
             
 
         });
+        
+        
+
+     $(audio).bind('ended', function(){
+        next_track();
+          
+     });
 
 
      audio.play();
