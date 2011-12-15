@@ -836,6 +836,7 @@ function next_track(){
           current_track = 1;
      }
      
+     init_bg();
      init_audio();
      
 }
@@ -848,6 +849,7 @@ function previous_track(){
           current_track = sources.length - 1;
      }
      
+     init_bg();
      init_audio();
      
 }
