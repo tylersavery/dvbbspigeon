@@ -645,7 +645,9 @@ function show_player_and_header(){
                          }, 650, 'easeInOutSine');
             
                });
-                    
+          
+          player_showing = true;  
+               
          }
      
      
