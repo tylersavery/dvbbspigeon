@@ -646,7 +646,9 @@ function show_player_and_header(){
             
                });
           
-          player_showing = true;  
+          player_showing = true;
+          
+          
                
          }
      
