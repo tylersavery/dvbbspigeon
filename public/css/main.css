@@ -48,7 +48,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     width:15px;
     height:14px;
     font-size:16px;
-    color:rgba(255,255,255,.7);
+    color:rgba(236, 233, 78, .9);
     cursor:pointer;
     text-transform:uppercase;
 }
@@ -217,7 +217,6 @@ span.up{
     display:none;
     position:absolute;
     width:500px;
-    margin-top: 60px;
     left:50%;
     margin-left:-250px;
     color: #fff;
@@ -226,7 +225,7 @@ span.up{
     z-index: 95;
     text-transform:uppercase;
     height:280px;
-    margin-top: -140px;
+    margin-top: -220px;
     top:50%;
 }
 
@@ -236,23 +235,36 @@ span.up{
 }
 
 .contact h4{
-    margin-bottom:50px;
-     font-size:16px; 
+    margin-bottom:20px;
+    opacity: .5;
+     font-size:16px;
 }
 
 .contact a{
     color:#fff;
     opacity: .8;
     text-decoration:none;
-    font-size:16px; 
+    font-size:16px;
+    font-weight:normal;
 }
 
 .contact a:hover{
     opacity:1;
 }
 
+
+.legals{
+    width:200px;
+    height:100px;
+    position:fixed;
+    bottom:30px;
+    left:50%;
+    margin-left:-100px;
+}
+
 .contact .small, .contact h6{
     font-size:14px;
+    opacity:.6;
 }
 .contact h6{
     margin-top:60px;
@@ -300,6 +312,47 @@ span.up{
 .credits a:hover{
     opacity:1;
 }
+
+
+
+
+
+
+
+.download_lightbox{
+    position:absolute;
+    width:320px;
+    height:250px;
+    left:50%;
+    top:50%;
+    margin-left:-160px;
+    margin-top:-125px;
+    z-index:100 ;
+    
+    text-align:center;
+    font-size:22px;
+    color: #ece94e;
+    text-transform:uppercase;
+    
+    display:none;
+
+}
+
+.download_lightbox h3, .download_lightbox a{
+    margin-top: 16px;
+    margin-bottom:16px;
+    display:block;
+}
+
+.download_lightbox a{
+    color: #848484;
+    text-decoration:none;
+}
+
+.download_lightbox a:hover{
+    color: #f1f1f1;
+}
+
 
 
 

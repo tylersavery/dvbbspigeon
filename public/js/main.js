@@ -41,6 +41,7 @@ $(document).ready(function () {
     get_objects();
     check_if_mobile();
     set_constants();
+    preload();
     //updateOrientation();
     
     init_splash();
@@ -134,7 +135,7 @@ $(document).ready(function () {
                 $strike.css('width', '0px');
                 $strike.show();
                 
-                var strike_width = $(this).width();
+                var strike_width = $(this).width() - 10;
                 
                 $strike.animate({
                     width: strike_width + 'px'
@@ -146,12 +147,32 @@ $(document).ready(function () {
         }
 
 
+     if(!player_showing){
+          
+          /*
+          
+          $bg_img.fadeOut(500, function(){
+          
+               $bg_img.attr("src", '/images/backgrounds/track1/first_frame.gif');
+               $bg_img.fadeTo(500, .2);
+               
+               
+          });
+          */
+          
+     }
+
+
     });
 
     $(".menu_item").mouseleave(function () {
 
-        $(".strikethrough").fadeOut(150);
-        $(".menu_foot").fadeOut(150);
+          $(".strikethrough").fadeOut(150);
+          $(".menu_foot").fadeOut(150);
+        
+          if(!player_showing){
+             //  $bg_img.fadeOut(500, function(){ });
+          }       
 
     });
     
@@ -174,6 +195,7 @@ $(document).ready(function () {
     $(".close, .blind").click(function(){
      
           $(".contact").fadeOut(500);
+          $(".download_lightbox").fadeOut(500);
           $(".credits").stop().fadeOut(500);
           $(".blind").fadeOut(500);
      
@@ -189,6 +211,13 @@ $(document).ready(function () {
     $("#credits_link").click(function(){
      
           load_credits();
+     
+    });
+    
+    
+    $("#menu_head_7").click(function(){
+     
+          load_downloads();
      
     });
     
@@ -376,8 +405,8 @@ function set_constants() {
      titles[2] = 'Drvgs';
      titles[3] = 'Come Alive';
      titles[4] = 'Sugar Coated';
-     titles[5] = 'Flashing Lights';
-     titles[6] = 'Its Been a Long Time';
+     titles[5] = 'Till I Die';
+     titles[6] = 'Here We Go';
      
      
 }
@@ -700,6 +729,7 @@ function init_splash(){
      
      
      
+     
      var rand = Math.round(Math.random() * 2);
      var time = new Date();
      time = time.getTime();
@@ -778,7 +808,15 @@ function enter_player() {
                               $(items[4]).animate({ left: 0 }, 300, 'easeOutSine', function(){
                                    $(items[5]).animate({ left: 0 }, 300, 'easeOutSine', function(){
                
+                                        $(items[6]).animate({ left: 0 }, 300, 'easeOutSine', function(){
                
+               
+                                        
+                                        
+                                        
+               
+               
+                                        });
                                         
                                         
                                         
@@ -832,6 +870,17 @@ function load_credits(){
 }
 
 
+function load_downloads(){
+     
+     $(".blind").fadeTo(500, .8, function(){
+     
+          $(".download_lightbox").fadeIn();
+          
+     });
+     
+     
+}
+
 function next_track(){
      
      if(current_track < (sources.length - 1)){
@@ -855,6 +904,15 @@ function previous_track(){
      
      init_bg();
      init_audio();
+     
+}
+
+
+function preload(){
+          
+     var src = '/images/backgrounds/track1/first_frame.gif';
+     var img = new Image();
+     img.src = src;
      
 }
 

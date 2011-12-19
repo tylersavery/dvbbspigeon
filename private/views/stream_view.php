@@ -5,8 +5,8 @@
 <div class="contact">
     
     <h3>D V B B S</h3>
-    <h4>Alex Andre [<a href="http://twitter.com/alexdvbbs" target="_blank"><span class="up">@</span>alexdvbbs</a>]<br>
-    Chris Andre [<a href="http://twitter.com/chrisdvbbs" target="_blank"><span class="up">@</span>chrisdvbbs</a>]
+    <h4>Alex Andre [ <a href="http://twitter.com/alexdvbbs" target="_blank"><span class="up">@</span>alexdvbbs</a> ]<br>
+    Chris Andre [ <a href="http://twitter.com/chrisdvbbs" target="_blank"><span class="up">@</span>chrisdvbbs</a> ]
     <p>&nbsp;</p>
     <h3>For all media inquiries/press/interviews/support please email</h3>
     <h4><a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a></h4>
@@ -14,9 +14,11 @@
     <h3>For all bookings and booking inquires:</h3>
     <h4><a href="mailto:colinlewis@theagencygroup.com">colinlewis<span class="up">@</span>theagencygroup.com</a></h4>
     
-    <h6>Legals</h6>
-    <a href="#" target="_blank" class="small">EB Reinbergs</a>
-    
+    <div class="legals">
+        <h6>Legals</h6>
+        <a href="#" target="_blank" class="small">EB Reinbergs</a>
+    </div>
+
 </div>
 
 <div class="credits">
@@ -35,6 +37,13 @@
     
     <img src="/images/ya.png" />
     
+</div>
+
+<div class="download_lightbox">
+    <h3>Free Digital Download</h3>
+    <a href="#">Free DJ Mix+Stems</a>
+    <a href="#">iTunes TRX</a>
+    <a href="#">Buy Physical Copy</a>
 </div>
 
 
@@ -92,7 +101,7 @@
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_5">Flashing Lights</div>
+                <div class="menu_head" id="menu_head_5">Till I Die</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="5">Download</div>
                     <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
@@ -103,12 +112,20 @@
             <div class="clear"></div>
             <div class="menu_item">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_6">Its Been a Long Time</div>
+                <div class="menu_head" id="menu_head_6">Here We Go</div>
                <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="6">Download</div>
                     <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
                     <div class="menu_foot_item download_stem" rel="6">Stems</div>
                 </div><!-- /.menu_foot -->
+            </div><!-- /.menu_item -->
+            
+            <div class="clear"></div>
+            <div class="menu_item mixtape">
+                <div class="strikethrough"></div>
+                <div class="menu_head" id="menu_head_7">Get the Mixtape</div>
+           
+
             </div><!-- /.menu_item -->
             
         </div> <!-- /.track_menu -->

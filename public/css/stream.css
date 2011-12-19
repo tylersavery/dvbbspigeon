@@ -53,43 +53,30 @@
 .track_menu .menu_head{
     position:relative;
     height: 28px;
-    width:160px;
+    width:120px;
     line-height: 28px;
     font-size: 18px;
     color: rgba(241,241,241, .5);
     background-color: rgba(17,17,17, .5);
     text-transform:uppercase;
-    text-align:left;
+    text-align:center;
     font-weight:100;
     float:left;
     cursor:default;
-    margin-left:6px;
+    margin-left:0px;
     
 
 }
 
-#menu_head_1{
-    width:87px;
+
+
+.track_menu .menu_item.mixtape .menu_head {
+    color:#ece94e;
+    cursor:pointer;
 }
 
-#menu_head_2{
-    width:50px;
-}
-
-#menu_head_3{
-    width:84px;
-}
-
-#menu_head_4{
-    width:95px;
-}
-
-#menu_head_5{
-    width:115px;
-}
-
-#menu_head_6{
-    width:150px;
+.track_menu .menu_item.mixtape .menu_head:hover{
+    color: rgba(236, 233, 78, .8);
 }
 
 .track_menu .menu_head:hover, .track_menu .menu_head.active{
@@ -242,7 +229,7 @@
     margin-top:3px;
     width: 130px;
     height:20px;
-    font-size: 13px;
+    font-size: 15px;
     line-height:20px;
     color: #fff;
     text-transform:uppercase;
@@ -599,5 +586,3 @@ and (max-device-width : 480px) {
 
 
 
-
-}
