@@ -40,10 +40,10 @@
 </div>
 
 <div class="download_lightbox">
-    <h3>Free Digital Download</h3>
-    <a href="#">Free DJ Mix+Stems</a>
-    <a href="#">iTunes TRX</a>
-    <a href="#">Buy Physical Copy</a>
+    <a href="#" class="mixtape_download">Free Digital Download</a>
+    <a href="#" class="mixtape_download">Free DJ Mix+Stems</a>
+    <a href="#" class="mixtape_download">iTunes TRX</a>
+    <a href="#" class="mixtape_download">Buy Physical Copy</a>
 </div>
 
 
@@ -123,7 +123,7 @@
             <div class="clear"></div>
             <div class="menu_item mixtape">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_7">Get the Mixtape</div>
+                <div class="menu_head" id="menu_head_7">Get Mixtape</div>
            
 
             </div><!-- /.menu_item -->

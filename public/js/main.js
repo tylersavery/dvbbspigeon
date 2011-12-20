@@ -135,7 +135,7 @@ $(document).ready(function () {
                 $strike.css('width', '0px');
                 $strike.show();
                 
-                var strike_width = $(this).width() - 10;
+                var strike_width = $(this).width() - 12;
                 
                 $strike.animate({
                     width: strike_width + 'px'
@@ -360,6 +360,16 @@ $(document).ready(function () {
           $(".player_back").click(function(){
              
              previous_track();
+               
+          });
+          
+          
+          $(".mixtape_download").click(function(){
+             
+             $(this).addClass("clicked");
+             
+             
+             return false;
                
           });
  
@@ -842,9 +852,22 @@ function enter_player() {
 
 function load_contact(){
      
+     
+     $(".close").hide();
+     
      $(".blind").fadeTo(1000, .8, function(){
      
-          $(".contact").fadeIn();
+          $(".contact").fadeIn(300, function(){
+               
+               var offset = $(".contact").offset();
+               var x = offset.left + $(".contact").width();
+               var y = offset.top - 10;
+               
+               $(".blind .close").css("left", x + "px").css("top", y + "px");
+               
+               $('.close').fadeIn(300);
+               
+          });
           
      });
      
@@ -854,10 +877,23 @@ function load_contact(){
 function load_credits(){
      
      $(".credits").css('top', window_height - 20 + 'px');
+     $(".close").hide();
      
      $(".blind").fadeTo(1000, .8, function(){
      
           $(".credits").show();
+          
+          
+          var offset = $(".credits").offset();
+          var x = offset.left + $(".credits").width();
+          var y = 20;
+          
+          $(".blind .close").css("left", x + "px").css("top", y + "px");
+          
+          $('.close').fadeIn(300);
+          
+          
+          
           $(".credits").animate({
           
                top: '0px'
@@ -872,9 +908,21 @@ function load_credits(){
 
 function load_downloads(){
      
+     $(".close").hide();
+     
      $(".blind").fadeTo(500, .8, function(){
      
-          $(".download_lightbox").fadeIn();
+           $(".download_lightbox").fadeIn(300, function(){
+               
+               var offset = $(".download_lightbox").offset();
+               var x = offset.left + $(".download_lightbox").width();
+               var y = offset.top - 10;
+               
+               $(".blind .close").css("left", x + "px").css("top", y + "px");
+               
+               $('.close').fadeIn(300);
+               
+          });
           
      });
      

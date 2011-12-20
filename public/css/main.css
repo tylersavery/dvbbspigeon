@@ -1,14 +1,3 @@
-@font-face {
-    font-family: 'BigntallMedium';
-    src: url('/css/fonts/Bigntall-2.eot');
-    src: url('/css/fonts/Bigntall-2.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/Bigntall-2.woff') format('woff'),
-         url('/css/fonts/Bigntall-2.svg#BigntallMedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 @import url(http://fonts.googleapis.com/css?family=Geo);
 
 
@@ -18,7 +7,7 @@
 
 body {
     font-size:14px;
-    font-family: Geo, sans-serif;
+    font-family: Geo, sans-serif !important;
     background-color:#696969;
     background-color: #000;
     overflow:hidden;
@@ -236,13 +225,13 @@ span.up{
 
 .contact h4{
     margin-bottom:20px;
-    opacity: .5;
+
      font-size:16px;
 }
 
 .contact a{
     color:#fff;
-    opacity: .8;
+    opacity: .75;
     text-decoration:none;
     font-size:16px;
     font-weight:normal;
@@ -257,14 +246,14 @@ span.up{
     width:200px;
     height:100px;
     position:fixed;
-    bottom:30px;
+    bottom:50px;
     left:50%;
     margin-left:-100px;
 }
 
 .contact .small, .contact h6{
     font-size:14px;
-    opacity:.6;
+    opacity:.75;
 }
 .contact h6{
     margin-top:60px;
@@ -322,11 +311,11 @@ span.up{
 .download_lightbox{
     position:absolute;
     width:320px;
-    height:250px;
+    height:200px;
     left:50%;
     top:50%;
     margin-left:-160px;
-    margin-top:-125px;
+    margin-top:-100px;
     z-index:100 ;
     
     text-align:center;
@@ -347,10 +336,15 @@ span.up{
 .download_lightbox a{
     color: #848484;
     text-decoration:none;
+    font-size:16px;
 }
 
 .download_lightbox a:hover{
     color: #f1f1f1;
+}
+
+.download_lightbox a.clicked{
+    color:#ECE94E;
 }
 
 
