@@ -179,7 +179,7 @@
     position:relative;
     float:left;
     margin-left:5px;
-    width:20px;
+    width:18px;
     height:20px;
     background-image:url(/images/player_controls.png);
     background-position:-22px -2px;
@@ -188,7 +188,7 @@
 }
 
 .player_play:hover{
-    background-position: -22px -25px;
+    background-position: -22px -24px;
 }
 
 
