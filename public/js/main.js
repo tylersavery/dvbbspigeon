@@ -749,7 +749,7 @@ function init_splash(){
      
      rand = 0;
      
-     $splash_img.attr('src', src[rand] + '?time=' + time).load(function(){
+     $splash_img.attr('src', src[rand] + '?time=' + time);//.load(function(){
           var margin_top = 0 - Math.round(h[rand] / 2);
           var margin_left = 0 - Math.round(w[rand] / 2);
 
@@ -764,7 +764,7 @@ function init_splash(){
        
           setTimeout(enter_player, 3000);
           
-     });
+    // });
      
 
 }
