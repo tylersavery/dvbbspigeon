@@ -577,7 +577,14 @@ function init_audio() {
         //timeleft = $('.player #timeleft');
         manualSeek = false;
         loaded = false;
-        audio.volume = 0.8;
+        
+
+             
+             if($(".player_volume_icon").hasClass('mute')){
+
+               audio.volume = 0;
+               
+             }
 
         $(audio).bind('timeupdate', function () {
 
