@@ -584,6 +584,14 @@ function init_audio() {
 
                audio.volume = 0;
                
+             } else {
+               
+               var vol = $(".player_volume_handle").css('left');
+               vol = vol.replace('%', '');
+               vol = vol / 100;
+               
+               
+               audio.volume = vol;
              }
 
         $(audio).bind('timeupdate', function () {
