@@ -750,7 +750,7 @@ function init_splash(){
      rand = 0;
      
      var img_loading = new Image();
-     img_loading.src = src[rand];
+     img_loading.src = src[rand] + '?time=' + time;
      
      img_loading.load = function() {
           
@@ -768,7 +768,7 @@ function init_splash(){
        //   setTimeout(hide_logo, LOAD_TIME);
        //   setTimeout(ensure_loader_is_gone, LOAD_TIME + 2000);
        
-          setTimeout(enter_player, 3000);
+          
           
      });
           
@@ -777,7 +777,7 @@ function init_splash(){
      
      
     
-     
+   setTimeout(enter_player, 3000);  
 
 }
 
