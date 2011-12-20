@@ -536,7 +536,7 @@ function set_sizes_and_positions() {
      //media player
      
      var padding_left = 304;
-     var padding_right = 280;
+     var padding_right = 250;
      
      if(is_mobile){
           padding_right = 100;
