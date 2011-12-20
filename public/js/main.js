@@ -472,7 +472,7 @@ function init_bg(){
                     
                     $bg_img.attr('src', BG_SRC);
                     //$("#loader").stop().fadeOut(300);
-                    $("#splash_img").hide();
+                    //$("#splash_img").hide();
      
                }
                                    
@@ -793,6 +793,7 @@ function hide_logo(){
          
           
      });
+     
      
       $(".splash").fadeOut(800, function(){
           
