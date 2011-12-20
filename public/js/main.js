@@ -756,7 +756,6 @@ function init_splash(){
           
           $splash_img.show();
           
-          
           $splash_img.attr('src', img_loading.src).load(function(){
           var margin_top = 0 - Math.round(h[rand] / 2);
           var margin_left = 0 - Math.round(w[rand] / 2);
@@ -779,7 +778,7 @@ function init_splash(){
      
      
     
-   setTimeout(enter_player, 3000);  
+   setTimeout(enter_player, 3500);  
 
 }
 
