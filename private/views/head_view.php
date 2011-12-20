@@ -2,8 +2,9 @@
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
     <title><?= $this->title; ?></title>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+    <META HTTP-EQUIV="Expires" CONTENT="-1" />
     <? if ($this->meta): ?>
-        <!-- include meta tags -->
         <? foreach ($this->meta as $meta): ?>
             <? echo '<meta ' . $meta . '/>' . "\n"; ?>
         <? endforeach; ?>
@@ -11,7 +12,7 @@
     <link rel="apple-touch-icon" href="/iphone.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="/iphone72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="/iphone114.png"/>
-    <http-equiv="PRAGMA" content="NO-CACHE" />
+    
     
     <? if ($this->css): ?>
         <!-- include css -->
