@@ -911,7 +911,7 @@ function load_credits(){
           
           $(".blind .close").css("left", x + "px").css("top", y + "px");
           
-          $('.close').fadeIn(300);
+        
           
           
           
@@ -919,7 +919,11 @@ function load_credits(){
           
                top: '0px'
                
-          }, 12000, 'easeInOutQuad');
+          }, 12000, 'easeInOutQuad', function(){
+               
+                 $('.close').fadeIn(300);
+               
+               });
           
      });
      

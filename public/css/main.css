@@ -289,7 +289,7 @@ span.up{
 .credits a{
     display:block;
 }
-.credits a, .credits{
+.credits a{
     color:#fff;
     opacity: .8;
     -webkit-transition-duration:.5sec;
