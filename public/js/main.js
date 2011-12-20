@@ -897,10 +897,10 @@ function load_contact(){
 
 function load_credits(){
      
-     $(".credits").css('top', window_height - 20 + 'px');
+     $(".credits").css('top', window_height - 10 + 'px');
      $(".close").hide();
      
-     $(".blind").fadeTo(1000, .8, function(){
+     $(".blind").fadeTo(800, .8, function(){
      
           $(".credits").show();
           
@@ -912,8 +912,6 @@ function load_credits(){
           $(".blind .close").css("left", x + "px").css("top", y + "px");
           
         
-          
-          
           
           $(".credits").animate({
           
