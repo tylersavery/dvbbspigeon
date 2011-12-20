@@ -63,6 +63,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     margin-top: -95px;
     width:500px;
     z-index:1;
+    display:none;
     
 }
 

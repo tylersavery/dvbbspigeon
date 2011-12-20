@@ -47,7 +47,7 @@
 </div>
 
 
-<img src="/images/dvbbs1.gif" id="splash_img" />
+<img src="#" id="splash_img" />
 <div class="page">
     <div class="wrap">
         <div id="background"><img id="bg_image" src="/images/black.gif" /></div>

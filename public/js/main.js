@@ -752,10 +752,12 @@ function init_splash(){
      var img_loading = new Image();
      img_loading.src = src[rand] + '?time=' + time;
      
-     img_loading.load = function() {
+     img_loading.onload = function() {
+          
+          $splash_img.show();
           
           
-          $splash_img.attr('src', src[rand] + '?time=' + time).load(function(){
+          $splash_img.attr('src', img_loading.src).load(function(){
           var margin_top = 0 - Math.round(h[rand] / 2);
           var margin_left = 0 - Math.round(w[rand] / 2);
 
