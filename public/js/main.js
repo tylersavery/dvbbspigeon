@@ -784,7 +784,7 @@ function init_splash() {
 
         $splash_img.show();
 
-        $splash_img.attr('src', src[rand] + '?time=' + time).load(function () {
+        $splash_img.attr('src', src[rand] + '?time=' + TIME_NOW).load(function () {
             var margin_top = 0 - Math.round(h[rand] / 2);
             var margin_left = 0 - Math.round(w[rand] / 2);
 
