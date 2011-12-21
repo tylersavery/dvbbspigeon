@@ -986,6 +986,10 @@ function preload() {
          var src = '/images/backgrounds/track'+ i +'/first_frame_'+ IMAGE_SIZE +'.gif';
          var img = new Image();
          img.src = src;
+         
+         var gif_src = '/images/backgrounds/track'+ i +'/'+ IMAGE_SIZE +'.gif';
+         var gif_img = new Image();
+         gif_img.src = gif_src;
      }
 }
 
