@@ -28,6 +28,7 @@ var IMG_ASPECT;
 var BG_SRC;
 var LOAD_TIME;
 var IMAGE_SIZE;
+var TIME_NOW;
 
 /* jQuery Objects */
 var $bg;
@@ -446,6 +447,9 @@ function set_constants() {
     }
     
     IMG_ASPECT = 12 / 8;
+    
+    
+    TIME_NOW = new Date().getTime();
 
 
 }
@@ -482,7 +486,7 @@ function init_bg() {
         IMAGE_SIZE = 'large';
     }
 
-    BG_SRC += '?time=' + new Date().getTime();
+    BG_SRC += '?time=' + TIME_NOW;
     
     IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
 
@@ -772,15 +776,9 @@ function init_splash() {
     w[2] = 989;
 
     var rand = Math.round(Math.random() * 2);
-    var time = new Date();
-    time = time.getTime();
 
-
-    /* src[0] should be src[rand] */
-
-    //rand = 0;
     var img_loading = new Image();
-    img_loading.src = src[rand] + '?time=' + time;
+    img_loading.src = src[rand] + '?time=' + TIME_NOW;
 
     img_loading.onload = function () {
 
