@@ -155,13 +155,13 @@ $(document).ready(function () {
                 var img = new Image();
                 img.src = '/images/backgrounds/track'+ track_number +'/first_frame_' + IMAGE_SIZE + '.gif';
 
-               // img.onload = function () {
+                img.onload = function () {
 
                     $preview.attr("src", img.src);
                     $preview.stop().fadeTo(500, .2);
 
                     set_sizes_and_positions();
-              //  }
+                }
 
             });
 
@@ -478,6 +478,8 @@ function init_bg() {
     }
 
     BG_SRC += '?time=' + new Date().getTime();
+    
+    console.log(BG_SRC);
 
 
     IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
