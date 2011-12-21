@@ -43,9 +43,10 @@ $(document).ready(function () {
     get_objects();
     check_if_mobile();
     set_constants();
-    preload();
+    
     //updateOrientation();
     init_splash();
+    preload();
 
     set_sizes_and_positions();
     set_can_play();
