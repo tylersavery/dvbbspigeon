@@ -221,6 +221,8 @@ $(document).ready(function () {
     $("#menu_head_7").click(function () {
 
         load_downloads();
+        
+        return false;
 
     });
 
@@ -451,6 +453,8 @@ function init_bg() {
 
     screen_width = screen.width;
     screen_height = screen.height;
+    
+    console.log(current_track);
 
     if (screen_width <= 1000) {
         //small
@@ -479,20 +483,11 @@ function init_bg() {
 
     BG_SRC += '?time=' + new Date().getTime();
     
-    console.log(BG_SRC);
-
-
     IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
 
     $("#splash_img").fadeOut(400, function () {
 
         $("#background").fadeOut(500, function () {
-
-            $bg_img.attr('src', '/images/backgrounds/track' + current_track + '/first_frame.gif');
-
-            set_sizes_and_positions();
-
-            $('#background').fadeIn(300);
 
             var img = new Image();
             img.src = BG_SRC;
@@ -500,8 +495,8 @@ function init_bg() {
             img.onload = function () {
 
                 $bg_img.attr('src', BG_SRC);
-                //$("#loader").stop().fadeOut(300);
-                //$("#splash_img").hide();
+                $('#background').fadeIn(300);
+   
             }
 
         });
@@ -790,7 +785,7 @@ function init_splash() {
 
         $splash_img.show();
 
-        $splash_img.attr('src', img_loading.src).load(function () {
+        $splash_img.attr('src', src[rand] + '?time=' + time).load(function () {
             var margin_top = 0 - Math.round(h[rand] / 2);
             var margin_left = 0 - Math.round(w[rand] / 2);
 
