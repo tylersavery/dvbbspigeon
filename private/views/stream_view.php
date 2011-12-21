@@ -48,14 +48,18 @@
 
 
 <img src="#" id="splash_img" />
+
+
+<img src="#" id="preview" />
+
 <div class="page">
     <div class="wrap">
         <div id="background"><img id="bg_image" src="/images/black.gif" /></div>
     
         <div class="track_menu">
-            <div class="menu_item">
+            <div class="menu_item" rel="1">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_1">Dance Bitch</div>
+                <div class="menu_head" id="menu_head_1" rel="1">Dance Bitch</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="1">Download</div>
                     <div class="menu_foot_item play_track" rel="1" id="play_track_1">Play</div>
@@ -64,9 +68,9 @@
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
-            <div class="menu_item">
+            <div class="menu_item" rel="2">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_2">DRVGS</div>
+                <div class="menu_head" id="menu_head_2" rel="2">DRVGS</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="2">Download</div>
                     <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
@@ -75,9 +79,9 @@
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
-            <div class="menu_item">
+            <div class="menu_item"  rel="3">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_3">Come Alive</div>
+                <div class="menu_head" id="menu_head_3" rel="3">Come Alive</div>
                <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="3">Download</div>
                     <div class="menu_foot_item play_track" rel="3" id="play_track_3">Play</div>
@@ -87,9 +91,9 @@
             
               
             <div class="clear"></div>
-            <div class="menu_item">
+            <div class="menu_item" rel="4">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_4">Sugar Coated</div>
+                <div class="menu_head" id="menu_head_4" rel="4">Sugar Coated</div>
                <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="4">Download</div>
                     <div class="menu_foot_item play_track" rel="4" id="play_track_4">Play</div>
@@ -99,9 +103,9 @@
             
             
             <div class="clear"></div>
-            <div class="menu_item">
+            <div class="menu_item" rel="5">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_5">Till I Die</div>
+                <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="5">Download</div>
                     <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
@@ -110,9 +114,9 @@
             </div><!-- /.menu_item -->
           
             <div class="clear"></div>
-            <div class="menu_item">
+            <div class="menu_item" rel="6">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_6">Here We Go</div>
+                <div class="menu_head" id="menu_head_6" rel="6">Here We Go</div>
                <div class="menu_foot">
                     <div class="menu_foot_item download_track" rel="6">Download</div>
                     <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
@@ -121,9 +125,9 @@
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
-            <div class="menu_item mixtape">
+            <div class="menu_item mixtape" rel="0">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_7">Get Mixtape</div>
+                <div class="menu_head" id="menu_head_7" rel="0">Get Mixtape</div>
            
 
             </div><!-- /.menu_item -->

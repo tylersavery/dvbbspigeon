@@ -214,7 +214,7 @@
     position:relative;
     float:left;
     margin-left:5px;
-    width:20px;
+    width:18px;
     height:20px;
     background-image:url(/images/player_controls.png);
     background-position:-98px -1px;
@@ -346,6 +346,18 @@
     
 }
 
+
+
+#preview{
+    position:absolute;
+    display:none;
+    width:100%;
+    min-height:100px;
+    top:0px;
+    left:0px;
+    z-index:300;
+    display:none;
+}
 
 
 
