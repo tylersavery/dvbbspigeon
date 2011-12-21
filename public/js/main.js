@@ -155,13 +155,13 @@ $(document).ready(function () {
                 var img = new Image();
                 img.src = '/images/backgrounds/track'+ track_number +'/first_frame_' + IMAGE_SIZE + '.gif';
 
-                img.onload = function () {
+               // img.onload = function () {
 
                     $preview.attr("src", img.src);
                     $preview.stop().fadeTo(500, .2);
 
                     set_sizes_and_positions();
-                }
+              //  }
 
             });
 
@@ -174,9 +174,8 @@ $(document).ready(function () {
         $(".strikethrough").fadeOut(150);
         $(".menu_foot").fadeOut(150);
 
-          //if (!player_showing) {
-              $preview.stop().fadeOut(500, function(){ });
-          // }
+
+        $preview.stop().fadeOut(500, function(){ });
 
     });
 
@@ -771,7 +770,7 @@ function init_splash() {
     w[1] = 778;
 
     src[2] = '/images/splash/dvbbs3.gif';
-    h[2] = 166;
+    h[2] = 144;
     w[2] = 989;
 
     var rand = Math.round(Math.random() * 2);
@@ -986,10 +985,11 @@ function previous_track() {
 
 function preload() {
 
-    var src = '/images/backgrounds/track1/first_frame.gif';
-    var img = new Image();
-    img.src = src;
-
+     for(i=1; i<=6; i++){
+         var src = '/images/backgrounds/track'+ i +'/first_frame_'+ IMAGE_SIZE +'.gif';
+         var img = new Image();
+         img.src = src;
+     }
 }
 
 function updateOrientation() {
