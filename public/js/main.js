@@ -616,9 +616,9 @@ function init_audio() {
 
             var vol = $(".player_volume_handle").css('left');
             vol = vol.replace('%', '');
+            vol = vol.replace('px', '');
             vol = vol / 100;
-
-
+     
             audio.volume = vol;
         }
 
