@@ -19,6 +19,8 @@ var is_mobile;
 var sources = new Array();
 var titles = new Array();
 var current_track;
+var keep_vimeo_up = false;
+var vimeo_showing = false;
 
 /* constants */
 
@@ -38,6 +40,9 @@ var $containers;
 var $page;
 var $menu_items;
 var $preview;
+var vimeo_player;
+var froogaloop;
+
 
 $(document).ready(function () {
 
@@ -48,6 +53,7 @@ $(document).ready(function () {
     //updateOrientation();
     init_splash();
     preload();
+    init_vimeo();
 
     set_sizes_and_positions();
     set_can_play();
@@ -230,9 +236,13 @@ $(document).ready(function () {
 
 
 
-    $(".play_track").click(function () {
+    $(".play_track, .menu_head").click(function () {
 
         var rel = parseInt($(this).attr('rel'));
+
+          if(rel == 0){
+               return false;
+          }
 
         //audio.src = sources[rel];
         if (current_track != rel) {
@@ -262,7 +272,7 @@ $(document).ready(function () {
 
             audio.play();
             $(".player_play").addClass('pause');
-            $(this).text('Pause');
+            $("#play_track_" + rel).text('Pause');
             is_playing = true;
 
         } else {
@@ -270,7 +280,7 @@ $(document).ready(function () {
             audio.pause();
             $(".player_play").removeClass('pause');
             is_playing = false;
-            $(this).text('Play');
+            $("#play_track_" + rel).text('Play');
 
         }
 
@@ -379,6 +389,42 @@ $(document).ready(function () {
     });
 
 
+     $(".header .logo").mouseenter(function(){
+        
+        load_vimeo(); 
+          
+     });
+     
+     $(".header .logo").click(function(){
+        
+        if(keep_vimeo_up){
+          keep_vimeo_up = false;
+          $(this).removeClass("active");
+          mute_vimeo_audio();
+        } else {
+          keep_vimeo_up = true;
+          $(this).addClass("active");
+          use_vimeo_audio();
+        }
+        
+        
+        
+     });
+     
+     $(".header .logo").mouseout(function(){
+        
+        if(!keep_vimeo_up){
+          hide_vimeo();
+        }
+          
+     });
+     
+     $("#blog_link").click(function(){
+        
+        load_blog();
+          
+     });
+
 
 });
 
@@ -396,7 +442,7 @@ function get_objects() {
     $bg_img = $("#background img");
     $wrap = $(".wrap");
 
-    $containers = $("#background, #background img, .wrap, #preview");
+    $containers = $("#background, #background img, .wrap, #preview, #vimeo_player");
     $page = $(".page");
 
     $menu_items = $(".menu_item");
@@ -459,8 +505,6 @@ function init_bg() {
     screen_width = screen.width;
     screen_height = screen.height;
     
-    console.log(current_track);
-
     if (screen_width <= 1000) {
         //small
         IMG_WIDTH = 1200;
@@ -523,6 +567,9 @@ function set_sizes_and_positions() {
     window_aspect = window_width / window_height;
 
 
+     $("#vimeo_player_container").width(window_width + 'px').height(window_height + 'px').css('top', 0).css('left', 0);
+  
+
     /* set background w/h */
 
     if (window_aspect > IMG_ASPECT) {
@@ -540,8 +587,11 @@ function set_sizes_and_positions() {
         
         $preview.css('top', top + 'px');
         $preview.css('left', 0);
+        
+        
+        
+        
 
-        //$(".track_menu").css('left', '0');
     } else {
 
         live_img_height = window_height;
@@ -556,7 +606,35 @@ function set_sizes_and_positions() {
         $wrap.css('margin-left', left + 'px');
         $wrap.css('top', 0);
 
-        // $(".track_menu").css('left', 0 - left + 'px');
+      
+          
+    }
+    
+    
+    /*
+     
+     aspect = w / h;
+     w = aspect * h;
+     h = w / aspect;
+     
+    */
+    
+    var video_height = 349;
+    var video_width = 620;
+    var VIDEO_ASPECT = video_width / video_height;
+    
+    
+    if(window_aspect > VIDEO_ASPECT){
+     
+     $("#vimeo_player").css('width', window_width + 'px');
+     var h = Math.ceil(window_width / VIDEO_ASPECT);
+     $("#vimeo_player").css('height', h + 'px');
+    
+    } else {
+     
+     $("#vimeo_player").css('height', window_height + 'px');
+     var w = Math.ceil(VIDEO_ASPECT * window_height);
+     $("#vimeo_player").css('width', w + 'px');
     }
 
 
@@ -564,7 +642,7 @@ function set_sizes_and_positions() {
 
     //media player
     var padding_left = 304;
-    var padding_right = 250;
+    var padding_right = 290;
 
     if (is_mobile) {
         padding_right = 100;
@@ -976,6 +1054,119 @@ function previous_track() {
     init_bg();
     init_audio();
 
+}
+
+
+function init_vimeo() {
+     
+     vimeo_player = document.getElementById('vimeo_player');
+     $f(vimeo_player).addEvent('ready', vimeo_ready);
+     vimeo_showing = false;
+     
+}
+
+function vimeo_ready(){
+     
+     froogaloop = $f('vimeo_player');
+     froogaloop.api('play');     
+
+     froogaloop.api('api_setVolume', 0);
+     
+     var t = setTimeout('pause_vimeo()', 2000);
+     
+}
+
+function pause_vimeo(){
+     
+     froogaloop.api('pause');  
+}
+
+function load_vimeo(){
+     
+     vimeo_showing = true;
+     
+     froogaloop.api('play');
+     
+     $("#vimeo_player_container").stop().fadeIn(300, function(){
+
+     });
+    
+}
+
+function hide_vimeo(){
+     
+    vimeo_showing = false;
+    
+    $("#vimeo_player_container").stop().fadeOut(300, function(){
+          froogaloop.api('pause'); 
+    });
+    
+    
+    froogaloop.api('api_setVolume', 0);  
+}
+
+
+function use_vimeo_audio(){
+    
+    froogaloop.api('api_setVolume', 80);
+    audio.volume = 0;
+     
+}
+
+
+function mute_vimeo_audio(){
+     
+     froogaloop.api('api_setVolume', 0);
+     
+     var vol = $(".player_volume_handle").css('left');
+     vol = vol.replace('%', '');
+     vol = vol.replace('px', '');
+     vol = vol / 100;
+     
+     audio.volume = vol;
+     
+     
+     
+}
+
+function load_blog(){
+     
+     
+     var additional_height = 0;
+     
+     if(!player_showing){
+         additional_height = 65; 
+     }
+     
+     $(".player").css('background-color', 'rgba(0,0,0,1)');
+     $(".player").css('z-index', '1000');
+
+     
+     $(".player").animate({
+        
+          height: window_height + additional_height
+          
+          
+     }, 900, function(){
+          
+          var url = '/blog';
+          
+          if(is_playing){
+               
+               var track_number = current_track;
+               var track_time = audio.currentTime;
+               
+               url += "?track=" + track_number;
+               url += "&time=" + track_time;
+               
+          }
+          
+          window.location = url;
+          
+     });
+     
+
+     
 }
 
 

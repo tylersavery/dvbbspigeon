@@ -22,28 +22,66 @@
 </div>
 
 <div class="credits">
-    <h3>Music by DVBBS</h3>
-    <h4></h4>
+    <h3 class="credits_title">Music by DVBBS</h3>
+    <h4><a href="https://twitter.com/#!/dvbbsdvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbsdvbbs</a>
+    <br><a href="https://twitter.com/#!/alexdvbbs" target="_blank" class="twitter"><span class="up">@</span>alexdvbbs</a>
+    <br><a href="https://twitter.com/#!/chrisdvbbs" target="_blank" class="twitter"><span class="up">@</span>chrisdvbbs</a>
+    </h4>
     
-    <h3>Web Design and Development</h3>
+    <h3>Web Design / Development / Animation</h3>
     <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
     
     <h3>Photography</h3>
     <h4>Matthew Guido [Dance Bitch]<br>
-    William Nguyen</h4>
+    William Nguyen<br>
+    </h4>
     
+    <h3>Creative Direction</h3>
+    <h4>Nev Todorovic
+    </h4>
+    
+    <h3>Production</h3>
+    <h4>Greg Decaire<br>
+    Alex Andre<br>
+    Chris Andre<br>
+    </h4>
+    
+    <!--
     <h3>Animation and Production</h3>
     <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
+    -->
     
-    <img src="/images/ya.png" />
+    <div class="kanary">Kanary</div>
+    
+    <a href="http://www.theyoungastronauts.com" target="_blank">
+        <img src="/images/ya.png" />
+    </a>
+
+    
     
 </div>
 
 <div class="download_lightbox">
     <a href="#" class="mixtape_download">Free Digital Download</a>
-    <a href="#" class="mixtape_download">Free DJ Mix+Stems</a>
-    <a href="#" class="mixtape_download">iTunes TRX</a>
-    <a href="#" class="mixtape_download">Buy Physical Copy</a>
+    <a href="#" class="mixtape_download">Download Stems</a>
+    <a href="#" class="mixtape_download">Download DJ Mix</a>
+    <a href="http://www.itunes.com" target="_blank" class="mixtape_download">iTunes TRX</a>
+    <a href="http://www.universal.com" target="_blank" class="mixtape_download">Buy Mixtape</a>
+    <a href="#" class="mixtape_download share_title">Share Mixtape</a>
+    
+    <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_compact"></a>
+<!--
+<a class="addthis_counter addthis_bubble_style"></a>
+-->
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f01e5ab119c7dda"></script>
+<!-- AddThis Button END -->
+    
 </div>
 
 
@@ -55,7 +93,7 @@
 <div class="page">
     <div class="wrap">
         <div id="background"><img id="bg_image" src="/images/black.gif" /></div>
-    
+        
         <div class="track_menu">
             <div class="menu_item" rel="1">
                 <div class="strikethrough"></div>
@@ -103,17 +141,6 @@
             
             
             <div class="clear"></div>
-            <div class="menu_item" rel="5">
-                <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
-                <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="5">Download</div>
-                    <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
-                    <div class="menu_foot_item download_stem" rel="5">Stems</div>
-                </div><!-- /.menu_foot -->
-            </div><!-- /.menu_item -->
-          
-            <div class="clear"></div>
             <div class="menu_item" rel="6">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_6" rel="6">Here We Go</div>
@@ -124,6 +151,18 @@
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
+            <div class="clear"></div>
+            <div class="menu_item" rel="5">
+                <div class="strikethrough"></div>
+                <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
+                <div class="menu_foot">
+                    <div class="menu_foot_item download_track" rel="5">Download</div>
+                    <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
+                    <div class="menu_foot_item download_stem" rel="5">Stems</div>
+                </div><!-- /.menu_foot -->
+            </div><!-- /.menu_item -->
+          
+
             <div class="clear"></div>
             <div class="menu_item mixtape" rel="0">
                 <div class="strikethrough"></div>
@@ -159,7 +198,8 @@
             <div class="social_item"><a href="http://twitter.com/dvbbs" id="social_twitter" target="_blank">twitter</a></div>
             <div class="social_item"><a href="http://youtube.com/dvbbs" id="social_youtube" target="_blank">youtube</a></div>
             <div class="social_item"><a href="http://soundcloud.com/DVBBS" id="social_soundcloud" target="_blank">soundcloud</a></div>
-            <div class="social_item last"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
+             <div class="social_item"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
+            <div class="social_item last"><a href="#" id="social_itunes" target="_blank">itunes</a></div>
         </div>
         
     </div><!-- /.player -->
@@ -173,5 +213,8 @@
     <div class="header">
         <div class="logo">DVBBS</div>
     </div><!-- ./header -->
-    
+    <div id="vimeo_player_container">
+            <iframe id="vimeo_player" src="http://player.vimeo.com/video/28242065?api=1&amp;player_id=vimeo_player" width="100%" frameborder="0"></iframe>
+            
+        </div>
 </div><!-- /.page -->
