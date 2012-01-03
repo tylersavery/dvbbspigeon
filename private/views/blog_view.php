@@ -1,11 +1,11 @@
-<h1>Blog</h1>
+<?= $this->player;?>
+<div class="clear"></div>
 
-<div class="posts_alex">
+<div class="posts">
 <? foreach($this->posts_html as $post_template): ?>
 
-<?= $post_template; ?>
+<?//= $post_template; ?>
 
-<hr />
 <? endforeach; ?>
 
 </div>

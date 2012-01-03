@@ -10,6 +10,8 @@ class Blog_Controller extends Static_Main_Controller {
             $tumblr = new Read_Tumblr('tylerdevelopment');
         }
 		
+		$this->css[] = '/css/blog.css';
+		$this->js_head[] = '/js/blog.js';
         
         $tumblr->getPosts(0, 20, null, null);
         $post_data = $tumblr->dumpArray();

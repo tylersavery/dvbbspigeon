@@ -1,0 +1,31 @@
+
+
+
+.blog_header{
+    position:relative;
+    width:100%;
+    height: 86px;
+    background-color: #121212;
+    display:none;
+}
+
+.blog_header #logo{
+    position:relative;
+    width: 242px;
+    height: 81px;
+    background-image: url(/images/logo.png);
+    position: relative;
+    text-indent: -9999px;
+    z-index: 120;
+    margin:auto;
+    display:block;
+}
+
+.player{
+    display:block;
+    bottom:auto;
+    top: 0px;
+    position:relative;
+}
+
+
