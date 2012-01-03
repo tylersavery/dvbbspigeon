@@ -251,9 +251,16 @@ function init_audio() {
 }
 
 
+
+
+
+
+
+
+
 function set_audio_start(){
     
-    //audio.currentTime = 4;
+    audio.currentTime = 4;
     audio.play();
     
 }
