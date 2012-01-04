@@ -537,16 +537,27 @@ function init_bg() {
     $("#splash_img").fadeOut(400, function () {
 
         $("#background").fadeOut(500, function () {
-
-            var img = new Image();
-            img.src = BG_SRC;
-
-            img.onload = function () {
-
-                $bg_img.attr('src', BG_SRC);
-                $('#background').fadeIn(300);
+          
+          
+            var temp_image = new Image();
+            temp_image.src = '/images/backgrounds/track' + current_track + '/first_frame_medium.gif';
+            
+            temp_image.onload = function(){
+               
+               $bg_img.attr('src', temp_image.src);
+               $('#background').fadeIn(300);
+               
+               var img = new Image();
+               img.src = BG_SRC;
    
+               img.onload = function () {
+                   $bg_img.attr('src', BG_SRC);
+               }
+               
             }
+
+
+           
 
         });
 
