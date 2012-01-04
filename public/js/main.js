@@ -523,8 +523,8 @@ function init_bg() {
 
     } else if (screen_width >= 1600) {
         // large
-        IMG_WIDTH = 1920;
-        IMG_HEIGHT = 1280;
+        IMG_WIDTH = 1200;
+        IMG_HEIGHT = 800;
 
         BG_SRC = '/images/backgrounds/track' + current_track + '/large.gif';
         IMAGE_SIZE = 'large';

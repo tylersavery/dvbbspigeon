@@ -1,6 +1,12 @@
 
 
-
+.wrap{
+    width:960px;
+    position:relative;
+    margin:auto;
+        top:-420px;
+        overflow:visible;
+}
 .blog_header{
     position:relative;
     width:100%;
@@ -13,12 +19,19 @@
     position:relative;
     width: 242px;
     height: 81px;
-    background-image: url(/images/logo.png);
     position: relative;
-    text-indent: -9999px;
     z-index: 120;
     margin:auto;
     display:block;
+}
+
+.tumblr_buttons{
+    position:absolute;
+    top:2px;
+    right: 2px;
+    width:200px;
+    height:24px;
+    text-align:right;
 }
 
 .player{
@@ -28,4 +41,101 @@
     position:relative;
 }
 
+
+
+.posts {
+    position:relative;
+}
+
+.post{
+    position:relative;
+
+}
+
+.post_top{
+    position:relative;
+    height:140px;
+    background-color:#343434;
+    overflow:visible !important;
+
+}
+
+.post_middle{
+    position:relative;
+    height:140px;
+    background-color:#121212;
+
+}
+
+.post_bottom{
+    position:relative;
+    height:140px;
+    background-color: #343434;
+
+}
+
+
+.post_content{
+    position:relative;
+    width: 500px;
+    height: 364px;
+    top:14px;
+
+}
+
+.post_date{
+    position:absolute;
+    left:0px;
+    top:0px;
+    font-size:10px;
+    color: #fff;
+    font-family: sans-serif;
+    width:200px;
+    
+    
+}
+
+.post_caption{
+    position:absolute;
+    right:0px;
+    top:0px;
+    font-size:10px;
+    color: #fff;
+    font-family: sans-serif;
+    
+}
+
+.photo{
+    position:absolute;
+    top:12px;
+}
+
+
+.post_author{
+    position:absolute;
+    width:86px;
+    height:122px;
+    left:-90px;
+    top:148px;
+    z-index:100;
+}
+
+
+
+
+.post_title{
+    position:absolute;
+    color:#fff;
+    font-size:12px;
+    font-family:sans-serif;
+    height: 20px;
+    line-height:20px;
+    width:450px;
+    right:0px;
+    top:200px;
+    text-align:center;
+    font-weight:lighter;
+    text-transform:uppercase;
+    
+}
 

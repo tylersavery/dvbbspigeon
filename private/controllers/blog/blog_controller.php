@@ -12,6 +12,8 @@ class Blog_Controller extends Static_Main_Controller {
 		
 		$this->css[] = '/css/blog.css';
 		$this->js_head[] = '/js/blog.js';
+		
+		$this->title .= " | B L O G";
         
         $tumblr->getPosts(0, 20, null, null);
         $post_data = $tumblr->dumpArray();
