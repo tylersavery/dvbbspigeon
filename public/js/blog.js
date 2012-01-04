@@ -71,6 +71,48 @@ $(document).ready(function () {
     });
 });
 
+
+$(window).resize(function(){
+	
+	set_sizes_and_positions();
+	
+});
+
+
+$(window).scroll(function(){
+	
+	var scroll_y = $(window).scrollTop();
+	
+	console.log('scroll ' + scroll_y);
+	
+	var offset = $(".post.dvbbs .post_content").offset();
+	
+	var top_offset = offset.top;
+	
+	console.log('offset ' + top_offset);
+	
+	//var new_margin = top_offset - scroll_y;
+	
+	/*
+	 
+	 top_offset > scroll_y : negative margin (-100)
+	 top_offset = scroll_y : centered (0)
+	 top_offset < scroll_y : positive margin (+100)
+	 
+	*/
+	
+	var ratio =  scroll_y/ top_offset;
+	
+	var margin = Math.round(ratio * 100 - 100);
+	
+	console.log('ratio: ' + ratio);
+	console.log('margin: ' + margin);
+	
+	
+	$(".post.dvbbs .post_content").css("margin-top", margin);
+
+});
+
 function set_constants() {
     current_track = 1;
     sources[0] = null;
