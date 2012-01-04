@@ -69,6 +69,8 @@ $(document).ready(function () {
     $(".player_back").click(function () {
         previous_track();
     });
+	
+	parallax();
 });
 
 
@@ -78,40 +80,56 @@ $(window).resize(function(){
 	
 });
 
-
 $(window).scroll(function(){
 	
+	parallax();
+	
+});
+
+
+function parallax(){
+	
+	var max_margin = 500;
+	var min_margin = -500;
+	
+	var container_height = 420;
+	var centering_y = Math.round((window_height - container_height) / 2) - 80;
+
 	var scroll_y = $(window).scrollTop();
 	
-	console.log('scroll ' + scroll_y);
+	scroll_y = scroll_y + centering_y;
 	
-	var offset = $(".post.dvbbs .post_content").offset();
+	$posts = $(".post_content");
 	
-	var top_offset = offset.top;
+	$i=0;
 	
-	console.log('offset ' + top_offset);
+	$posts.each(function(){
+		$i++;
+		if($i>1){		
+		
+			
+			var offset = $(this).offset();
+			var offset_y = offset.top - $(this).css('margin-top').replace("px", "");
+			var ratio = ((scroll_y / offset_y) * 100) - 100;
+			
+			var margin = Math.round(ratio * 5);
+			
+			if(margin > max_margin){ margin = max_margin; }
+			if(margin < min_margin){ margin = min_margin; }
+			
+			$(this).css('margin-top', margin + 'px');
+			
+			/*
+			console.log("POST " + $(this).attr('rel') + ": scroll_y => " + scroll_y);
+			console.log("POST " + $(this).attr('rel') + ": offset_y => " + offset_y);
+			console.log("POST " + $(this).attr('rel') + ": ratio => " + ratio);
+			console.log("POST " + $(this).attr('rel') + ": margin => " + margin);
+			*/
+		}
+	});
 	
-	//var new_margin = top_offset - scroll_y;
 	
-	/*
-	 
-	 top_offset > scroll_y : negative margin (-100)
-	 top_offset = scroll_y : centered (0)
-	 top_offset < scroll_y : positive margin (+100)
-	 
-	*/
-	
-	var ratio =  scroll_y/ top_offset;
-	
-	var margin = Math.round(ratio * 100 - 100);
-	
-	console.log('ratio: ' + ratio);
-	console.log('margin: ' + margin);
-	
-	
-	$(".post.dvbbs .post_content").css("margin-top", margin);
-
-});
+}
 
 function set_constants() {
     current_track = 1;
@@ -237,7 +255,15 @@ function previous_track() {
 }
 
 function show_header() {
-    $(".blog_header").slideDown(800);
+    $(".blog_header").slideDown(800, function(){
+		$(".posts").fadeIn(800, function(){
+			
+			parallax();
+			
+		});
+		
+		
+	});
 }
 
 function set_sizes_and_positions() {
@@ -245,7 +271,7 @@ function set_sizes_and_positions() {
     window_height = $(window).height();
     //media player
     var padding_left = 304;
-    var padding_right = 290;
+    var padding_right = 300;
     var gutter_border = 10;
     var gutter_width = window_width - padding_left - padding_right - gutter_border;
     $(".player_gutter").width(gutter_width + 'px');

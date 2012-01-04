@@ -47,11 +47,13 @@ body{
 
 .posts {
     position:relative;
+    display:none;
 }
 
 .post{
     position:relative;
     height:420px;
+    overflow:hidden;
 
 }
 
@@ -90,11 +92,9 @@ body{
 
 }
 
+
 .post_content{
-    margin-top:-300px;
-}
-.post:first-child .post_content{
-    margin-top:0;
+
 }
 
 .post.dvbbs .post_content{

@@ -36,13 +36,17 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     right: 5px;
     width:15px;
     height:14px;
-    font-size:16px;
+    font-size:10px;
+    font-weight:bold;
+    font-family:arial;
     color:rgba(236, 233, 78, .9);
     cursor:pointer;
     text-transform:uppercase;
+    z-index:10000;
 }
 
 .close:hover{
+
    color:rgba(255,255,255,1); 
 }
 
@@ -286,9 +290,10 @@ span.up{
     margin-left:-200px;
     color: #fff;
     text-align:center;
-    line-height: 24px;
+    line-height: 22px;
     z-index: 95;
     text-transform:uppercase;
+    padding-top:30px;
 }
 
 .credits h3{
@@ -297,12 +302,12 @@ span.up{
 }
 
 .credits h3.credits_title{
-    font-size:20px;
+    font-size:15px;
 }
 
 .credits h4{
-    margin-bottom:16px;
-    font-size:16px;
+    margin-bottom:10px;
+    font-size:15px;
 }
 
 .credits a{
@@ -312,10 +317,10 @@ span.up{
     color:#fff;
     opacity: .8;
     -webkit-transition-duration:.5sec;
-    margin-bottom:10px;
+
     position:relative;
     text-decoration:none;
-    font-size:16px; 
+    font-size:15px; 
 }
 
 .credits a.twitter{
@@ -332,10 +337,17 @@ span.up{
 .kanary{
     font-size:28px;
     color: #ECE94E;
-    margin-bottom:25px;
-    margin-top:30px;
+    margin-bottom:10px;
+    margin-top:20px;
+    text-indent:-9999px;
+    width: 120px;
+    height: 52px;
+    background-image:url(/images/kanarylogo.png);
+    margin-left:144px;
     
 }
+
+
 
 
 .addthis_toolbox{
@@ -450,7 +462,24 @@ ul.top_menu li:hover{
 
 
 
+.hayley{
+    position:absolute;
+    left:-105px;
+    top:24px;
+    color:#fff;
+    font-size:13px;
+    text-transform:uppercase;
+    background-color: rgba(17,17,17, .5);
+    width:105px;
+    height:15px;
+    line-height:15px;
+    text-align:center;
+    display:none;
+}
 
+.featuring {
+    font-size:10px;
+}
 
 
 

@@ -4,17 +4,20 @@ class Blog_Controller extends Static_Main_Controller {
     function __construct($uri, $data) {
         parent::__construct($uri, $data);
         
+		/*
         if(PLEASE_CACHE){
             $tumblr = new Read_Tumblr_Cache('tylerdevelopment','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
         } else {
             $tumblr = new Read_Tumblr('tylerdevelopment');
         }
+		*/
 		
 		$this->css[] = '/css/blog.css';
 		$this->js_head[] = '/js/blog.js';
 		
 		$this->title .= " | B L O G";
         
+		/*
         $tumblr->getPosts(0, 20, null, null);
         $post_data = $tumblr->dumpArray();
         $posts = $post_data['posts'];
@@ -52,7 +55,7 @@ class Blog_Controller extends Static_Main_Controller {
 				
         
         $this->content_view->posts_html = $posts_html;
-        
+		*/
         
     }
     

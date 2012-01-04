@@ -66,6 +66,8 @@ $(document).ready(function () {
     /* events */
 
     $(".menu_item .menu_head").mouseenter(function () {
+     
+        $(".hayley").hide();
 
         var $foot = $(this).next('.menu_foot');
         var foot_width = $foot.width();
@@ -100,6 +102,8 @@ $(document).ready(function () {
 
                     $items.css('width', 0);
                     $($items[0]).show();
+                    
+                    $(".hayley").slideDown(250);
 
                     $($items[0]).animate({
 
@@ -122,7 +126,9 @@ $(document).ready(function () {
                                 width: '68px'
 
                             }, 120, 'easeInOutCirc', function () {
-
+                              
+                           
+                              
                             });
 
                         });
@@ -465,7 +471,7 @@ function set_constants() {
 
     titles[0] = null;
     titles[1] = 'Dance Bitch';
-    titles[2] = 'Drvgs';
+    titles[2] = 'Drvgs <span class="featuring">Ft. Hayley Gene</span>';
     titles[3] = 'Come Alive';
     titles[4] = 'Sugar Coated';
     titles[5] = 'Till I Die';
@@ -761,7 +767,7 @@ function init_audio() {
 
 
         audio.play();
-        $(".player_title").text(titles[current_track]);
+        $(".player_title").html(titles[current_track]);
 
     }
 }
@@ -857,8 +863,8 @@ function init_splash() {
     w[0] = 500;
 
     src[1] = '/images/splash/dvbbs2.gif';
-    h[1] = 778;
-    w[1] = 778;
+    h[1] = 1280;
+    w[1] = 1280;
 
     src[2] = '/images/splash/dvbbs3.gif';
     h[2] = 144;
@@ -970,8 +976,8 @@ function load_contact() {
         $(".contact").fadeIn(300, function () {
 
             var offset = $(".contact").offset();
-            var x = offset.left + $(".contact").width();
-            var y = offset.top - 10;
+            var x = offset.left + $(".contact").width() - 40;
+            var y = offset.top - 30;
 
             $(".blind .close").css("left", x + "px").css("top", y + "px");
 
@@ -1000,8 +1006,6 @@ function load_credits() {
 
         $(".blind .close").css("left", x + "px").css("top", y + "px");
 
-
-
         $(".credits").animate({
 
             top: '0px'
@@ -1027,7 +1031,7 @@ function load_downloads() {
         $(".download_lightbox").fadeIn(300, function () {
 
             var offset = $(".download_lightbox").offset();
-            var x = offset.left + $(".download_lightbox").width();
+            var x = offset.left + $(".download_lightbox").width() - 50;
             var y = offset.top - 10;
 
             $(".blind .close").css("left", x + "px").css("top", y + "px");

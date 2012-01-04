@@ -3,7 +3,9 @@
 
     <div class="posts">
         
-        <div class="post alex" style="z-index:10;">
+        <? for($i=1;$i<=5;$i++): ?>
+        
+        <div class="post alex">
             <div class="post_top"></div>
             <div class="post_middle"></div>
             <div class="post_bottom"></div>
@@ -17,7 +19,7 @@
                     </div>  
                 </div>
             
-                <div class="post_content">
+                <div class="post_content" rel="a<?= $i;?>">
                     <div class="post_date">5th January 2012</div>
                     <div class="post_caption">Photo with 543 Notes</div>
                     <div class="photo">
@@ -34,7 +36,7 @@
         <div class="clear"></div>
         
         
-        <div class="post dvbbs" style="z-index:9;">
+        <div class="post dvbbs">
             <div class="post_top"></div>
             <div class="post_middle"></div>
             <div class="post_bottom"></div>
@@ -48,7 +50,7 @@
                     </div>  
                 </div>
             
-                <div class="post_content">
+                <div class="post_content" id="post_content<?= $i;?>" rel="b<?= $i;?>">
                     <div class="post_date">5th January 2012</div>
                     <div class="post_caption">Photo with 543 Notes</div>
                     <div class="photo">
@@ -64,7 +66,7 @@
         <div class="clear"></div>
         
         
-        <div class="post chris" style="z-index:8;">
+        <div class="post chris">
             <div class="post_top"></div>
             <div class="post_middle"></div>
             <div class="post_bottom"></div>
@@ -78,7 +80,7 @@
                     </div>  
                 </div>
             
-                <div class="post_content">
+                <div class="post_content" rel="c<?= $i;?>">
                     <div class="post_date">5th January 2012</div>
                     <div class="post_caption">Photo with 543 Notes</div>
                     <div class="photo">
@@ -92,12 +94,22 @@
             
         </div>
         
-    </div>    
+        <div class="clear"></div>
+        
+        <? endfor; ?>
+        
+        
+        
+    </div>
     
-<? foreach($this->posts_html as $post_template): ?>
+
+    
+<? //foreach($this->posts_html as $post_template): ?>
 
 <?//= $post_template; ?>
 
-<? endforeach; ?>
+<? //endforeach; ?>
 
 </div>
+
+    <div style="height:200px; position:relative;"></div>

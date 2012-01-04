@@ -16,7 +16,7 @@
     
     <div class="legals">
         <h6>Legals</h6>
-        <a href="#" target="_blank" class="small">EB Reinbergs</a>
+        <a href="http://www.three60legal.com" target="_blank" class="small">EB Reinbergs</a>
     </div>
 
 </div>
@@ -24,16 +24,17 @@
 <div class="credits">
     <h3 class="credits_title">Music by DVBBS</h3>
     <h4><a href="https://twitter.com/#!/dvbbsdvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbsdvbbs</a>
-    <br><a href="https://twitter.com/#!/alexdvbbs" target="_blank" class="twitter"><span class="up">@</span>alexdvbbs</a>
-    <br><a href="https://twitter.com/#!/chrisdvbbs" target="_blank" class="twitter"><span class="up">@</span>chrisdvbbs</a>
+    | <a href="https://twitter.com/#!/alexdvbbs" target="_blank" class="twitter"><span class="up">@</span>alexdvbbs</a>
+    | <a href="https://twitter.com/#!/chrisdvbbs" target="_blank" class="twitter"><span class="up">@</span>chrisdvbbs</a>
+    <br> <a href="#" onclick="return false;"><span style="opacity: .5">DRVGS</span> Ft. Hayley Gene</a>
     </h4>
     
     <h3>Web Design / Development / Animation</h3>
     <h4><a href="http://www.theyoungastronauts.com" target="_blank">The Young Astronauts</a></h4>
     
     <h3>Photography</h3>
-    <h4>Matthew Guido [Dance Bitch]<br>
-    William Nguyen<br>
+    <h4><a href="http://mathewguido.com" target="_blank">Mathew Guido [Dance Bitch]<br>
+    <a href="http://lostinthewillderness.com/" target="_blank">William Nguyen</a>
     </h4>
     
     <h3>Creative Direction</h3>
@@ -44,6 +45,7 @@
     <h4>Greg Decaire<br>
     Alex Andre<br>
     Chris Andre<br>
+    Sidney Leeder
     </h4>
     
     <!--
@@ -113,6 +115,7 @@
                     <div class="menu_foot_item download_track" rel="2">Download</div>
                     <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
                     <div class="menu_foot_item download_stem" rel="2">Stems</div>
+                    <div class="hayley">Ft. Hayley Gene</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
