@@ -5,7 +5,7 @@ class Stream_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         $this->js_head[] = JS_ROOT . 'main.js';
-        $this->css[] = '/css/mobile.css';
+        //$this->css[] = '/css/mobile.css';
         
         if(strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone')){
 
