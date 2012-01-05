@@ -46,6 +46,7 @@ var froogaloop;
 
 $(document).ready(function () {
 
+    
     get_objects();
     check_if_mobile();
     set_constants();
@@ -57,6 +58,8 @@ $(document).ready(function () {
 
     set_sizes_and_positions();
     set_can_play();
+    
+    check_browser(); 
 
     // init_audio();
     hide_menu_bar();
@@ -65,7 +68,7 @@ $(document).ready(function () {
 
     /* events */
 
-    $(".menu_item .menu_head").mouseenter(function () {
+    $(".menu_item .menu_head").mouseenter(function() {
      
         $(".hayley").hide();
 
@@ -711,7 +714,7 @@ function set_sizes_and_positions() {
 
     //media player
     var padding_left = 304;
-    var padding_right = 290;
+    var padding_right = 295;
 
     if (is_mobile) {
         padding_right = 100;
@@ -1331,4 +1334,14 @@ function secondsToTime(secs) {
         "s": seconds
     };
     return obj;
+}
+
+
+function check_browser(){
+     
+     if(!can_play){
+          window.location = '/lite';
+     }
+     
+     
 }
