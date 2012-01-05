@@ -1,5 +1,8 @@
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="http://stratus.heroku.com/js/soundcloud.player.api.js"></script>
+<script type="text/javascript" src="http://stratus.heroku.com/js/stratus.js"></script>
+<link type="text/css" rel="stylesheet" href="http://stratus.heroku.com/css/stratus.css"/>
 <link rel="stylesheet" type="text/css" href="/css/ie.css" />
 <![endif]-->
 
@@ -31,7 +34,6 @@
     <h4><a href="https://twitter.com/#!/dvbbsdvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbsdvbbs</a>
     | <a href="https://twitter.com/#!/alexdvbbs" target="_blank" class="twitter"><span class="up">@</span>alexdvbbs</a>
     | <a href="https://twitter.com/#!/chrisdvbbs" target="_blank" class="twitter"><span class="up">@</span>chrisdvbbs</a>
-    <br> <a href="#" onclick="return false;"><span style="opacity: .5">DRVGS</span> Ft. Hayley Gene</a>
     </h4>
     
     <h3>Web Design / Development / Animation</h3>

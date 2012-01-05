@@ -320,7 +320,7 @@ $(document).ready(function () {
 
       
 
-     } 
+     }
      
         show_player_and_header();
      
@@ -339,14 +339,14 @@ $(document).ready(function () {
             init_audio();
         }
 
-
+/*
         if (!can_play) {
 
             alert('Your browser does not support audio. Please download the track instead.');
 
             return false;
         }
-
+*/
 
         if (!is_playing) {
             audio.play();
@@ -820,6 +820,17 @@ function init_audio() {
         
         push_analytic('play', current_track);
 
+    } else {
+     
+     console.log("STRATUS");
+     
+     $.stratus({
+      color: '000000',
+      links: [ { url: 'http://soundcloud.com/foofighters' } ]
+     });
+     
+     
+     
     }
 }
 
