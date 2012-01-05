@@ -10,6 +10,7 @@ var window_width;
 var can_play = true;
 var is_playing = false;
 var play_from = false;
+var audio_initialized = false;
 
 
 $(document).ready(function () {
@@ -17,6 +18,8 @@ $(document).ready(function () {
     show_header();
     set_sizes_and_positions();
     check_audio_from_session();
+	
+	
     $(".player_play").click(function () {
         if (current_track == 0) {
             current_track = 1;
@@ -25,9 +28,14 @@ $(document).ready(function () {
             alert('Your browser does not support audio. Please download the track instead.');
             return false;
         }
-        if (!is_playing) {
-            init_audio();
-            audio.play();
+        if (!$(this).hasClass('pause')) {
+
+			if(audio_initialized){
+				audio.play();	
+			} else {
+				init_audio();
+			}
+			           
             $(".player_play").addClass('pause');
             //$("#play_track").text('Pause');
             is_playing = true;
@@ -38,6 +46,8 @@ $(document).ready(function () {
             //$("#play_track").text('Play');
         }
     });
+	
+	
     $(".player_volume_icon").click(function () {
         if ($(this).hasClass('mute')) {
             audio.volume = .8;
@@ -150,6 +160,10 @@ function set_constants() {
 }
 
 function init_audio() {
+	
+	
+	audio_initialized = true;
+	
     if ( !! document.createElement('audio').canPlayType) {
         if ($("#audio_player").length > 0) {
             audio.pause();
@@ -214,9 +228,14 @@ function init_audio() {
         
         $(audio).bind('play', function(){
           
+		  
             if (play_from) {
                 
                 var t = setTimeout('set_audio_start()', 1000);
+				$(".player_play").addClass('pause');
+				play_from = false;
+				is_playing = true;	
+				
                 
             }
             
@@ -231,8 +250,10 @@ function init_audio() {
 
 
 function set_audio_start() {
-    audio.currentTime = Math.ceil(play_from);
-    play_from = false;
+	if(play_from){
+		audio.currentTime = Math.ceil(play_from);
+		play_from = false;
+	}
 }
 
 
