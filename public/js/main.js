@@ -827,6 +827,9 @@ function init_audio() {
         audio.play();
         $(".player_title").html(titles[current_track]);
         
+        $(".menu_head").removeClass('playing'); 
+        $("#menu_head_" + current_track).addClass('playing');
+        
         push_analytic('play', current_track);
 
     } else {
@@ -1118,10 +1121,14 @@ function load_downloads() {
 
 function next_track() {
 
-    if (current_track < (sources.length - 1)) {
-        current_track++;
+    if (current_track == 4){
+     current_track = 6
+    } else if(current_track == 6){
+     current_track = 5;
+    } else if(current_track == 5){
+     current_track = 1
     } else {
-        current_track = 1;
+        current_track++;
     }
 
     init_bg();
@@ -1131,11 +1138,17 @@ function next_track() {
 
 function previous_track() {
 
-    if (current_track > 1) {
-        current_track--;
-    } else {
-        current_track = sources.length - 1;
-    }
+     if(current_track == 1){
+          current_track = 5;
+     } else if(current_track == 5){
+          current_track = 6;
+     } else if(current_track == 6){
+          current_track = 4;
+     } else {
+          current_track--;
+     }
+
+
 
     init_bg();
     init_audio();
