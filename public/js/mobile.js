@@ -283,7 +283,7 @@ function previous_track() {
 
 function init_bg(){
     
-    BG_SRC = '/images/backgrounds/track' + current_track + '/small.gif?time=' + TIME_NOW;
+    BG_SRC = '/images/backgrounds/track' + current_track + '/mobile.gif?time=' + TIME_NOW;
 
     $("#splash").fadeOut(400, function () {
        
