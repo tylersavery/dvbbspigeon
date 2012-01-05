@@ -593,6 +593,7 @@ function init_bg() {
 
         $("#background").fadeOut(500, function () {
           
+          $("#vimeo_player_container").hide();
           
             var temp_image = new Image();
             temp_image.src = '/images/backgrounds/track' + current_track + '/first_frame_medium.gif?time=' + TIME_NOW;
@@ -600,7 +601,11 @@ function init_bg() {
             temp_image.onload = function(){
                
                $bg_img.attr('src', temp_image.src);
-               $('#background').fadeIn(300);
+               $('#background').fadeIn(300, function(){
+                    
+                    $("#vimeo_player_container").show();
+                    
+               });
                
                var img = new Image();
                img.src = BG_SRC + '?time='+TIME_NOW;
@@ -822,7 +827,6 @@ function init_audio() {
 
     } else {
      
-     console.log("STRATUS");
      
      $.stratus({
       color: '000000',
@@ -1137,14 +1141,9 @@ function previous_track() {
 
 function init_vimeo() {
      
-     
      vimeo_player = document.getElementById('vimeo_player');
      $f(vimeo_player).addEvent('ready', vimeo_ready);
      vimeo_showing = false;
-     
-     
-     
-     
      
 }
 
@@ -1173,6 +1172,7 @@ function load_vimeo(){
      if(can_play){
           froogaloop.api('play');
      }
+     
      $("#vimeo_player_container").css('z-index', 1);
      
      /*
