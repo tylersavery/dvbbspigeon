@@ -295,19 +295,12 @@ $(document).ready(function () {
                 audio.pause();
                 is_playing = false;
             }
-
+     
             init_bg();
             init_audio();
         }
 
-        if (!can_play) {
-
-            alert('Your browser does not support audio. Please download the track instead.');
-
-            return false;
-        }
-
-
+     if (can_play) {
 
         if (!is_playing) {
 
@@ -325,11 +318,12 @@ $(document).ready(function () {
 
         }
 
+      
 
-
+     } 
+     
         show_player_and_header();
-
-
+     
     });
 
 
@@ -601,7 +595,7 @@ function init_bg() {
           
           
             var temp_image = new Image();
-            temp_image.src = '/images/backgrounds/track' + current_track + '/first_frame_medium.gif';
+            temp_image.src = '/images/backgrounds/track' + current_track + '/first_frame_medium.gif?time=' + TIME_NOW;
             
             temp_image.onload = function(){
                
@@ -609,7 +603,7 @@ function init_bg() {
                $('#background').fadeIn(300);
                
                var img = new Image();
-               img.src = BG_SRC;
+               img.src = BG_SRC + '?time='+TIME_NOW;
    
                img.onload = function () {
                    $bg_img.attr('src', BG_SRC);
@@ -881,6 +875,7 @@ function show_player_and_header() {
 
 
     }
+    
 
 
 }
@@ -1164,8 +1159,9 @@ function load_vimeo(){
      
      vimeo_showing = true;
      
-     froogaloop.api('play');
-     
+     if(can_play){
+          froogaloop.api('play');
+     }
      $("#vimeo_player_container").css('z-index', 1);
      
      /*
@@ -1196,8 +1192,9 @@ function hide_vimeo(){
     */
     
     
-    
+   if(can_play){ 
     froogaloop.api('api_setVolume', 0);  
+   }
 }
 
 
@@ -1340,7 +1337,7 @@ function secondsToTime(secs) {
 function check_browser(){
      
      if(!can_play){
-          window.location = '/lite';
+         // window.location = '/lite';
      }
      
      

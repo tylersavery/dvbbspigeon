@@ -1,3 +1,7 @@
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" />
+<![endif]-->
 
 <div id="loader"><img src="/images/loader.gif" width="16" height="16" /></div>
 <div class="blind"><div class="close">x</div></div>
@@ -7,6 +11,7 @@
     <h3>D V B B S</h3>
     <h4>Alex Andre [ <a href="http://twitter.com/alexdvbbs" target="_blank"><span class="up">@</span>alexdvbbs</a> ]<br>
     Chris Andre [ <a href="http://twitter.com/chrisdvbbs" target="_blank"><span class="up">@</span>chrisdvbbs</a> ]
+    </h4>
     <p>&nbsp;</p>
     <h3>For all media inquiries/press/interviews/support please email</h3>
     <h4><a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a></h4>

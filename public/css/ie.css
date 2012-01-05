@@ -1,0 +1,30 @@
+body{
+    background-color:#000000;
+}
+.player{
+    display:none;
+}
+
+.top_menu li{
+    font-size:10px;
+}
+
+.track_menu .menu_head{
+    font-size:12px;
+    height:32px;
+    color: #ccc;
+}
+
+.track_menu .menu_foot .menu_foot_item{
+    color:#ccc;
+    font-size:10px;
+}
+.hayley{
+    color:#ccc;
+    font-size:10px;
+}
+
+
+.vimeo_player_container{
+    display:none;
+}
