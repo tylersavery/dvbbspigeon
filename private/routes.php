@@ -41,6 +41,10 @@ class Pigeon {
               array('lite')
             ),
 			
+			'Mobile_Controller' => array(
+              array('m')
+            ),
+			
             // *** ADMIN ***
             
             'Admin_Controller' => array(

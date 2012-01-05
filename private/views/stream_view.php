@@ -104,7 +104,7 @@
         <div id="background"><img id="bg_image" src="/images/black.gif" /></div>
         
         <div class="track_menu">
-            <div class="menu_item" rel="1">
+            <div class="menu_item" id="menu_item_1" rel="1">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_1" rel="1">Dance Bitch</div>
                 <div class="menu_foot">
@@ -115,7 +115,7 @@
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
-            <div class="menu_item" rel="2">
+            <div class="menu_item" id="menu_item_2" rel="2">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_2" rel="2">DRVGS</div>
                 <div class="menu_foot">
@@ -127,7 +127,7 @@
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
-            <div class="menu_item"  rel="3">
+            <div class="menu_item"  id="menu_item_3" rel="3">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_3" rel="3">Come Alive</div>
                <div class="menu_foot">
@@ -139,7 +139,7 @@
             
               
             <div class="clear"></div>
-            <div class="menu_item" rel="4">
+            <div class="menu_item" id="menu_item_4" rel="4">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_4" rel="4">Sugar Coated</div>
                <div class="menu_foot">
@@ -151,7 +151,7 @@
             
             
             <div class="clear"></div>
-            <div class="menu_item" rel="6">
+            <div class="menu_item"  id="menu_item_6" rel="6">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_6" rel="6">Here We Go</div>
                <div class="menu_foot">
@@ -162,7 +162,7 @@
             </div><!-- /.menu_item -->
             
             <div class="clear"></div>
-            <div class="menu_item" rel="5">
+            <div class="menu_item"  id="menu_item_5" rel="5">
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
                 <div class="menu_foot">

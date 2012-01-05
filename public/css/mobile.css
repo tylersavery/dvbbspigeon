@@ -1,0 +1,487 @@
+/* Global */
+
+
+body{
+    background-color:#000;
+    color:#fff;
+    font-family: Geo, sans-serif !important;
+    font-size:14px;
+}
+
+
+
+
+/* Styles */
+
+#background{
+    position:absolute;
+    width:320px;
+    height:213px;
+    background-color:black;
+
+}
+
+
+#bg_image{
+    position:absolute;
+    width:320px;
+    height:213px;
+}
+
+#player{
+    position:absolute;
+    width:320px;
+    height:49px;
+    background-color:#282829;
+    top:213px;
+    border-bottom:1px solid #ece94e;
+    
+}
+
+#splash{
+    position:absolute;
+    width:250px;
+    height:96px;
+    top:60px;
+    left:34px;
+}
+
+#splash #splash_image{
+    width:250px;
+    height:96px;
+}
+
+
+#blind{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:320px;
+    height:415px;
+    background-color:#000;
+    display:none;
+}
+
+.close{
+    position:absolute;
+    top:8px;
+    right:8px;
+    width:20px;
+    height:20px;
+    color:#ece94e;
+    font-size:12px;
+    font-weight:bold;
+    font-family:arial, sans-serif;
+    z-index:10;
+    text-align:center;
+    line-height:20px;
+}
+
+#contact_content{
+    position:absolute;
+    width:320px;
+    height:315px;
+    top:0;
+    left:0;
+    text-transform:uppercase;
+    text-align:center;
+    padding-top:100px;
+    display:none;
+    z-index:5;
+    line-height:16px;
+    
+}
+#contact_content a{
+    color:#ece94e;
+    text-decoration:none;
+}
+
+
+#download_content{
+    position:absolute;
+    width:320px;
+    top:0;
+    left:0;
+    text-transform:uppercase;
+    text-align:center;
+    padding-top:180px;
+    display:none;
+    z-index:5;
+    line-height:16px;
+}
+
+
+
+#credits_content{
+    position:absolute;
+    width:320px;
+    height:415px;
+    overflow:hidden;
+    top:0;
+    left:0;
+    text-transform:uppercase;
+    text-align:center;
+    display:none;
+    z-index:5;
+    line-height:16px;
+
+}
+
+
+.credits_content_scroller{
+    position:relative;
+    width:320px;
+    height:600px;
+}
+
+#credits_content a{
+    color:#ece94e;
+    text-decoration:none;    
+}
+
+#credits_content h3{
+    margin-top:12px;
+}
+
+#credits_content h4{
+    color:#ece94e;
+}
+
+.kanary{
+    font-size:28px;
+    color: #ECE94E;
+    margin:20px auto 10px auto;
+    text-indent:-9999px;
+    width: 120px;
+    height: 52px;
+    background-image:url(/images/kanarylogo.png);
+    
+}
+
+
+
+.player_back{
+    position:absolute;
+    width:32px;
+    height:30px;
+    background-image:url(/images/player_controls_m.png);
+    top:9px;
+    left:10px;
+    
+    background-position:1px -2px;
+    
+}
+
+.player_play{
+    position:absolute;
+    width:35px;
+    height:30px;
+    background-image:url(/images/player_controls_m.png);
+    top:9px;
+    left:46px;
+    background-position:-33px -2px;
+    
+}
+
+.player_play.pause{
+    background-position:-160px 0px;
+}
+
+.player_next{
+    position:absolute;
+    width:32px;
+    height:30px;
+    background-image:url(/images/player_controls_m.png);
+    top:9px;
+    left:85px;
+    background-position:-76px -2px;
+    
+}
+
+
+.player_time{
+    position:absolute;
+    font-size:10px;
+    top: 36px;
+    left:190px;
+}
+
+
+
+
+.player_gutter{
+    position:absolute;
+    float:left;
+    width:170px;
+    height: 14px;
+    border:3px solid #000;
+    top:15px;
+    left:130px;
+    background-color:#fff;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.player_handle{
+    position:relative;
+    width:6px;
+    height:14px;
+    background-image:url(/images/player/handle.gif);
+    cursor:pointer;
+    left:-10px;
+}
+
+.player_handle:before{
+    content:"";
+    width:3000px;
+    height:14px;
+    background-color: #ece94e;
+    position:absolute;
+    right:6px;
+    
+}
+
+
+
+#menu_container{
+    position:absolute;
+    top: 263px;
+    width:320px;
+    height:110px;
+    background-color:black;
+}
+
+
+.menu_item{
+    position:relative;
+    width:105px;
+    height:36px;
+    border-right:1px solid #000;
+
+    float:left;
+    line-height:36px;
+    text-align:center;
+    font-family:Geo, sans-serif !important;
+    text-transform:uppercase;
+    font-size:12px;
+    
+    background: rgb(43,46,49); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(43,46,49,1) 0%, rgba(50,54,57,1) 76%, rgba(66,70,75,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,46,49,1)), color-stop(76%,rgba(50,54,57,1)), color-stop(100%,rgba(66,70,75,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2e31', endColorstr='#42464b',GradientType=0 ); /* IE6-9 */
+        
+}
+
+
+.menu_item.playing{
+    color:#ece94e;
+}
+
+
+#menu_item_3, #menu_item_5{
+    width:108px;
+    border-right:none;
+}
+
+#social{
+    position:absolute;
+    height:30px;
+    width:310px;
+    background-color:black;
+    top:330px;
+    overflow:hidden;
+    
+    padding-top:10px;
+    padding-left:10px;
+    
+}
+
+
+
+
+#social .social_item{
+    position:relative;
+    width:34px;
+    height:17px;
+    float:left;
+    margin-right: 8px;
+    margin-left:8px;
+    text-align:center;
+}
+
+#social .social_item a{
+    background-image:url(/images/social.png);
+    text-indent:-9999px;
+    display:block;
+    width:34px;
+    height:17px;
+    background-repeat:no-repeat;
+}
+
+#social_facebook{
+    background-position: -9px -2px;
+    width:33px;
+}
+
+#social_facebook:hover{
+    background-position: -9px -2px;
+}
+
+#social_twitter{
+    background-position: -49px -2px;
+}
+
+#social_twitter:hover{
+    background-position: -49px -2px;
+}
+
+#social_youtube{
+    background-position: -89px -2px;
+}
+
+#social_youtube:hover{
+    background-position: -89px -2px;
+}
+
+#social_soundcloud{
+    background-position: -130px -2px;
+    width: 33px;
+    
+}
+
+#social_soundcloud:hover{
+    background-position: -130px -2px;
+}
+
+#social_tumblr{
+    background-position: -169px -2px;
+}
+
+#social_tumblr:hover{
+    background-position: -169px -2px;
+}
+
+#social_itunes{
+    background-position: -209px -2px;
+}
+
+#social_itunes:hover{
+    background-position: -209px -2px;
+}
+
+
+#footer{
+    position:absolute;
+    height:50px;
+
+    width:320px;
+    top:365px;
+}
+
+
+.footer_link {
+    position:relative;
+    float:left;
+    width:105px;
+    height:50px;
+    text-align:center;
+    
+    
+    line-height:50px;
+    text-align:center;
+    font-family:Geo, sans-serif !important;
+    text-transform:uppercase;
+    font-size:14px;
+    
+    background: rgb(43,46,49); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(43,46,49,1) 0%, rgba(50,54,57,1) 76%, rgba(66,70,75,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,46,49,1)), color-stop(76%,rgba(50,54,57,1)), color-stop(100%,rgba(66,70,75,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2e31', endColorstr='#42464b',GradientType=0 ); /* IE6-9 */
+     
+    
+}
+
+
+
+
+#footer_link_contact{
+    border-right: 1px solid #000; 
+}
+
+#footer_link_download{
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    width:106px;
+}
+#footer_link_credits{
+    border-left: 1px solid #000; 
+}
+
+
+
+
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+
+
+
+#background{
+    left: 160px;
+    top:0px;
+}
+
+#player{
+    left: 160px;
+    top:216px;
+    height:47px;
+    margin-top:3px;
+    border-bottom:none;
+}
+
+#splash{
+    left:194px;
+}
+
+#menu_container{
+    top:0;
+    left:0;
+    width:160px;
+    height:266px;
+    
+}
+.menu_item{
+    clear:both;
+    height:44px;
+    line-height:44px;
+    width: 160px;
+    border-right:none;
+}
+
+#menu_item_5{
+    height:46px;
+}
+
+#social{
+    display:none;
+}
+
+#menu_item_3, #menu_item_5{
+    width:160px;
+    border-right:none;
+}
+
+
+
+}

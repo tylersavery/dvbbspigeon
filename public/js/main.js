@@ -638,6 +638,20 @@ function set_sizes_and_positions() {
 
 
     hide_menu_bar();
+    
+    
+    if(is_mobile){
+     
+          var track_menu_top = window_height - $(".track_menu").css('height').replace('px','') - 80;
+          $(".track_menu").css('top', track_menu_top + "px");
+          
+          
+     
+     
+    }
+    
+    
+    
 
     window_aspect = window_width / window_height;
 
@@ -1001,9 +1015,16 @@ function hide_logo() {
 
 function enter_player() {
 
-    //$("#loader").fadeOut(500);
-    var i = 500;
-    var items = $(".track_menu .menu_item");
+     var i = 500;
+     var items = $(".track_menu .menu_item");
+     
+     if(is_mobile){
+               
+          $(items).css('left', 0);
+          return;
+     }
+
+   
 
     $(items[0]).animate({
         left: 0
