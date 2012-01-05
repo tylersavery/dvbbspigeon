@@ -73,6 +73,14 @@
 }
 
 
+.track_menu .menu_head.playing {
+    color:#ece94e;
+}
+
+.track_menu .menu_head.playing:hover {
+    color:#ece94e;
+}
+
 
 .track_menu .menu_item.mixtape .menu_head {
     color:#ece94e;

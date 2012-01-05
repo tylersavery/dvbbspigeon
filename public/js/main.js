@@ -306,6 +306,10 @@ $(document).ready(function () {
 
             audio.play();
             $(".player_play").addClass('pause');
+            
+            $(".menu_head").removeClass('playing'); 
+            $("#menu_head_" + rel).addClass('playing');
+            
             $("#play_track_" + rel).text('Pause');
             is_playing = true;
 
@@ -1167,32 +1171,20 @@ function pause_vimeo(){
 
 function load_vimeo(){
      
-     vimeo_showing = true;
-     
      if(can_play){
           froogaloop.api('play');
      }
      
-     $("#vimeo_player_container").hide();
+     if(!vimeo_showing){
+          $("#vimeo_player_container").hide();
      
-     $("#vimeo_player_container").css('z-index', 1);
+          $("#vimeo_player_container").css('z-index', 1);
 
-     $("#vimeo_player_container").fadeIn(300);
+          $("#vimeo_player_container").fadeIn(300);
+     }
      
+     vimeo_showing = true;
      
-     /*
-     $("#vimeo_player_container").animate({
-          
-          opacity: 1
-          
-          }, 300);
-    
-     
-     $("#vimeo_player_container").stop().fadeIn(300, function(){
-          
-
-     });
-    */
 }
 
 function hide_vimeo(){

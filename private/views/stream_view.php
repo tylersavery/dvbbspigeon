@@ -196,8 +196,10 @@
     <div class="header">
         <div class="logo">DVBBS</div>
     </div><!-- ./header -->
+    <div style="display:none;">
     <div id="vimeo_player_container">
             <iframe id="vimeo_player" src="http://player.vimeo.com/video/28242065?api=1&amp;player_id=vimeo_player" width="100%" frameborder="0"></iframe>
             
         </div>
+    </div>
 </div><!-- /.page -->
