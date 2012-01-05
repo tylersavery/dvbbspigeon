@@ -140,6 +140,10 @@ class Pigeon {
             'Ajax_Post_Category_Controller' => array(
                 array('ajax', 'post', 'category')
             ),
+			
+			'Ajax_Post_Analytic_Controller' => array(
+                array('ajax', 'post', 'analytic')
+            ),
             
             //feed
             

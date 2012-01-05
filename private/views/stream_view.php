@@ -64,9 +64,9 @@
 </div>
 
 <div class="download_lightbox">
-    <a href="#" class="mixtape_download">Free Digital Download</a>
-    <a href="#" class="mixtape_download">Download Stems</a>
-    <a href="#" class="mixtape_download">Download DJ Mix</a>
+    <a href="#" class="mixtape_download" id="mixtape_download_digital">Free Digital Download</a>
+    <a href="#" class="mixtape_download" id="mixtape_download_stems">Download Stems</a>
+    <a href="#" class="mixtape_download" id="mixtape_download_dj">Download DJ Mix</a>
     <a href="http://www.itunes.com" target="_blank" class="mixtape_download">iTunes TRX</a>
     <a href="http://www.universal.com" target="_blank" class="mixtape_download">Buy Mixtape</a>
     <a href="#" class="mixtape_download share_title">Share Mixtape</a>

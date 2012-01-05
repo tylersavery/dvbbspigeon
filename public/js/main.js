@@ -60,8 +60,8 @@ $(document).ready(function () {
 
     // init_audio();
     hide_menu_bar();
-
-
+    
+    push_analytic('visit', '');
 
     /* events */
 
@@ -194,17 +194,49 @@ $(document).ready(function () {
     });
 
 
-
-
     $(".download_track").click(function () {
 
-        window.location = '/downloads/track.zip';
+        var rel = $(this).attr("rel");
+        var file = '';
+        
+        switch(rel){
+          case "1":
+               file = 'dancebitch.mp3.zip';
+               break;
+          case "2":
+               file = 'drvgs.mp3.zip';
+               break;
+          case "3":
+               file = 'comealive.mp3.zip';
+               break;
+          case "4":
+               file = 'sugarcoated.mp3.zip';
+               break;
+          case "5":
+               file = 'tillidie.mp3.zip';
+               break;
+          case "6":
+               file = 'herewego.mp3.zip';
+               break;
+          default:
+               file = 'dancebitch.mp3.zip';
+               break;
+          
+        }
+        
+        var url =  '/downloads/' + file;
+        
+        window.location = url;
+        
+        push_analytic('download', file);
 
     });
 
     $(".download_stem").click(function () {
 
         window.location = '/downloads/stems.zip';
+        
+        push_analytic('download', 'stems');
 
     });
 
@@ -388,11 +420,31 @@ $(document).ready(function () {
     $(".mixtape_download").click(function () {
 
         $(this).addClass("clicked");
+        
+        
 
 
         return false;
 
     });
+    
+     $("#mixtape_download_digital").click(function () {
+     
+          push_analytic('download', 'mixtape');
+          
+     });
+     
+     $("#mixtape_download_stems").click(function () {
+     
+          push_analytic('download', 'stems');
+          
+     });
+     
+     $("#mixtape_download_dj").click(function () {
+     
+          push_analytic('download', 'dj');
+          
+     });
 
 
      $(".header .logo").mouseenter(function(){
@@ -768,6 +820,8 @@ function init_audio() {
 
         audio.play();
         $(".player_title").html(titles[current_track]);
+        
+        push_analytic('play', current_track);
 
     }
 }
@@ -1184,6 +1238,22 @@ function load_blog(){
      
 }
 
+
+function push_analytic(key, value){
+     
+     var datastring = "key=" + key + "&value=" + value;
+     
+     $.ajax({
+            url: "/ajax/post/analytic",
+            type: "POST",
+            data: datastring,
+            success: function(d) {
+               
+               
+            }
+        });
+     
+}
 
 function preload() {
 
