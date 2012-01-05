@@ -55,6 +55,7 @@ body{
     height:420px;
     overflow:hidden;
 
+
 }
 
 .post_top{
@@ -62,13 +63,35 @@ body{
     height:140px;
     background-color:#343434;
     overflow:visible !important;
+}
+
+
+.post_top:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:8px;
+    z-index:1000;
+background: -moz-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.85)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
 }
+
+
+
+
 
 .post.dvbbs .post_top, .post.dvbbs .post_bottom{
     background-color: #ece94e;
-}
 
+
+
+}
 .post_middle{
     position:relative;
     height:140px;
@@ -99,6 +122,10 @@ body{
 
 .post.dvbbs .post_content{
     left:210px;
+}
+
+.post.dvbbs .post_title{
+    right:-100px;
 }
 
 .post.chris .post_content{
@@ -140,10 +167,19 @@ body{
     position:absolute;
     width:86px;
     height:122px;
-    left:-90px;
-    top:148px;
+    left:10px;
+    top:8px;
     z-index:100;
+}
+
+
+.post.dvbbs .post_author{
     display:none;
+}
+
+.post.chris .post_author{
+    right:10px;
+    left:auto;
 }
 
 .post_name{
@@ -151,6 +187,11 @@ body{
     height:115px;
     background-image:url(/images/name_alex.gif);
     position:absolute;
+}
+
+
+.post.chris .post_name{
+   background-image:url(/images/name_chris.gif); 
 }
 
 .post_social{
@@ -183,5 +224,21 @@ body{
     left:-60px;
     right:auto;
     
+}
+
+.post.audio .photo{
+    margin-top:160px;
+}
+
+.post.audio .post_date{
+    margin-top:155px;
+}
+
+.post.video .photo{
+    margin-top:50px;
+}
+
+.post.video .post_date{
+    margin-top:45px;
 }
 

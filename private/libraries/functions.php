@@ -251,4 +251,10 @@ function safe_filename($SafeFile) {
 	return $SafeFile;
 }
 
+
+function compare_arrays($a, $b){
+	
+	return ($a['time'] > $b['time']) ? -1 : +1;
+}
+
 ?>

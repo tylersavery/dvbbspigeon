@@ -1,5 +1,31 @@
-<div class="post regular">
-	<div class="datetime"><?= time_to_friendly_date($this->post['time']); ?></div>
-	<div class="title"><a href="/blog/<?= $this->post['id'];?>"><?= $this->post['content']['title']; ?></a></div>
-	<div class="body"><?= $this->post['content']['body']; ?></div>
+<div class="post regular <?= $this->author;?>">
+	<div class="post_top"></div>
+	<div class="post_middle">
+		
+		<div class="post_author">
+			<div class="post_name"></div>
+			<div class="post_social">
+				<a href="<?=$this->facebook_url;?>"><img src="/images/facebook.gif" /></a><br />
+				<a href="<?=$this->twitter_url;?>"><img src="/images/twitter.gif" /></a>
+			</div>  
+		</div>
+	
+		
+	</div>
+	<div class="post_bottom"></div>
+	
+	<div class="wrap">
+	
+		<div class="post_content" rel="a<?= $i;?>">
+			<div class="post_date"><?= time_to_friendly_date($this->post['time']); ?></div>
+			<div class="post_caption">&nbsp;</div>
+			<div class="photo">
+				<?= $this->post['content']['title']; ?>
+			</div>
+		</div>
+		
+		<div class="post_title"><?= $this->post['content']['body']; ?></div>
+		
+	</div>
+	
 </div>
