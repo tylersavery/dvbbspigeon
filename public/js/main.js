@@ -1173,7 +1173,12 @@ function load_vimeo(){
           froogaloop.api('play');
      }
      
+     $("#vimeo_player_container").hide();
+     
      $("#vimeo_player_container").css('z-index', 1);
+
+     $("#vimeo_player_container").fadeIn(300);
+     
      
      /*
      $("#vimeo_player_container").animate({
@@ -1194,7 +1199,9 @@ function hide_vimeo(){
      
     vimeo_showing = false;
     
-    $("#vimeo_player_container").css('z-index', -100);
+    $("#vimeo_player_container").fadeOut();
+    
+    //$("#vimeo_player_container").css('z-index', -100);
     
     /*
     $("#vimeo_player_container").stop().fadeOut(300, function(){
