@@ -1128,20 +1128,27 @@ function previous_track() {
 
 function init_vimeo() {
      
+     
      vimeo_player = document.getElementById('vimeo_player');
      $f(vimeo_player).addEvent('ready', vimeo_ready);
      vimeo_showing = false;
+     
+     
+     
+     
      
 }
 
 function vimeo_ready(){
      
+
      froogaloop = $f('vimeo_player');
      froogaloop.api('play');     
 
      froogaloop.api('api_setVolume', 0);
      
      var t = setTimeout('pause_vimeo()', 2000);
+     
      
 }
 
@@ -1156,19 +1163,35 @@ function load_vimeo(){
      
      froogaloop.api('play');
      
+     $("#vimeo_player_container").css('z-index', 1);
+     
+     /*
+     $("#vimeo_player_container").animate({
+          
+          opacity: 1
+          
+          }, 300);
+    
+     
      $("#vimeo_player_container").stop().fadeIn(300, function(){
+          
 
      });
-    
+    */
 }
 
 function hide_vimeo(){
      
     vimeo_showing = false;
     
+    $("#vimeo_player_container").css('z-index', -100);
+    
+    /*
     $("#vimeo_player_container").stop().fadeOut(300, function(){
           froogaloop.api('pause'); 
     });
+    */
+    
     
     
     froogaloop.api('api_setVolume', 0);  
