@@ -233,7 +233,7 @@ function init_audio() {
                 
                 var t = setTimeout('set_audio_start()', 1000);
 				$(".player_play").addClass('pause');
-				play_from = false;
+				//play_from = false;
 				is_playing = true;	
 				
                 
@@ -250,6 +250,8 @@ function init_audio() {
 
 
 function set_audio_start() {
+	
+	
 	if(play_from){
 		audio.currentTime = Math.ceil(play_from);
 		play_from = false;
