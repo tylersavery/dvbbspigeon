@@ -285,6 +285,8 @@ function init_bg(){
     
     BG_SRC = '/images/backgrounds/track' + current_track + '/mobile.gif?time=' + TIME_NOW;
 
+    alert(BG_SRC);
+
     $("#splash").fadeOut(400, function () {
        
        $("#background").fadeOut(500, function () {
