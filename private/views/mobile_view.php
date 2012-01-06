@@ -21,8 +21,8 @@
     <div class="menu_item" id="menu_item_2" rel="2">Drvgs</div>
     <div class="menu_item" id="menu_item_3" rel="3">Come Alive</div>
     <div class="menu_item" id="menu_item_4" rel="4">Sugar Coated</div>
-    <div class="menu_item" id="menu_item_6" rel="5">Till I Die</div> 
-    <div class="menu_item" id="menu_item_5" rel="6">Here We Go</div>
+    <div class="menu_item" id="menu_item_5" rel="5">Till I Die</div> 
+    <div class="menu_item" id="menu_item_6" rel="6">Here We Go</div>
     
 </div>
 
