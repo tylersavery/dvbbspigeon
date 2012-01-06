@@ -7,9 +7,10 @@ class Stream_Controller extends Static_Main_Controller {
         $this->js_head[] = JS_ROOT . 'main.js';
         //$this->css[] = '/css/mobile.css';
         
-        if(strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone')){
+        if(strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'], 'iPod') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')){
 
             header('Location: /m');
+        
         }
 
     }

@@ -534,6 +534,7 @@ function set_constants() {
     screen_width = screen.width;
     screen_height = screen.height;
 
+/*
     if (screen_width <= 1000) {
         //small
         IMAGE_SIZE = 'small';
@@ -551,6 +552,10 @@ function set_constants() {
 
     }
     
+*/
+    
+    IMAGE_SIZE = 'medium';
+    
     IMG_ASPECT = 12 / 8;
     
     
@@ -564,6 +569,7 @@ function init_bg() {
     screen_width = screen.width;
     screen_height = screen.height;
     
+    /*
     if (screen_width <= 1000) {
         //small
         IMG_WIDTH = 1200;
@@ -588,6 +594,14 @@ function init_bg() {
         BG_SRC = '/images/backgrounds/track' + current_track + '/large.gif';
         IMAGE_SIZE = 'large';
     }
+    */
+    
+    
+     IMG_WIDTH = 1200;
+     IMG_HEIGHT = 800;
+
+     BG_SRC = '/images/backgrounds/track' + current_track + '/medium.gif';
+     IMAGE_SIZE = 'medium';
 
     BG_SRC += '?time=' + TIME_NOW;
     
