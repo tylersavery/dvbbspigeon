@@ -435,11 +435,14 @@ body{
 and (min-width : 321px) {
 /* Styles */
 
+/*
 
 
 #background{
     left: 80px;
     top:0px;
+    height: 213px;
+    overflow:hidden;
 }
 
 #player{

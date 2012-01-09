@@ -9,15 +9,25 @@ var playing = false;
 var cued = false;
 var BG_SRC;
 
+var window_width;
+var window_height;
+
+var IMG_ASPECT;
+
 $(document).ready(function(){
     
     set_constants();
     
    push_analytic('visit', '');
 
+		
+
+	
    var t = window.setTimeout('hide_menu_bar()', 300);
     
     init_splash();
+	
+	
     
    $(".menu_item").click(function(){
     
@@ -118,10 +128,18 @@ window.onorientationchange = function() {
     
 }
 
+window.onresize = function(){
+	
+	resize();
+	
+};
+
 
 function hide_menu_bar(){
     
     window.scrollTo(0, 1);
+	
+		resize();
     
 }
 
@@ -240,6 +258,10 @@ function set_constants(){
     sources[6] = 'longtime';
     
     TIME_NOW = new Date().getTime();
+
+
+	
+	IMG_ASPECT = 320 / 213;
     
     
 }
@@ -331,6 +353,44 @@ function init_splash(){
         
     }
     
+}
+
+
+function resize(){
+
+	window_width = $(window).width();
+	window_height = $(window).height();
+	
+	if(window_width > window_height){
+		//landscape	
+		
+		var padding_left = 80;
+		var padding_right = 80;
+		
+		var content_width = window_width - padding_left - padding_right;
+		
+		$("#player").width(content_width);
+		$("#background").width(content_width);
+		
+		
+		var img_height = content_width / IMG_ASPECT;
+		$("#bg_image").width(content_width);
+		$("#bg_image").height(img_height);
+		
+		var splash_left = Math.floor((content_width - 250) / 2) + 80;
+		$("#splash").css('left', splash_left + 'px');
+		
+
+		
+		
+	} else {
+		//portrait
+		
+
+		
+	}
+	
+	
 }
 
 function push_analytic(key, value){
