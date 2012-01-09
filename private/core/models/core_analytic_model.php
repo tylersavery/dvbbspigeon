@@ -7,7 +7,8 @@ class Core_Analytic_Model extends Core_Model {
         'time',
         'ip',
         'thekey',
-        'thevalue'
+        'thevalue',
+		'mobile'
 	);
 
 	protected $id;
@@ -15,6 +16,7 @@ class Core_Analytic_Model extends Core_Model {
     protected $ip;
     protected $thekey;
     protected $thevalue;
+	protected $mobile;
 
 	function __construct() {
 		parent::__construct();
@@ -59,7 +61,14 @@ class Core_Analytic_Model extends Core_Model {
 	public function set_thevalue($value) {
 		$this->thevalue = $value;
 	}
-    
+	
+	public function get_mobile() {
+		return $this->mobile;
+	}
 
+	public function set_mobile($value) {
+		$this->mobile = $value;
+	}
+    
 }
 ?>

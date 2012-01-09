@@ -13,7 +13,7 @@ $(document).ready(function(){
     
     set_constants();
     
-
+   push_analytic('visit', '');
 
    var t = window.setTimeout('hide_menu_bar()', 300);
     
@@ -207,6 +207,9 @@ function init_audio(){
         
         $(".menu_item").removeClass('playing'); 
         $("#menu_item_" + current_track).addClass('playing');
+		
+		push_analytic('play', current_track);
+		
         
     });
     
@@ -330,6 +333,23 @@ function init_splash(){
     
 }
 
+function push_analytic(key, value){
+     
+     var datastring = "key=" + key + "&value=" + value + "&mobile=1";
+     
+	 
+     $.ajax({
+            url: "/ajax/post/analytic",
+            type: "POST",
+            data: datastring,
+            success: function(d) {
+				
+               
+               
+            }
+        });
+     
+}
 
 
 /* HELPERS */

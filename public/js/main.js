@@ -1322,7 +1322,7 @@ function load_blog(){
 
 function push_analytic(key, value){
      
-     var datastring = "key=" + key + "&value=" + value;
+     var datastring = "key=" + key + "&value=" + value + "&mobile=false";
      
      $.ajax({
             url: "/ajax/post/analytic",
