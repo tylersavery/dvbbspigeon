@@ -111,6 +111,12 @@ class Pigeon {
                 array('admin', 'audio', 'delete', '{is_numeric:audio_id}'),         
             ),
 			
+			//analytics
+			
+			'Admin_Analytic_Controller' => array(
+                array('admin', 'analytics'),         
+            ),
+			
 			//images
 			
 			'Admin_Image_Controller' => array(
