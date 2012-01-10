@@ -400,7 +400,7 @@ function resize(){
 		$("#bg_image").width(content_width);
 		$("#bg_image").height(img_height);
 		
-		var splash_left = Math.floor((content_width - 250) / 2) + 80;
+		var splash_left = 34;
 		$("#splash").css('left', splash_left + 'px');
 		
 

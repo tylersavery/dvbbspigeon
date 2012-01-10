@@ -466,7 +466,7 @@ and (min-width : 321px) {
 
 #social .social_item{
     
-    width:80px;
+    width:80px !important;
     height:29px;
 
     margin:0;
