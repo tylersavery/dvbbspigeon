@@ -532,7 +532,7 @@ and (min-width : 321px) {
     background-color:#585858;
     background-image:url(/images/mobile/social/apple.gif);
     background-repeat:no-repeat;
-    background-position: 0 2px;
+    background-position: 0 1px;
 }
 
 .social_item.last{

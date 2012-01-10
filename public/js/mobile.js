@@ -361,7 +361,8 @@ function resize(){
 	window_width = $(window).width();
 	window_height = $(window).height();
 	
-	if(window_width > window_height){
+	
+	if(window.innerHeight < window.innerWidth){
 		//landscape	
 		
 		var padding_left = 80;
