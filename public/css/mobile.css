@@ -289,14 +289,12 @@ body{
 
 #social{
     position:absolute;
-    height:30px;
-    width:310px;
+    height:53px;
+    width:320px;
     background-color:black;
     top:330px;
     overflow:hidden;
     
-    padding-top:10px;
-    padding-left:10px;
     
 }
 
@@ -305,73 +303,53 @@ body{
 
 #social .social_item{
     position:relative;
-    width:34px;
-    height:17px;
+    width:53px;
+    height:34px;
     float:left;
-    margin-right: 8px;
-    margin-left:8px;
+    margin-right: 0px;
+    margin-left:0px;
     text-align:center;
 }
 
 #social .social_item a{
-    background-image:url(/images/social.png);
     text-indent:-9999px;
     display:block;
-    width:34px;
-    height:17px;
+    width:53px;
+    height:34px;
     background-repeat:no-repeat;
 }
 
-#social_facebook{
-    background-position: -9px -2px;
-    width:33px;
+#social .social_item#social_item_facebook {
+    background-image:url(/images/mobile/social/facebook_p.gif);
 }
-
-#social_facebook:hover{
-    background-position: -9px -2px;
+#social .social_item#social_item_twitter {
+    background-image:url(/images/mobile/social/twitter_p.gif);
+    
 }
-
-#social_twitter{
-    background-position: -49px -2px;
+#social .social_item#social_item_soundcloud {
+    background-image:url(/images/mobile/social/soundcloud_p.gif);
+            width:54px;
+    background-repeat:repeat-x;
+    
+    
 }
-
-#social_twitter:hover{
-    background-position: -49px -2px;
+#social .social_item#social_item_youtube {
+    background-image:url(/images/mobile/social/youtube_p.gif);
+    
 }
-
-#social_youtube{
-    background-position: -89px -2px;
+#social .social_item#social_item_itunes {
+    background-image:url(/images/mobile/social/itunes_p.gif);
+        width:54px;
+    background-repeat:repeat-x;
+    
 }
+#social .social_item#social_item_tumblr {
+    background-image:url(/images/mobile/social/tumblr_p.gif);
 
-#social_youtube:hover{
-    background-position: -89px -2px;
-}
-
-#social_soundcloud{
-    background-position: -130px -2px;
-    width: 33px;
     
 }
 
-#social_soundcloud:hover{
-    background-position: -130px -2px;
-}
 
-#social_tumblr{
-    background-position: -169px -2px;
-}
-
-#social_tumblr:hover{
-    background-position: -169px -2px;
-}
-
-#social_itunes{
-    background-position: -209px -2px;
-}
-
-#social_itunes:hover{
-    background-position: -209px -2px;
-}
 
 
 #footer{
@@ -435,7 +413,7 @@ body{
 and (min-width : 321px) {
 /* Styles */
 
-
+/*
 
 #background{
     left: 80px;
