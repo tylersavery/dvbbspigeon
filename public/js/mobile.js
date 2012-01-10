@@ -387,7 +387,24 @@ function resize(){
 	} else {
 		//portrait
 		
+		var padding_left = 0;
+		var padding_right = 0;
+		
+		var content_width = window_width - padding_left - padding_right;
+		
+		$("#player").width(content_width);
+		$("#background").width(content_width);
+		
+		
+		var img_height = content_width / IMG_ASPECT;
+		$("#bg_image").width(content_width);
+		$("#bg_image").height(img_height);
+		
+		var splash_left = Math.floor((content_width - 250) / 2) + 80;
+		$("#splash").css('left', splash_left + 'px');
+		
 
+		
 		
 	}
 	

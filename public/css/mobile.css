@@ -471,7 +471,7 @@ and (min-width : 321px) {
 
     margin:0;
     padding:0;
-    
+    background-repeat:no-repeat;
 }
 
 #social .social_item a {
