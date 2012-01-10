@@ -274,11 +274,13 @@ body{
     background: linear-gradient(top, rgba(43,46,49,1) 0%,rgba(50,54,57,1) 76%,rgba(66,70,75,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2e31', endColorstr='#42464b',GradientType=0 ); /* IE6-9 */
         
+    text-decoration:none;
 }
 
 
 .menu_item.playing{
     color:#ece94e;
+    text-decoration:line-through;
 }
 
 
