@@ -961,9 +961,9 @@ function init_splash() {
     s[0] = 168103;
 
     src[1] = '/images/splash/dvbbs2.gif';
-    h[1] = 1280;
-    w[1] = 1280;
-    s[1] = 189672;
+    h[1] = 639;
+    w[1] = 639;
+    s[1] = 171486;
 
     src[2] = '/images/splash/dvbbs3.gif';
     h[2] = 144;
