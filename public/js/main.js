@@ -582,6 +582,7 @@ function init_bg() {
     screen_width = screen.width;
     screen_height = screen.height;
     
+    console.log("yo");
     console.log("SPEED" + speed_bps);
     
     
