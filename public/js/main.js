@@ -250,6 +250,7 @@ $(document).ready(function () {
         $(".download_lightbox").fadeOut(500);
         $(".credits").stop().fadeOut(500);
         $(".blind").fadeOut(500);
+        $("#share_widget_container").fadeOut(500);
 
     });
 
@@ -481,6 +482,13 @@ $(document).ready(function () {
      $("#blog_link").click(function(){
         
         load_blog();
+          
+     });
+     
+     
+     $(".share_track").click(function(){
+        
+        share_track();  
           
      });
 
@@ -1316,6 +1324,16 @@ function load_blog(){
      });
      
 
+     
+}
+
+
+function share_track(){
+     
+     
+     $(".blind").fadeTo(300, .7);
+     $("#share_widget_container").fadeIn(300);
+     
      
 }
 

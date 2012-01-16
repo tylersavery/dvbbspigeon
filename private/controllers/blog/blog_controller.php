@@ -5,7 +5,9 @@ class Blog_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         if(PLEASE_CACHE){
-            $tumblr = new Read_Tumblr_Cache('tylerdevelopment','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
+            $alex_tumblr = new Read_Tumblr_Cache('tylerdevelopment','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
+			$chris_tumblr = new Read_Tumblr_Cache('tylerdevelopmentchris','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
+			$dvbbs_tumblr = new Read_Tumblr_Cache('tylersdevelopmentdvbbs','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);
         } else {
             $alex_tumblr = new Read_Tumblr('tylerdevelopment');
 			$chris_tumblr = new Read_Tumblr('tylerdevelopmentchris');
@@ -13,7 +15,10 @@ class Blog_Controller extends Static_Main_Controller {
         }
 		
 		$this->css[] = '/css/blog.css';
+		$this->css[] = '/css/blog_mobile.css';
 		$this->js_head[] = '/js/blog.js';
+		
+		
 		
 		$this->title .= " | B L O G";
         

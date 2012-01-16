@@ -78,8 +78,8 @@
     <a href="http://www.universal.com" target="_blank" class="mixtape_download">Buy Mixtape</a>
     <a href="#" class="mixtape_download share_title">Share Mixtape</a>
     
-    <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style ">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
 <a class="addthis_button_preferred_1"></a>
 <a class="addthis_button_preferred_2"></a>
 <a class="addthis_button_preferred_3"></a>
@@ -108,7 +108,7 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_1" rel="1">Dance Bitch</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="1">Download</div>
+                    <div class="menu_foot_item share_track" rel="1">Share</div>
                     <div class="menu_foot_item play_track" rel="1" id="play_track_1">Play</div>
                     <div class="menu_foot_item download_stem"  rel="1">Stems</div>
                 </div><!-- /.menu_foot -->
@@ -119,7 +119,7 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_2" rel="2">DRVGS</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="2">Download</div>
+                    <div class="menu_foot_item share_track" rel="2">Share</div>
                     <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
                     <div class="menu_foot_item download_stem" rel="2">Stems</div>
                     <div class="hayley">Ft. Hayley Gene</div>
@@ -131,7 +131,7 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_3" rel="3">Come Alive</div>
                <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="3">Download</div>
+                    <div class="menu_foot_item share_track" rel="3">Share</div>
                     <div class="menu_foot_item play_track" rel="3" id="play_track_3">Play</div>
                     <div class="menu_foot_item download_stem" rel="3">Stems</div>
                 </div><!-- /.menu_foot -->
@@ -143,7 +143,7 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_4" rel="4">Sugar Coated</div>
                <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="4">Download</div>
+                    <div class="menu_foot_item share_track" rel="4">Share</div>
                     <div class="menu_foot_item play_track" rel="4" id="play_track_4">Play</div>
                     <div class="menu_foot_item download_stem" rel="4">Stems</div>
                 </div><!-- /.menu_foot -->
@@ -155,7 +155,7 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_6" rel="6">Here We Go</div>
                <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="6">Download</div>
+                    <div class="menu_foot_item share_track" rel="6">Share</div>
                     <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
                     <div class="menu_foot_item download_stem" rel="6">Stems</div>
                 </div><!-- /.menu_foot -->
@@ -166,12 +166,11 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item download_track" rel="5">Download</div>
+                    <div class="menu_foot_item share_track" rel="5">Share</div>
                     <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
                     <div class="menu_foot_item download_stem" rel="5">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
-          
 
             <div class="clear"></div>
             <div class="menu_item mixtape" rel="0">
@@ -197,9 +196,34 @@
         <div class="logo">DVBBS</div>
     </div><!-- ./header -->
     <div style="display:none;">
-    <div id="vimeo_player_container">
+        <div id="vimeo_player_container">
             <iframe id="vimeo_player" src="http://player.vimeo.com/video/28242065?api=1&amp;player_id=vimeo_player" width="100%" frameborder="0"></iframe>
-            
         </div>
+
     </div>
+    <div id="share_widget_container">
+        <div class="close">x</div>
+         <div id="share_widgets">
+            <div id="share_widget_twitter" class="share_widget">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="share_widget_facebook" class="share_widget">
+                <div class="fb-like" data-href="http://www.dvbbs.com" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+            </div>
+         
+         </div>
+    </div>
+    
 </div><!-- /.page -->
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=280386945308203";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

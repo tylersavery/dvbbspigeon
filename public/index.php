@@ -12,7 +12,7 @@ switch(ENVIROMENT) {
     case 'dvbbs':
         define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'dvbbspigeon'.DS);
         break;
-    case '192.168.1.154':
+    case '192.168.1.147':
         define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'dvbbspigeon'.DS);
         break;
 	case 'dvbbs.mac':

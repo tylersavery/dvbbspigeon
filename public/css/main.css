@@ -298,7 +298,8 @@ span.up{
 
 .credits h3{
     font-size: 14px;
-    opacity: .5;
+    opacity: .9;
+    color:#ECE94E;
 }
 
 .credits h3.credits_title{
@@ -308,6 +309,7 @@ span.up{
 .credits h4{
     margin-bottom:10px;
     font-size:15px;
+    opacity:.8;
 }
 
 .credits a{
@@ -482,4 +484,30 @@ ul.top_menu li:hover{
 }
 
 
+#share_widget_container{
+    display:none;
+    width:100%;
+    position:relative;
+    height:100%;
+    
+}
 
+#share_widgets{
+    position:fixed;
+    z-index:1000;
+    top:50%;
+    left:50%;
+    margin-left:-105px;
+    margin-top:-12px;
+    width:210px;
+    height:24px;
+}
+
+.share_widget{
+    float:left;
+    width:120px;
+}
+
+#share_widget_twitter{
+    width:85px;
+}

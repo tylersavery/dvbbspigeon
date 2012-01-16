@@ -381,6 +381,8 @@ function resize(){
 		var splash_left = Math.floor((content_width - 250) / 2) + 80;
 		$("#splash").css('left', splash_left + 'px');
 		
+		
+		
 
 		
 		
@@ -407,6 +409,12 @@ function resize(){
 		
 		
 	}
+	
+	
+	var $lightbox = $("#blind, #contact_content, #download_content, #credits_content, .credits_content_scroller");
+		
+	$lightbox.width(window_width);
+	$lightbox.height(window_height);
 	
 	
 }

@@ -13,20 +13,12 @@ class Static_Main_Controller extends Static_Base_Controller {
 		$this->js_head[] = JS_ROOT . 'libraries/modernizr.js';
 		$this->js_head[] = JS_ROOT . 'libraries/froogaloop.js';
         $this->js_head[] = JS_ROOT . 'libraries/color.js';
-        
-
-		$this->meta[] = 'name="apple-mobile-web-app-capable" content="yes"';
-        $this->meta[] = 'name="apple-mobile-web-app-status-bar-style" content="black"';
-
-		
+  
 		$this->content_view->player = $this->content_view->capture('player_view.php');
-		
-        
+		      
 	}
     
     protected function content_view() {
-		
-		
 		
         return $this->content_view->capture('main_view.php');
     }
