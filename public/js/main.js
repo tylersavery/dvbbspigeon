@@ -21,6 +21,7 @@ var titles = new Array();
 var current_track;
 var keep_vimeo_up = false;
 var vimeo_showing = false;
+var speed_bps = null;
 
 /* constants */
 
@@ -49,8 +50,7 @@ $(document).ready(function () {
     
     get_objects();
     check_if_mobile();
-    test_connection();
-    
+
     
     set_constants();
     
@@ -582,7 +582,7 @@ function init_bg() {
     screen_width = screen.width;
     screen_height = screen.height;
     
-    
+    console.log("SPEED" + speed_bps);
     
     
     /*
@@ -973,26 +973,39 @@ function init_splash() {
     var src = new Array();
     var h = new Array();
     var w = new Array();
+    var s = new Array();
 
     src[0] = '/images/splash/dvbbs1.gif';
     h[0] = 192;
     w[0] = 500;
+    s[0] = 1000;
 
     src[1] = '/images/splash/dvbbs2.gif';
     h[1] = 1280;
     w[1] = 1280;
+    s[1] = 1000;
 
     src[2] = '/images/splash/dvbbs3.gif';
     h[2] = 144;
     w[2] = 989;
+    s[2] = 1000;
 
+    var download_start = (new Date()).getTime();  
+    
     var rand = Math.round(Math.random() * 2);
 
     var img_loading = new Image();
     img_loading.src = src[rand] + '?time=' + TIME_NOW;
+    
+
 
     img_loading.onload = function () {
-
+     
+        var download_end = (new Date()).getTime();
+        var duration = Math.round((download_end - download_start) / 1000);
+        var bitsLoaded = s[rand] * 8;
+        speed_bps = Math.round(bitsLoaded / duration);     
+        
         $splash_img.show();
 
         $splash_img.attr('src', src[rand] + '?time=' + TIME_NOW).load(function () {
@@ -1016,6 +1029,7 @@ function init_splash() {
     setTimeout(enter_player, 3500);
 
 }
+
 
 
 function ensure_loader_is_gone() {
@@ -1424,40 +1438,3 @@ function check_browser(){
      
      
 }
-
-
-function test_connection(){
-     
-     var src = "/images/logo.png" + "?n=" + Math.random();
-     var size = 14011;
-     var start, end;
-     
-     var download = new Image();
-     
-     download.onload = function() {
-          end = (new Date()).getTime() ;
-          showResults();
-     }
-
-     start = (new Date()).getTime();
-     download.src = src;
-     
-     function showResults () {
-               
-          var duration = Math.round((end - start) / 1000) ;
-          var bitsLoaded = size * 8 ;
-          var speedBps = Math.round(bitsLoaded / duration) ;
-          var speedKbps = (speedBps / 1024).toFixed(2) ;
-          var speedMbps = (speedKbps / 1024).toFixed(2) ;
-          console.log("Your connection speed is: \n" +
-               speedBps + " bps\n" +
-               speedKbps + " kbps\n" +
-               speedMbps + " Mbps\n") ;
-     
-     }
-     
-}
-
-
-
-
