@@ -32,7 +32,7 @@ var BG_SRC;
 var LOAD_TIME;
 var IMAGE_SIZE;
 var TIME_NOW;
-var SPEED_TRESHOLD = 1500;
+var SPEED_TRESHOLD = 320000;
 
 /* jQuery Objects */
 var $bg;
@@ -582,60 +582,23 @@ function init_bg() {
 
     screen_width = screen.width;
     screen_height = screen.height;
-
-
-     
-    
-    
-    /*
-    if (screen_width <= 1000) {
-        //small
-        IMG_WIDTH = 1200;
-        IMG_HEIGHT = 800;
-
-        BG_SRC = '/images/backgrounds/track' + current_track + '/small.gif';
-        IMAGE_SIZE = 'small';
-
-    } else if (screen_width > 1000 && screen_width < 1600) {
-        //medium
-        IMG_WIDTH = 1200;
-        IMG_HEIGHT = 800;
-
-        BG_SRC = '/images/backgrounds/track' + current_track + '/medium.gif';
-        IMAGE_SIZE = 'medium';
-
-    } else if (screen_width >= 1600) {
-        // large
-        IMG_WIDTH = 1200;
-        IMG_HEIGHT = 800;
-
-        BG_SRC = '/images/backgrounds/track' + current_track + '/large.gif';
-        IMAGE_SIZE = 'large';
-    }
-    */
     
      IMG_WIDTH = 1200;
      IMG_HEIGHT = 800;
      IMAGE_SIZE = 'medium';
-     
-     
-     
+  
      if(is_int(speed_bps)){
           if(speed_bps < SPEED_TRESHOLD){
                IMG_WIDTH = 900;
                IMG_HEIGHT = 600;
                IMAGE_SIZE = 'small'; 
-               console.log("IS SLOW");
+               console.log("IS SLOW - using small");
           }
-          
-          console.log("IS INT:" +speed_bps );
-     } else{
-          console.log("NOT INT");
+          console.log("IS INT:" + speed_bps );
      }
 
-     BG_SRC = '/images/backgrounds/track' + current_track + '/' + IMAGE_SIZE + '.gif' + '?time=' + TIME_NOW;;
+    BG_SRC = '/images/backgrounds/track' + current_track + '/' + IMAGE_SIZE + '.gif' + '?time=' + TIME_NOW;;
      
-
     IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
 
     $("#splash_img").fadeOut(400, function () {
