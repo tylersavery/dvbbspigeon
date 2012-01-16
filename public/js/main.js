@@ -627,7 +627,7 @@ function init_bg() {
                console.log("IS SLOW");
           }
           
-          console.log("IS INT");
+          console.log("IS INT:" +speed_bps );
      } else{
           console.log("NOT INT");
      }
