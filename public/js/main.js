@@ -581,9 +581,9 @@ function init_bg() {
 
     screen_width = screen.width;
     screen_height = screen.height;
-    
-    console.log("yo");
-    console.log("SPEED" + speed_bps);
+
+
+     
     
     
     /*
@@ -616,6 +616,21 @@ function init_bg() {
      IMG_WIDTH = 1200;
      IMG_HEIGHT = 800;
      IMAGE_SIZE = 'medium';
+     
+     
+     
+     if(is_int(speed_bps)){
+          if(speed_bps < 2000){
+               IMG_WIDTH = 900;
+               IMG_HEIGHT = 600;
+               IMAGE_SIZE = 'small'; 
+               console.log("IS SLOW");
+          }
+          
+          console.log("IS INT");
+     } else{
+          console.log("NOT INT");
+     }
 
      BG_SRC = '/images/backgrounds/track' + current_track + '/' + IMAGE_SIZE + '.gif' + '?time=' + TIME_NOW;;
      
@@ -1439,3 +1454,7 @@ function check_browser(){
      
      
 }
+
+function is_int(input){
+    return typeof(input)=='number'&&parseInt(input)==input;
+  }
