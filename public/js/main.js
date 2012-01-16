@@ -32,6 +32,7 @@ var BG_SRC;
 var LOAD_TIME;
 var IMAGE_SIZE;
 var TIME_NOW;
+var SPEED_TRESHOLD = 1500;
 
 /* jQuery Objects */
 var $bg;
@@ -620,7 +621,7 @@ function init_bg() {
      
      
      if(is_int(speed_bps)){
-          if(speed_bps < 2000){
+          if(speed_bps < SPEED_TRESHOLD){
                IMG_WIDTH = 900;
                IMG_HEIGHT = 600;
                IMAGE_SIZE = 'small'; 
@@ -994,17 +995,17 @@ function init_splash() {
     src[0] = '/images/splash/dvbbs1.gif';
     h[0] = 192;
     w[0] = 500;
-    s[0] = 1000;
+    s[0] = 168103;
 
     src[1] = '/images/splash/dvbbs2.gif';
     h[1] = 1280;
     w[1] = 1280;
-    s[1] = 1000;
+    s[1] = 189672;
 
     src[2] = '/images/splash/dvbbs3.gif';
     h[2] = 144;
     w[2] = 989;
-    s[2] = 1000;
+    s[2] = 78893;
 
     var download_start = (new Date()).getTime();  
     
