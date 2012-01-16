@@ -135,16 +135,18 @@ body{
 }
 
 #credits_content a{
-    color:#ece94e;
-    text-decoration:none;    
+    color:#FFF;
+    text-decoration:none;
 }
 
 #credits_content h3{
     margin-top:12px;
+    color:#ece94e;
 }
 
 #credits_content h4{
     color:#ece94e;
+    color:#FFF;
 }
 
 .kanary{

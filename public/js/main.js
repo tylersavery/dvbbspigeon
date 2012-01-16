@@ -49,7 +49,12 @@ $(document).ready(function () {
     
     get_objects();
     check_if_mobile();
+    test_connection();
+    
+    
     set_constants();
+    
+    
     
     //updateOrientation();
     init_splash();
@@ -577,6 +582,9 @@ function init_bg() {
     screen_width = screen.width;
     screen_height = screen.height;
     
+    
+    
+    
     /*
     if (screen_width <= 1000) {
         //small
@@ -604,15 +612,13 @@ function init_bg() {
     }
     */
     
-    
      IMG_WIDTH = 1200;
      IMG_HEIGHT = 800;
-
-     BG_SRC = '/images/backgrounds/track' + current_track + '/medium.gif';
      IMAGE_SIZE = 'medium';
 
-    BG_SRC += '?time=' + TIME_NOW;
-    
+     BG_SRC = '/images/backgrounds/track' + current_track + '/' + IMAGE_SIZE + '.gif' + '?time=' + TIME_NOW;;
+     
+
     IMG_ASPECT = IMG_WIDTH / IMG_HEIGHT;
 
     $("#splash_img").fadeOut(400, function () {
@@ -1418,3 +1424,40 @@ function check_browser(){
      
      
 }
+
+
+function test_connection(){
+     
+     var src = "/images/logo.png" + "?n=" + Math.random();
+     var size = 14011;
+     var start, end;
+     
+     var download = new Image();
+     
+     download.onload = function() {
+          end = (new Date()).getTime() ;
+          showResults();
+     }
+
+     start = (new Date()).getTime();
+     download.src = src;
+     
+     function showResults () {
+               
+          var duration = Math.round((end - start) / 1000) ;
+          var bitsLoaded = size * 8 ;
+          var speedBps = Math.round(bitsLoaded / duration) ;
+          var speedKbps = (speedBps / 1024).toFixed(2) ;
+          var speedMbps = (speedKbps / 1024).toFixed(2) ;
+          console.log("Your connection speed is: \n" +
+               speedBps + " bps\n" +
+               speedKbps + " kbps\n" +
+               speedMbps + " Mbps\n") ;
+     
+     }
+     
+}
+
+
+
+

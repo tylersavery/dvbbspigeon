@@ -13,12 +13,25 @@ body{
     font-size:12px;
     height:32px;
     color: #ccc;
+    background-color:#0f0f0f;
+    height:24px;
 }
+
+.track_menu .menu_head:hover{
+    color:#fff;
+}
+
 
 .track_menu .menu_foot .menu_foot_item{
     color:#ccc;
     font-size:10px;
+    background-color:#0f0f0f;
 }
+
+.track_menu .menu_foot .menu_foot_item:hover{
+    color:#fff;
+}
+
 .hayley{
     color:#ccc;
     font-size:10px;
@@ -28,3 +41,7 @@ body{
 #vimeo_player_container{
     display:none;
 }
+
+.menu_foot .menu_foot_item{
+    display:none;
+    }

@@ -36,6 +36,12 @@ body{
     text-align:right;
 }
 
+.social_buttons{
+    position:absolute;
+    right:2px;
+    top:0px;
+}
+
 .player{
     display:block;
     bottom:auto;

@@ -240,7 +240,8 @@ span.up{
 
 .contact h3{
     font-size: 14px;
-    opacity: .5;
+    opacity: .9;
+    color:#ECE94E;
 }
 
 .contact h4{
@@ -269,6 +270,7 @@ span.up{
     bottom:50px;
     left:50%;
     margin-left:-100px;
+    color:#ECE94E;
 }
 
 .contact .small, .contact h6{

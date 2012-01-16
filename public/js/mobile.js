@@ -81,13 +81,24 @@ $(document).ready(function(){
    
    $("#footer_link_contact").click(function(){
     
+		window_height = $(window).height();
+		window_width = $(window).width();
+	
+		var $lightbox = $("#blind, #contact_content, #download_content, #credits_content, .credits_content_scroller");
+		
+		$lightbox.css('top', 0);
+		$lightbox.css('left', 0);
+		$lightbox.width(window_width);
+		$("#blind").height($(document).height());	
+	
         $("#blind").fadeTo(300, .8);
         $("#contact_content").fadeIn(500);
-    
+	
    });
    
    $("#footer_link_download").click(function(){
-    
+    	$("#blind").height($(window).height());
+		$("#download_content").height($(window).height());
         $("#blind").fadeTo(300, .8);
         $("#download_content").fadeIn(500);
     
@@ -95,10 +106,14 @@ $(document).ready(function(){
    
    $("#footer_link_credits").click(function(){
     
+		$("#blind").height($(document).height());
+		
+	
         $("#blind").fadeTo(300, .8);
+		
 
         $(".credits_content_scroller").css('top', '420px');
-        
+        $("#credits_content").height($(document).height());
         $("#credits_content").show();
         $(".credits_content_scroller").animate({
         
@@ -259,8 +274,6 @@ function set_constants(){
     
     TIME_NOW = new Date().getTime();
 
-
-	
 	IMG_ASPECT = 320 / 213;
     
     
@@ -413,6 +426,8 @@ function resize(){
 	
 	var $lightbox = $("#blind, #contact_content, #download_content, #credits_content, .credits_content_scroller");
 		
+	$lightbox.css('top', 0);
+	$lightbox.css('left', 0);
 	$lightbox.width(window_width);
 	$lightbox.height(window_height);
 	
