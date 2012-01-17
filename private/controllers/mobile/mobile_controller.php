@@ -7,6 +7,7 @@ class Mobile_Controller extends Static_Main_Controller {
         $this->css = null;
         $this->css[] = '/css/reset.css';
         
+        $this->js_head[] = JS_ROOT . 'jquery.ui.touch.js';
         $this->js_head[] = JS_ROOT . 'mobile.js';
         $this->css[] = '/css/mobile.css';
 
