@@ -32,7 +32,7 @@
     <div class="social_item" id="social_item_twitter"><a href="http://twitter.com/dvbbs" id="social_twitter" target="_blank">twitter</a></div>
     <div class="social_item" id="social_item_youtube"><a href="http://youtube.com/dvbbs" id="social_youtube" target="_blank">youtube</a></div>
     <div class="social_item" id="social_item_soundcloud"><a href="http://soundcloud.com/DVBBS" id="social_soundcloud" target="_blank">soundcloud</a></div>
-    <div class="social_item" id="social_item_tumblr"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
+    <div class="social_item" id="social_item_tumblr"><a href="/blog" id="social_tumblr" target="_blank">tumblr</a></div>
     <div class="social_item last" id="social_item_itunes"><a href="#" id="social_itunes" target="_blank">itunes</a></div>
 </div>
 
