@@ -9,8 +9,11 @@ var playing = false;
 var cued = false;
 var BG_SRC;
 
+var hayley_showing = false;
+
 var window_width;
 var window_height;
+var track_lengths = new Array();
 
 var IMG_ASPECT;
 
@@ -20,13 +23,11 @@ $(document).ready(function(){
     
    push_analytic('visit', '');
 
-		
-
-	
    var t = window.setTimeout('hide_menu_bar()', 300);
     
     init_splash();
 	
+	var h = window.setInterval('hayley()', 5000);
 	
     
    $(".menu_item").click(function(){
@@ -81,15 +82,7 @@ $(document).ready(function(){
    
    $("#footer_link_contact").click(function(){
     
-		window_height = $(window).height();
-		window_width = $(window).width();
-	
-		var $lightbox = $("#blind, #contact_content, #download_content, #credits_content, .credits_content_scroller");
-		
-		$lightbox.css('top', 0);
-		$lightbox.css('left', 0);
-		$lightbox.width(window_width);
-		$("#blind").height($(document).height());	
+		set_blind_size();
 	
         $("#blind").fadeTo(300, .8);
         $("#contact_content").fadeIn(500);
@@ -97,8 +90,13 @@ $(document).ready(function(){
    });
    
    $("#footer_link_download").click(function(){
-    	$("#blind").height($(window).height());
-		$("#download_content").height($(window).height());
+
+		set_blind_size();
+		
+
+	
+		
+		$("#download_content").height(screen.height);
         $("#blind").fadeTo(300, .8);
         $("#download_content").fadeIn(500);
     
@@ -106,9 +104,9 @@ $(document).ready(function(){
    
    $("#footer_link_credits").click(function(){
     
-		$("#blind").height($(document).height());
+		set_blind_size();
 		
-	
+		
         $("#blind").fadeTo(300, .8);
 		
 
@@ -131,6 +129,12 @@ $(document).ready(function(){
     
    });
    
+   $("#footer_link_blog").click(function(){
+	
+		window.location = '/blog';
+	
+   });
+   
    
    
    
@@ -141,6 +145,8 @@ window.onorientationchange = function() {
     
    var t = window.setTimeout('hide_menu_bar()', 300);
     
+	set_blind_size();
+	
 }
 
 window.onresize = function(){
@@ -149,6 +155,49 @@ window.onresize = function(){
 	
 };
 
+
+function set_blind_size(){
+	
+	if(window.innerHeight < window.innerWidth){
+		var w = screen.height;
+		var h = screen.width;
+	} else {
+		var w = screen.width;
+		var h = screen.height;
+	}
+		
+	$("#blind").width(w);
+	$("#blind").height(h);
+	
+	
+	$(".credits_content_scroller, #credits_content").width(w);
+	$(".credits_content_scroller, #credits_content").height(h);
+	
+}
+
+function hayley(){
+	
+	if(hayley_showing){
+		hayley_showing = false;
+		
+		$("#hayley").fadeOut(300, function(){
+			
+			$("#drvgs").fadeIn(300);
+			
+		});
+		
+	} else {
+		hayley_showing = true;
+		
+		$("#drvgs").fadeOut(300, function(){
+			
+			$("#hayley").fadeIn(300);
+			
+		});
+		
+	}
+	
+}
 
 function hide_menu_bar(){
     
@@ -201,13 +250,13 @@ function init_audio(){
         if (!loaded) {
             loaded = true;
 
-/*
+
             $('.player_gutter').slider({
                 value: 0,
                 step: 0.01,
                 orientation: "horizontal",
                 range: "min",
-                max: audio.duration,
+                max: track_lengths[current_track],
                 animate: true,
                 slide: function () {
                     manualSeek = true;
@@ -217,10 +266,7 @@ function init_audio(){
                     audio.currentTime = ui.value;
                 }
             });
-            
-*/
-
-        
+			
 
         }
 
@@ -271,6 +317,14 @@ function set_constants(){
     sources[4] = 'sugarcoated';
     sources[5] = 'flashinglights';
     sources[6] = 'longtime';
+	
+	track_lengths[1] = 174.17068481445312;
+	track_lengths[2] = 280.427490234375;
+	track_lengths[3] = 200.62413024902344;
+	track_lengths[4] = 173.12818908691406;
+	track_lengths[5] = 216.57437133789062;
+	track_lengths[6] = 198.6173095703125;
+	
     
     TIME_NOW = new Date().getTime();
 
@@ -298,9 +352,7 @@ function next_track() {
 }
 
 function previous_track() {
-     if(current_track == 0){
-        current_track = 5;  
-     } else if(current_track == 1){
+     if(current_track == 1){
           current_track = 5;
      } else if(current_track == 5){
           current_track = 6;
@@ -396,9 +448,6 @@ function resize(){
 		
 		
 		
-
-		
-		
 	} else {
 		//portrait
 		
@@ -417,21 +466,11 @@ function resize(){
 		
 		var splash_left = 34;
 		$("#splash").css('left', splash_left + 'px');
-		
-
-		
-		
+	
 	}
 	
-	
-	var $lightbox = $("#blind, #contact_content, #download_content, #credits_content, .credits_content_scroller");
-		
-	$lightbox.css('top', 0);
-	$lightbox.css('left', 0);
-	$lightbox.width(window_width);
-	$lightbox.height(window_height);
-	
-	
+
+	set_blind_size();
 }
 
 function push_analytic(key, value){

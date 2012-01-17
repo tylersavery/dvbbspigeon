@@ -548,25 +548,6 @@ function set_constants() {
     screen_width = screen.width;
     screen_height = screen.height;
 
-/*
-    if (screen_width <= 1000) {
-        //small
-        IMAGE_SIZE = 'small';
-
-    } else if (screen_width > 1000 && screen_width < 1600) {
-        //medium
-        IMAGE_SIZE = 'medium';
-
-    } else if (screen_width >= 1600) {
-        // large
-        IMAGE_SIZE = 'large';
-    } else {
-
-        IMAGE_SIZE = 'medium';
-
-    }
-    
-*/
     
     IMAGE_SIZE = 'medium';
     
@@ -961,8 +942,8 @@ function init_splash() {
     s[0] = 168103;
 
     src[1] = '/images/splash/dvbbs2.gif';
-    h[1] = 639;
-    w[1] = 639;
+    h[1] = 1280;
+    w[1] = 1280;
     s[1] = 171486;
 
     src[2] = '/images/splash/dvbbs3.gif';

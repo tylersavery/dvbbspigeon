@@ -14,6 +14,10 @@ class Static_Main_Controller extends Static_Base_Controller {
 		$this->js_head[] = JS_ROOT . 'libraries/froogaloop.js';
         $this->js_head[] = JS_ROOT . 'libraries/color.js';
   
+  /*
+		print_r($_SERVER['HTTP_USER_AGENT']);
+		die();
+  */
 		$this->content_view->player = $this->content_view->capture('player_view.php');
 		      
 	}

@@ -18,11 +18,11 @@
 
 <div id="menu_container">
     <div class="menu_item" id="menu_item_1" rel="1">Dance Bitch</div>
-    <div class="menu_item" id="menu_item_2" rel="2">Drvgs</div>
+    <div class="menu_item" id="menu_item_2" rel="2"><span id="drvgs">Drvgs</span><span id="hayley">FT. Hayley Gene</span></div>
     <div class="menu_item" id="menu_item_3" rel="3">Come Alive</div>
     <div class="menu_item" id="menu_item_4" rel="4">Sugar Coated</div>
-    <div class="menu_item" id="menu_item_5" rel="5">Till I Die</div> 
-    <div class="menu_item" id="menu_item_6" rel="6">Here We Go</div>
+    <div class="menu_item" id="menu_item_6" rel="6">Here We Go</div> 
+    <div class="menu_item" id="menu_item_5" rel="5">Till I Die</div>
     
 </div>
 
@@ -37,6 +37,7 @@
 </div>
 
 <div id="footer">
+    <div class="footer_link" id="footer_link_blog">Blog</div>
     <div class="footer_link" id="footer_link_contact">Contact</div>
     <div class="footer_link" id="footer_link_download">Download</div>
     <div class="footer_link" id="footer_link_credits">Credits</div>
