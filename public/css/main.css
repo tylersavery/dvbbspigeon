@@ -502,7 +502,7 @@ ul.top_menu li:hover{
     left:50%;
     margin-left:-105px;
     margin-top:-12px;
-    width:210px;
+    width:300px;
     height:24px;
 }
 
@@ -513,4 +513,12 @@ ul.top_menu li:hover{
 
 #share_widget_twitter{
     width:63px;
+}
+
+.facebook_publish{
+    cursor:pointer;
+    float:left;
+    width:57px;
+    margin-left:-6px;
+    margin-top:1px;
 }

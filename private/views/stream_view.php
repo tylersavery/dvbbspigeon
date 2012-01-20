@@ -242,7 +242,7 @@
             <div id="share_widget_facebook" class="share_widget">
                 <div class="fb-like" data-href="http://www.dvbbs.com#1" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
             </div>
-            <div class="facebook_publish" rel="1">Publish</div>
+            <div class="facebook_publish share_widget" rel="1"><img src="/images/facebook_share.gif" /></div>
          </div>
     </div>
     
