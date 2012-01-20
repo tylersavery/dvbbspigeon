@@ -553,6 +553,7 @@ $(document).ready(function () {
                               description
              ),
              link: link,
+             attachment: attachment,
              picture: picture,
              actions: [
                   { name: action_title, link: action_link }
