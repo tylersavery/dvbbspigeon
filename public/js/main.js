@@ -533,35 +533,17 @@ $(document).ready(function () {
         var picture = 'http://dvbbs.theyoungastronauts.com/images/backgrounds/track'+rel+'/mobile.gif';
         var action_link = 'http://dvbbs.com/#' + rel;
         var action_title = 'D V B B S ' + song_name;
-        
-        var attachment = {"media": [{
-                            "type": "mp3", 
-                            "src": "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3", 
-                            "title": "Dance Bitch", 
-                            "artist": "DVBBS", 
-                            "album": "EP"
-                        }]};
+
         
         
         FB.ui(
             {
              method: 'feed',
              
-             attachment: {
-                name: 'D V B B S',
-                caption: 'Dance Bitch1',
-                media: [{
-                            type: "mp3", 
-                            source: "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3", 
-                            title: "Dance Bitch", 
-                            artist: "DVBBS", 
-                            album: "EP"
-                        }]
-             },
-             
              source: "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3",
              message: message,
              name: name,
+             description: 'description',
              caption: caption,
                 description: (
                               description
