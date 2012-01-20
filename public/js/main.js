@@ -1438,13 +1438,18 @@ function load_blog(){
 
 function share_track(track){
      
-     window.location.hash = track;
      
-     $(".blind").fadeTo(300, .7);
+     $("#share_widget_container_1,#share_widget_container_2,#share_widget_container_3,#share_widget_container_4,#share_widget_container_5,#share_widget_container_6").fadeOut(300, function(){
+        
+        window.location.hash = track;
      
-     //$("#share_widget_facebook .fb-like").attr("data-href", "http://www.dvbbs.com#"+track);
+        $(".blind").fadeTo(300, .7);
+          
+        $("#share_widget_container_"+track).fadeIn(300);
+        
+     });
      
-     $("#share_widget_container_"+track).fadeIn(300);
+
      
      
 }
