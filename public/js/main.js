@@ -546,7 +546,7 @@ $(document).ready(function () {
         FB.ui(
             {
              method: 'feed',
-             /*
+             
              attachment: {
                 name: 'D V B B S',
                 caption: 'Dance Bitch',
@@ -558,7 +558,7 @@ $(document).ready(function () {
                             album: "EP"
                         }]
              },
-             */
+             
              source: "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3",
              message: message,
              name: name,
