@@ -523,7 +523,8 @@ $(document).ready(function () {
      $(".facebook_publish").click(function(){
         
         var rel = $(this).attr('rel');
-        
+        song_name = track_number_to_name(rel);
+
         var message = 'D V B B S';
         var name = 'D V B B S ' + song_name;
         var caption = 'Listen Now';
@@ -532,6 +533,7 @@ $(document).ready(function () {
         var picture = 'http://dvbbs.com/images/backgrounds/track'+rel+'/mobile.gif';
         var action_link = 'http://dvbbs.com/#' + rel;
         var action_title = 'D V B B S ' + song_name;
+        
         
         
         FB.ui(
@@ -571,6 +573,33 @@ $(window).resize(function () {
     scrollTo(0, 1);
     setTimeout('set_sizes_and_positions()', 1000);
 });
+
+function track_number_to_name(num){
+
+    switch(parseInt(num)){
+        case 1:
+            return "Dance Bitch";
+            break;
+        case 2:
+            return "DRVGS";
+            break;
+        case 3:
+            return "Come Alive";
+            break;
+        case 4:
+            return "Sugar Coated";
+            break;
+        case 5:
+            return "Till I Die";
+            break;
+        case 6:
+            return "Here We Go";
+            break;
+    
+            
+    }
+    
+}
 
 
 function get_objects() {
