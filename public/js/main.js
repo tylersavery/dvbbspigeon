@@ -526,7 +526,7 @@ $(document).ready(function () {
         song_name = track_number_to_name(rel);
 
         var message = 'D V B B S';
-        var name = 'D V B B S 1 ' + song_name;
+        var name = 'D V B B S ' + song_name;
         var caption = 'Listen Now';
         var description = '';
         var link = 'http://dvbbs.com/#'+rel;
@@ -534,8 +534,6 @@ $(document).ready(function () {
         var action_link = 'http://dvbbs.com/#' + rel;
         var action_title = 'D V B B S ' + song_name;
 
-        
-        
         FB.ui(
             {
              method: 'feed',
