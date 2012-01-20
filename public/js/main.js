@@ -548,7 +548,7 @@ $(document).ready(function () {
              link: link,
              picture: picture,
              actions: [
-                  { name: action_name, link: action_link }
+                  { name: action_title, link: action_link }
              ],
             user_message_prompt: 'Post to your wall'
             },
