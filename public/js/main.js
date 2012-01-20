@@ -523,7 +523,8 @@ $(document).ready(function () {
      $(".facebook_publish").click(function(){
         
         var rel = $(this).attr('rel');
-        song_name = track_number_to_name(rel);
+        var song_name = track_number_to_name(rel);
+        var filename = track_number_to_filename(rel);
 
         var message = 'D V B B S';
         var name = 'D V B B S ' + song_name;
@@ -533,12 +534,12 @@ $(document).ready(function () {
         var picture = 'http://dvbbs.theyoungastronauts.com/images/backgrounds/track'+rel+'/mobile.gif';
         var action_link = 'http://dvbbs.com/#' + rel;
         var action_title = 'D V B B S ' + song_name;
+        var audio_src = "http://dvbbs.theyoungastronauts.com/audio/track"+rel+"/" + filename;
 
         FB.ui(
             {
              method: 'feed',
-             
-             source: "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3?i=12",
+             source: audio_src,
              message: message,
              name: name,
              description: 'description',
@@ -602,6 +603,30 @@ function track_number_to_name(num){
             
     }
     
+}
+
+
+function track_number_to_filename(num){
+     switch(parseInt(num)){
+        case 1:
+            return "dancebitch.mp3";
+            break;
+        case 2:
+            return "drvgs.mp3";
+            break;
+        case 3:
+            return "comealive.mp3";
+            break;
+        case 4:
+            return "sugarcoated.mp3";
+            break;
+        case 5:
+            return "flashinglights.mp3";
+            break;
+        case 6:
+            return "longtime.mp3";
+            break;
+    }
 }
 
 

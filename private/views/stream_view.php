@@ -255,7 +255,8 @@
             </div>
             <div id="share_widget_facebook" class="share_widget">
                 <div class="fb-like" data-href="http://www.dvbbs.com#2" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
-            </div>  
+            </div>
+            <div class="facebook_publish share_widget" rel="2"><img src="/images/facebook_share.gif" /></div>
          </div>
     </div>
     
@@ -268,7 +269,8 @@
             </div>
             <div id="share_widget_facebook" class="share_widget">
                 <div class="fb-like" data-href="http://www.dvbbs.com#3" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
-            </div>  
+            </div>
+            <div class="facebook_publish share_widget" rel="3"><img src="/images/facebook_share.gif" /></div>
          </div>
     </div>
     
@@ -281,7 +283,8 @@
             </div>
             <div id="share_widget_facebook" class="share_widget">
                 <div class="fb-like" data-href="http://www.dvbbs.com#4" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
-            </div>  
+            </div>
+            <div class="facebook_publish share_widget" rel="4"><img src="/images/facebook_share.gif" /></div>
          </div>
     </div>
     
@@ -294,7 +297,8 @@
             </div>
             <div id="share_widget_facebook" class="share_widget">
                 <div class="fb-like" data-href="http://www.dvbbs.com#5" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
-            </div>  
+            </div>
+            <div class="facebook_publish share_widget" rel="5"><img src="/images/facebook_share.gif" /></div>
          </div>
     </div>
     
@@ -307,7 +311,8 @@
             </div>
             <div id="share_widget_facebook" class="share_widget">
                 <div class="fb-like" data-href="http://www.dvbbs.com#6" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
-            </div>  
+            </div>
+            <div class="facebook_publish share_widget" rel="6"><img src="/images/facebook_share.gif" /></div>
          </div>
     </div>
     
