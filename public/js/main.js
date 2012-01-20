@@ -522,23 +522,33 @@ $(document).ready(function () {
      
      $(".facebook_publish").click(function(){
         
+        var rel = $(this).attr('rel');
+        
+        var message = 'D V B B S';
+        var name = 'D V B B S ' + song_name;
+        var caption = 'Listen Now';
+        var description = '';
+        var link = 'http://dvbbs.com/#'+rel;
+        var picture = 'http://dvbbs.com/images/backgrounds/track'+rel+'/mobile.gif';
+        var action_link = 'http://dvbbs.com/#' + rel;
+        var action_title = 'D V B B S ' + song_name;
+        
+        
         FB.ui(
             {
              method: 'feed',
-             message: 'getting educated about Facebook Connect',
-             name: 'Connect',
-             caption: 'The Facebook Connect JavaScript SDK',
+             message: message,
+             name: name,
+             caption: caption,
                 description: (
-                'A small JavaScript library that allows you to harness ' +
-                'the power of Facebook, bringing the user\'s identity, ' +
-                'social graph and distribution power to your site.'
+                              description
              ),
-             link: 'http://www.fbrell.com/',
-             picture: 'http://www.fbrell.com/f8.jpg',
+             link: link,
+             picture: picture,
              actions: [
-                  { name: 'fbrell', link: 'http://www.fbrell.com/' }
+                  { name: action_name, link: action_link }
              ],
-            user_message_prompt: 'Share your thoughts about RELL'
+            user_message_prompt: 'Post to your wall'
             },
             function(response) {
               if (response && response.post_id) {
