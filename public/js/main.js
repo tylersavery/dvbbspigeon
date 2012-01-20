@@ -549,7 +549,7 @@ $(document).ready(function () {
              
              attachment: {
                 name: 'D V B B S',
-                caption: 'Dance Bitch',
+                caption: 'Dance Bitch1',
                 media: [{
                             type: "mp3", 
                             source: "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3", 
