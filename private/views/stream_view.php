@@ -6,6 +6,29 @@
 <link rel="stylesheet" type="text/css" href="/css/ie.css" />
 <![endif]-->
 
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '299230586789641', // App ID
+      channelUrl : '/channel.php', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
+</script>
+
 <div id="loader"><img src="/images/loader.gif" width="16" height="16" /></div>
 <div class="blind"><div class="close">x</div></div>
 
@@ -74,23 +97,23 @@
     <!--<a href="#" class="mixtape_download" id="mixtape_download_digital">Free Digital Download</a>-->
     <a href="#" class="mixtape_download" id="mixtape_download_stems">Download Stems</a>
     <a href="#" class="mixtape_download" id="mixtape_download_dj">Download DJ Mix</a>
-    <a href="http://www.itunes.com" target="_blank" class="mixtape_download">iTunes TRX</a>
+   <!-- <a href="http://www.itunes.com" target="_blank" class="mixtape_download">iTunes TRX</a>-->
     <a href="http://www.universal.com" target="_blank" class="mixtape_download">Buy Mixtape</a>
     <a href="#" class="mixtape_download share_title">Share Mixtape</a>
     
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style">
-<a class="addthis_button_preferred_1"></a>
-<a class="addthis_button_preferred_2"></a>
-<a class="addthis_button_preferred_3"></a>
-<a class="addthis_button_compact"></a>
-<!--
-<a class="addthis_counter addthis_bubble_style"></a>
--->
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f01e5ab119c7dda"></script>
-<!-- AddThis Button END -->
-    
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_preferred_3"></a>
+        <a class="addthis_button_compact"></a>
+        <!--
+        <a class="addthis_counter addthis_bubble_style"></a>
+        -->
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f01e5ab119c7dda"></script>
+    <!-- AddThis Button END -->
+        
 </div>
 
 
@@ -108,9 +131,11 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_1" rel="1">Dance Bitch</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item share_track" rel="1">Share</div>
                     <div class="menu_foot_item play_track" rel="1" id="play_track_1">Play</div>
                     <div class="menu_foot_item download_stem"  rel="1">Stems</div>
+                    <div class="menu_foot_item share_track" rel="1">Share</div>
+                    <div class="menu_foot_item itunes"  rel="1">iTunes</div>
+                    
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -119,9 +144,10 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_2" rel="2">DRVGS</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item share_track" rel="2">Share</div>
                     <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
-                    <div class="menu_foot_item download_stem" rel="2">Stems</div>
+                    <div class="menu_foot_item download_stem"  rel="2">Stems</div>
+                    <div class="menu_foot_item share_track" rel="2">Share</div>
+                    <div class="menu_foot_item itunes"  rel="2">iTunes</div>
                     <div class="hayley">Ft. Hayley Gene</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
@@ -131,9 +157,10 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_3" rel="3">Come Alive</div>
                <div class="menu_foot">
-                    <div class="menu_foot_item share_track" rel="3">Share</div>
                     <div class="menu_foot_item play_track" rel="3" id="play_track_3">Play</div>
-                    <div class="menu_foot_item download_stem" rel="3">Stems</div>
+                    <div class="menu_foot_item download_stem"  rel="3">Stems</div>
+                    <div class="menu_foot_item share_track" rel="3">Share</div>
+                    <div class="menu_foot_item itunes"  rel="3">iTunes</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -143,9 +170,10 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_4" rel="4">Sugar Coated</div>
                <div class="menu_foot">
-                    <div class="menu_foot_item share_track" rel="4">Share</div>
                     <div class="menu_foot_item play_track" rel="4" id="play_track_4">Play</div>
-                    <div class="menu_foot_item download_stem" rel="4">Stems</div>
+                    <div class="menu_foot_item download_stem"  rel="4">Stems</div>
+                    <div class="menu_foot_item share_track" rel="4">Share</div>
+                    <div class="menu_foot_item itunes"  rel="4">iTunes</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -155,9 +183,10 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_6" rel="6">Here We Go</div>
                <div class="menu_foot">
-                    <div class="menu_foot_item share_track" rel="6">Share</div>
                     <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
-                    <div class="menu_foot_item download_stem" rel="6">Stems</div>
+                    <div class="menu_foot_item download_stem"  rel="6">Stems</div>
+                    <div class="menu_foot_item share_track" rel="6">Share</div>
+                    <div class="menu_foot_item itunes"  rel="6">iTunes</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -166,9 +195,10 @@
                 <div class="strikethrough"></div>
                 <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
                 <div class="menu_foot">
-                    <div class="menu_foot_item share_track" rel="5">Share</div>
                     <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
                     <div class="menu_foot_item download_stem" rel="5">Stems</div>
+                    <div class="menu_foot_item share_track" rel="5">Share</div>
+                    <div class="menu_foot_item itunes" rel="5">iTunes</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
 
@@ -198,20 +228,86 @@
     <div style="display:none;">
         <div id="vimeo_player_container">
             <iframe id="vimeo_player" src="http://player.vimeo.com/video/28242065?api=1&amp;player_id=vimeo_player" width="100%" frameborder="0"></iframe>
+            
         </div>
 
     </div>
-    <div id="share_widget_container">
+    <div id="share_widget_container_1">
         <div class="close">x</div>
          <div id="share_widgets">
             <div id="share_widget_twitter" class="share_widget">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <a href="https://twitter.com/share" data-count="none" data-text="D V B B S - Dance Bitch http://www.dvbbs.com/#1" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div id="share_widget_facebook" class="share_widget">
-                <div class="fb-like" data-href="http://www.dvbbs.com" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+                <div class="fb-like" data-href="http://www.dvbbs.com#1" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
             </div>
-         
+            <div class="facebook_publish">Publish</div>
+         </div>
+    </div>
+    
+    <div id="share_widget_container_2">
+        <div class="close">x</div>
+         <div id="share_widgets">
+            <div id="share_widget_twitter" class="share_widget">
+                <a href="https://twitter.com/share" data-text="D V B B S - DRVGS http://www.dvbbs.com/#2" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="share_widget_facebook" class="share_widget">
+                <div class="fb-like" data-href="http://www.dvbbs.com#2" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+            </div>  
+         </div>
+    </div>
+    
+    <div id="share_widget_container_3">
+        <div class="close">x</div>
+         <div id="share_widgets">
+            <div id="share_widget_twitter" class="share_widget">
+                <a href="https://twitter.com/share" data-text="D V B B S - Come Alive http://www.dvbbs.com/#3" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="share_widget_facebook" class="share_widget">
+                <div class="fb-like" data-href="http://www.dvbbs.com#3" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+            </div>  
+         </div>
+    </div>
+    
+    <div id="share_widget_container_4">
+        <div class="close">x</div>
+         <div id="share_widgets">
+            <div id="share_widget_twitter" class="share_widget">
+                <a href="https://twitter.com/share" data-text="D V B B S - Sugar Coated http://www.dvbbs.com/#4" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="share_widget_facebook" class="share_widget">
+                <div class="fb-like" data-href="http://www.dvbbs.com#4" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+            </div>  
+         </div>
+    </div>
+    
+    <div id="share_widget_container_5">
+        <div class="close">x</div>
+         <div id="share_widgets">
+            <div id="share_widget_twitter" class="share_widget">
+                <a href="https://twitter.com/share" data-text="D V B B S - Till I Die http://www.dvbbs.com/#5" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="share_widget_facebook" class="share_widget">
+                <div class="fb-like" data-href="http://www.dvbbs.com#5" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+            </div>  
+         </div>
+    </div>
+    
+    <div id="share_widget_container_6">
+        <div class="close">x</div>
+         <div id="share_widgets">
+            <div id="share_widget_twitter" class="share_widget">
+                <a href="https://twitter.com/share" data-text="D V B B S - Here We Go http://www.dvbbs.com/#6" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div id="share_widget_facebook" class="share_widget">
+                <div class="fb-like" data-href="http://www.dvbbs.com#6" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+            </div>  
          </div>
     </div>
     

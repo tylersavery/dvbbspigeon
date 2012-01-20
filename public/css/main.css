@@ -486,7 +486,8 @@ ul.top_menu li:hover{
 }
 
 
-#share_widget_container{
+#share_widget_container_1,#share_widget_container_2,#share_widget_container_3,
+#share_widget_container_4,#share_widget_container_5,#share_widget_container_6{
     display:none;
     width:100%;
     position:relative;
@@ -511,5 +512,5 @@ ul.top_menu li:hover{
 }
 
 #share_widget_twitter{
-    width:85px;
+    width:63px;
 }

@@ -72,6 +72,8 @@ $(document).ready(function () {
     
     push_analytic('visit', '');
 
+    
+
     /* events */
 
     $(".menu_item .menu_head").mouseenter(function() {
@@ -136,7 +138,19 @@ $(document).ready(function () {
 
                             }, 120, 'easeInOutCirc', function () {
                               
-                           
+                              console.log($($items[3]));
+                              
+                                $($items[3]).show();
+    
+                                $($items[3]).animate({
+    
+                                    width: '68px'
+    
+                                }, 120, 'easeInOutCirc', function () {
+                                  
+                               
+                                  
+                                });
                               
                             });
 
@@ -256,7 +270,13 @@ $(document).ready(function () {
         $(".download_lightbox").fadeOut(500);
         $(".credits").stop().fadeOut(500);
         $(".blind").fadeOut(500);
-        $("#share_widget_container").fadeOut(500);
+        $("#share_widget_container_1").fadeOut(500);
+        $("#share_widget_container_2").fadeOut(500);
+        $("#share_widget_container_3").fadeOut(500);
+        $("#share_widget_container_4").fadeOut(500);
+        $("#share_widget_container_5").fadeOut(500);
+        $("#share_widget_container_6").fadeOut(500);
+        $(".download_lightbox").fadeOut(500);
 
     });
 
@@ -494,9 +514,43 @@ $(document).ready(function () {
      
      $(".share_track").click(function(){
         
-        share_track();  
+        var rel = $(this).attr('rel');
+        
+        share_track(rel);  
           
      });
+     
+     $(".facebook_publish").click(function(){
+        
+        FB.ui(
+            {
+             method: 'feed',
+             message: 'getting educated about Facebook Connect',
+             name: 'Connect',
+             caption: 'The Facebook Connect JavaScript SDK',
+                description: (
+                'A small JavaScript library that allows you to harness ' +
+                'the power of Facebook, bringing the user\'s identity, ' +
+                'social graph and distribution power to your site.'
+             ),
+             link: 'http://www.fbrell.com/',
+             picture: 'http://www.fbrell.com/f8.jpg',
+             actions: [
+                  { name: 'fbrell', link: 'http://www.fbrell.com/' }
+             ],
+            user_message_prompt: 'Share your thoughts about RELL'
+            },
+            function(response) {
+              if (response && response.post_id) {
+                alert('Post was published.');
+              } else {
+                alert('Post was not published.');
+              }
+            }
+        );
+        
+     });
+     
 
 
 });
@@ -1052,6 +1106,7 @@ function enter_player() {
                                 left: 0
                             }, 300, 'easeOutSine', function () {
 
+                                check_for_hash();
 
                             });
 
@@ -1121,6 +1176,7 @@ function load_credits() {
 
 
 function load_downloads() {
+  
 
     $(".close").hide();
 
@@ -1135,6 +1191,10 @@ function load_downloads() {
             $(".blind .close").css("left", x + "px").css("top", y + "px");
 
             $('.close').fadeIn(300);
+            
+               window.location = '/downloads/mixtape.zip';
+        
+               push_analytic('download', 'mixtape');
 
         });
 
@@ -1309,11 +1369,15 @@ function load_blog(){
 }
 
 
-function share_track(){
+function share_track(track){
      
+     window.location.hash = track;
      
      $(".blind").fadeTo(300, .7);
-     $("#share_widget_container").fadeIn(300);
+     
+     //$("#share_widget_facebook .fb-like").attr("data-href", "http://www.dvbbs.com#"+track);
+     
+     $("#share_widget_container_"+track).fadeIn(300);
      
      
 }
@@ -1402,4 +1466,21 @@ function check_browser(){
 
 function is_int(input){
     return typeof(input)=='number'&&parseInt(input)==input;
-  }
+}
+  
+
+
+function check_for_hash(){
+    
+
+    
+    if(window.location.hash) {
+ 
+        var current_track = parseInt((window.location.hash).replace('#',''));
+ 
+        
+        $("#play_track_"+current_track).click();
+        
+    }
+    
+}
