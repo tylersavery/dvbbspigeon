@@ -546,6 +546,17 @@ $(document).ready(function () {
         FB.ui(
             {
              method: 'feed',
+             attachment: {
+                name: 'D V B B S',
+                caption: 'Dance Bitch',
+                media: [{
+                            type: "mp3", 
+                            source: "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3", 
+                            title: "Dance Bitch", 
+                            artist: "DVBBS", 
+                            album: "EP"
+                        }]
+             },
              message: message,
              name: name,
              caption: caption,
@@ -553,17 +564,7 @@ $(document).ready(function () {
                               description
              ),
              link: link,
-             attachment: {
-                "name": 'D V B B S',
-                "caption": 'Dance Bitch',
-                "media": [{
-                            "type": "mp3", 
-                            "src": "http://dvbbs.theyoungastronauts.com/audio/track1/dancebitch.mp3", 
-                            "title": "Dance Bitch", 
-                            "artist": "DVBBS", 
-                            "album": "EP"
-                        }]
-             },
+            
              picture: picture,
              actions: [
                   { name: action_title, link: action_link }
