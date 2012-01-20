@@ -534,6 +534,13 @@ $(document).ready(function () {
         var action_link = 'http://dvbbs.com/#' + rel;
         var action_title = 'D V B B S ' + song_name;
         
+        var attachment = {"media": [{
+                            "type": "mp3", 
+                            "src": "http://dvbbs.theyoungastronauts.com/audio/track"+rel+"/dancebitch.mp3", 
+                            "title": "Dance Bitch", 
+                            "artist": "DVBBS", 
+                            "album": "EP"
+                        }]}
         
         
         FB.ui(
