@@ -544,6 +544,7 @@ $(document).ready(function () {
              message: message,
              name: name,
              description: 'description',
+             artist: 'D V B B S',
              caption: caption,
                 description: (
                               description
