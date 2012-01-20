@@ -530,7 +530,7 @@ $(document).ready(function () {
         var caption = 'Listen Now';
         var description = '';
         var link = 'http://dvbbs.com/#'+rel;
-        var picture = 'http://dvbbs.com/images/backgrounds/track'+rel+'/mobile.gif';
+        var picture = 'http://dvbbs.theyoungastronauts.com/images/backgrounds/track'+rel+'/mobile.gif';
         var action_link = 'http://dvbbs.com/#' + rel;
         var action_title = 'D V B B S ' + song_name;
         
