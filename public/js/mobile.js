@@ -19,7 +19,7 @@ var IMG_ASPECT;
 
 $(document).ready(function(){
     
-    set_constants();
+   set_constants();
     
    push_analytic('visit', '');
 
@@ -199,7 +199,7 @@ function hayley(){
 	
 }
 
-function hide_menu_bar(){
+function hide_menu_bar() {
     
     window.scrollTo(0, 1);
 	
@@ -207,10 +207,9 @@ function hide_menu_bar(){
     
 }
 
-function init_audio(){
-    
+function init_audio() {
+	
     if ($("#audio_player").length > 0) {
-
             audio.pause();
             $("#audio_player").remove();
     }
@@ -270,25 +269,21 @@ function init_audio(){
 
         }
 
-
     });
-    
-    
- 
     
     $(audio).bind('ended', function () {
         next_track();
     });
     
     $(audio).bind('play', function () {
-        $(".player_play").addClass('pause');
+        
+		$(".player_play").addClass('pause');
         playing = true;
         
         $(".menu_item").removeClass('playing'); 
         $("#menu_item_" + current_track).addClass('playing');
 		
 		push_analytic('play', current_track);
-		
         
     });
     
@@ -296,13 +291,12 @@ function init_audio(){
         $(".player_play").removeClass('pause');
         playing = false;
     });
-    
-    audio.play();
 
-    
-    
-    
-    
+	var t = window.setTimeout(function(){
+		
+		audio.play();
+		
+	}, 1000);
 }
 
 
@@ -337,18 +331,20 @@ function set_constants(){
 function next_track() {
 
     if (current_track == 4){
-     current_track = 6
+     current_track = 6;
     } else if(current_track == 6){
      current_track = 5;
     } else if(current_track == 5){
-     current_track = 1
+     current_track = 1;
     } else {
         current_track++;
     }
 
     init_bg();
+	
     init_audio();
 
+	audio.play();
 }
 
 function previous_track() {
@@ -361,8 +357,6 @@ function previous_track() {
      } else {
           current_track--;
      }
-
-
 
     init_bg();
     init_audio();

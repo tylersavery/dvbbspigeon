@@ -1061,20 +1061,20 @@ function init_splash() {
     h[0] = 192;
     w[0] = 500;
     s[0] = 168103;
-
+/*
     src[1] = '/images/splash/dvbbs2.gif';
     h[1] = 1280;
     w[1] = 1280;
     s[1] = 171486;
-
-    src[2] = '/images/splash/dvbbs3.gif';
-    h[2] = 144;
-    w[2] = 989;
-    s[2] = 78893;
+*/
+    src[1] = '/images/splash/dvbbs3.gif';
+    h[1] = 144;
+    w[1] = 989;
+    s[1] = 78893;
 
     var download_start = (new Date()).getTime();  
     
-    var rand = Math.round(Math.random() * 2);
+    var rand = Math.round(Math.random());
 
     var img_loading = new Image();
     img_loading.src = src[rand] + '?time=' + TIME_NOW;

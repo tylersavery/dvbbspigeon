@@ -337,12 +337,15 @@ span.up{
     opacity:1;
 }
 
+.underground{
+    margin-top:16px;
+}
 
 .kanary{
     font-size:28px;
     color: #ECE94E;
     margin-bottom:10px;
-    margin-top:20px;
+    margin-top:10px;
     text-indent:-9999px;
     width: 120px;
     height: 52px;
