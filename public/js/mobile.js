@@ -158,6 +158,7 @@ window.onresize = function(){
 
 function set_blind_size(){
 	
+	/*
 	if(window.innerHeight < window.innerWidth){
 		var w = screen.height;
 		var h = screen.width;
@@ -165,6 +166,13 @@ function set_blind_size(){
 		var w = screen.width;
 		var h = screen.height;
 	}
+	*/
+	
+	//this might break it for iphone
+		
+	
+	var w = screen.width;
+	var h = screen.height;	
 		
 	$("#blind").width(w);
 	$("#blind").height(h);

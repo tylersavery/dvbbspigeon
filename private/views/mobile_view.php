@@ -115,6 +115,10 @@
         
         <div class="kanary">Kanary</div>
         
+
+            <img src="/images/uologo_white.png" /><br />
+       <br>
+        
         <a href="http://www.theyoungastronauts.com" target="_blank">
             <img src="/images/ya.png" />
         </a>
