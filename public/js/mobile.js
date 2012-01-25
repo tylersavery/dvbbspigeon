@@ -170,10 +170,22 @@ function set_blind_size(){
 	
 	//this might break it for iphone
 		
-	
-	var w = screen.width;
-	var h = screen.height;	
+	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))){
 		
+		if(window.innerHeight < window.innerWidth){
+			var w = screen.height;
+			var h = screen.width;
+		} else {
+			var w = screen.width;
+			var h = screen.height;
+		}
+		
+	} else {
+		
+		var w = screen.width;
+		var h = screen.height;
+		
+	}
 	$("#blind").width(w);
 	$("#blind").height(h);
 	
