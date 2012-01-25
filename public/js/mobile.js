@@ -440,8 +440,10 @@ function resize(){
 	window_width = $(window).width();
 	window_height = $(window).height();
 	
+	var facebook = 1;
 	
-	if(window.innerHeight < window.innerWidth){
+	
+	if((window.innerHeight < window.innerWidth) && !facebook){
 		//landscape	
 		
 		var padding_left = 80;
