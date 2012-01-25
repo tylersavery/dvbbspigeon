@@ -443,7 +443,7 @@ function resize(){
 	var facebook = 1;
 	
 	
-	if((window.innerHeight < window.innerWidth) && !facebook){
+	if((window.innerHeight < window.innerWidth) && facebook != 1){
 		//landscape	
 		
 		var padding_left = 80;
