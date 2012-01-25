@@ -127,7 +127,7 @@
 </div>
 
 
-<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 
 <script>
 
@@ -145,5 +145,5 @@ window.fbAsyncInit = function() {
 // Do things that will sometimes call sizeChangeCallback()
 
 function sizeChangeCallback() {
-    FB.Canvas.setSize();
+    FB.Canvas.setSize({height: 400});
 }
