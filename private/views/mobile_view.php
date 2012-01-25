@@ -126,3 +126,24 @@
     </div>
 </div>
 
+
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+
+<script>
+
+FB.init({
+    appId : '284190808302685',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml : true // parse XFBML
+});
+
+window.fbAsyncInit = function() {
+    FB.Canvas.setSize();
+}
+
+// Do things that will sometimes call sizeChangeCallback()
+
+function sizeChangeCallback() {
+    FB.Canvas.setSize();
+}
