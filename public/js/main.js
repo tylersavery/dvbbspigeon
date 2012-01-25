@@ -22,6 +22,7 @@ var current_track;
 var keep_vimeo_up = false;
 var vimeo_showing = false;
 var speed_bps = null;
+var facebook = null;
 
 /* constants */
 
@@ -51,6 +52,7 @@ $(document).ready(function () {
     
     get_objects();
     check_if_mobile();
+    check_facebook();
 
     
     set_constants();
@@ -571,12 +573,45 @@ $(document).ready(function () {
 
 });
 
+$.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
+
 $(window).resize(function () {
 
     set_sizes_and_positions();
     scrollTo(0, 1);
     setTimeout('set_sizes_and_positions()', 1000);
 });
+
+
+function check_facebook(){
+    
+    facebook = $.getUrlVar('f');
+    
+    if(facebook == "1"){
+        facebook = true;
+        $("body").addClass("facebook");
+        return true;
+    }
+    
+    facebook = false;
+    return false;
+    
+}
 
 function track_number_to_name(num){
 

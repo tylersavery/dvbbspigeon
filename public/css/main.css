@@ -529,3 +529,31 @@ ul.top_menu li:hover{
     margin-left:-6px;
     margin-top:1px;
 }
+
+
+
+/* FACEBOOK  APP */
+
+
+
+body.facebook {
+    
+}
+
+
+body.facebook #blog_link{
+    display:none;
+}
+
+body.facebook .track_menu .menu_item{
+    padding-bottom:2px;
+    padding-top:2px;
+}
+
+body.facebook .player_gutter{
+    width:160px !important;
+}
+
+body.facebook .logo{
+    display:none;
+}

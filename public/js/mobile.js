@@ -20,6 +20,7 @@ var IMG_ASPECT;
 $(document).ready(function(){
     
    set_constants();
+   
     
    push_analytic('visit', '');
 
@@ -154,7 +155,6 @@ window.onresize = function(){
 	resize();
 	
 };
-
 
 function set_blind_size(){
 	
