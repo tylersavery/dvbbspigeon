@@ -139,7 +139,7 @@ FB.init({
 });
 
 window.fbAsyncInit = function() {
-    FB.Canvas.setSize();
+    FB.Canvas.setSize({height: 400});
 }
 
 // Do things that will sometimes call sizeChangeCallback()
