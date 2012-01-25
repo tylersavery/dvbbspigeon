@@ -9,7 +9,7 @@
 }
 body{
     width:520px;
-    height:300px;
+    height:268px;
     overflow:hidden;
 }
 
@@ -19,6 +19,6 @@ iframe{
 </style>
 </head>
 <body>
-<iframe width="520" height="350" src="http://dvbbs.theyoungastronauts.com/m?f=1"></iframe>
+<iframe width="520" height="268" src="http://dvbbs.theyoungastronauts.com/m?f=1"></iframe>
 </body>
 </html>
