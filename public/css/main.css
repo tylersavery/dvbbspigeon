@@ -545,6 +545,11 @@ body.facebook #blog_link{
     display:none;
 }
 
+body.facebook .track_menu{
+    margin-top:110px !important;
+    top:0px !important;
+}
+
 body.facebook .track_menu .menu_item{
     padding-bottom:2px;
     padding-top:2px;
