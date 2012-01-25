@@ -12,6 +12,10 @@ body{
     height:300px;
     overflow:hidden;
 }
+
+iframe{
+    border:none;
+}
 </style>
 </head>
 <body>
