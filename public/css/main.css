@@ -42,7 +42,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
     color:rgba(236, 233, 78, .9);
     cursor:pointer;
     text-transform:uppercase;
-    z-index:10000;
+    z-index:100000;
 }
 
 .close:hover{
@@ -529,6 +529,8 @@ ul.top_menu li:hover{
     margin-left:-6px;
     margin-top:1px;
 }
+
+
 
 
 
