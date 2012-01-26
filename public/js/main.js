@@ -1261,15 +1261,31 @@ function load_credits() {
 
         $(".blind .close").css("left", x + "px").css("top", y + "px");
 
-        $(".credits").animate({
 
-            top: '0px'
+        if(facebook){
+            
+            $(".credits").animate({
+    
+                top: '-1000px'
+    
+            }, 13000, 'easeInOutQuad', function () {
+    
+                $(".close").click();   
+            });
+            
+        } else {
 
-        }, 12000, 'easeInOutQuad', function () {
-
-            $('.close').fadeIn(300);
-
-        });
+            $(".credits").animate({
+    
+                top: '0px'
+    
+            }, 12000, 'easeInOutQuad', function () {
+    
+                $('.close').fadeIn(300);
+    
+            });
+        
+        }
 
     });
 
