@@ -19,13 +19,12 @@ iframe{
 
 
 .social{
-    width:516px;
+    width:520px;
     height:30px;
     position:relative;
     margin:0px auto;
     right:0px;
-    padding-left:4px;
-    background-color:#231f20;
+    background-color:#000;
     margin-top:-4px;
 
 }
@@ -37,7 +36,7 @@ iframe{
 }
 
 .social .social_item a{
-    background-image:url(/images/dvbbs_socialicons_facebook.gif);
+    background-image:url(/images/socialicons_facebook_dvbbs.gif);
     text-indent:-9999px;
     display:block;
     width:104px;
@@ -64,7 +63,7 @@ iframe{
 
 #social_soundcloud{
     background-position: -208px -30px;
-    width:100px;
+
 }
 
 #social_soundcloud:hover{
@@ -73,7 +72,7 @@ iframe{
 
 #social_tumblr{
     background-position: -312px -30px;
-    width:100px;
+
 }
 
 #social_tumblr:hover{
@@ -86,13 +85,13 @@ iframe{
 
 #social_itunes:hover{
     background-position: -416px -0px;
-    margin-right:0px;
+
 }
 
 
 
 #fbplugin{
-    background-color:#231f20;
+    background-color:#000;
     position:relative;
     margin-top:0px;
     padding-left:2px;
