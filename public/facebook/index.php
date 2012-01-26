@@ -93,7 +93,7 @@ iframe{
 #fbplugin{
     background-color:#000;
     position:relative;
-    margin-top:0px;
+    margin-top:1px;
     padding-left:2px;
 }
 
