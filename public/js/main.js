@@ -1266,9 +1266,9 @@ function load_credits() {
             
             $(".credits").animate({
     
-                top: '-1000px'
+                top: '-500px'
     
-            }, 13000, 'easeInOutQuad', function () {
+            }, 15000, 'easeInOutQuad', function () {
     
                 $(".close").click();   
             });
