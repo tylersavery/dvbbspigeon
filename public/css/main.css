@@ -386,7 +386,7 @@ span.up{
     text-transform:uppercase;
     
     display:none;
-
+    padding-top:22px;
 }
 
 .download_lightbox h3, .download_lightbox a{
