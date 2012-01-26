@@ -562,3 +562,7 @@ body.facebook .player_gutter{
 body.facebook .logo{
     display:none;
 }
+
+body.facebook .track_menu .menu_item .menu_foot .hayley{
+    top:18px;
+}
