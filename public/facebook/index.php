@@ -26,7 +26,7 @@ iframe{
     position:relative;
     float:left;
     margin:3px auto;
-    margin-left:150px;
+    margin-left:165px;
 }
 
 .social .social_item{
