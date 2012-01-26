@@ -21,12 +21,13 @@ iframe{
 
 
 .social{
-    width:230px;
+    width:190px;
     height:18px;
-    position:relative;
+    position:absolute;
     float:left;
-    margin:3px auto;
-    margin-left:165px;
+    margin:0px auto;
+    right:0px;
+    text-align:right;
 }
 
 .social .social_item{
@@ -96,6 +97,7 @@ iframe{
 
 #social_itunes:hover{
     background-position: -209px -2px;
+    margin-right:0px;
 }
 
 
