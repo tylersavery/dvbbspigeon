@@ -1310,8 +1310,18 @@ function load_downloads() {
 
             $('.close').fadeIn(300);
             
-               window.location = '/downloads/mixtape.zip';
-        
+            
+               if($.cookie('downloaded') == 1){
+                
+               } else {
+                var date = new Date();
+                date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
+            
+                window.location = '/downloads/mixtape.zip';
+                $.cookie('downloaded', 1, { expires: date });
+               
+               }
+               
                push_analytic('download', 'mixtape');
 
         });
