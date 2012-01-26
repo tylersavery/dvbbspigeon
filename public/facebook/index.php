@@ -9,8 +9,6 @@
 }
 body{
     width:520px;
-    height:380px;
-    overflow:hidden;
 }
 
 iframe{
@@ -104,6 +102,10 @@ iframe{
     margin-right:0px;
 }
 
+#fbplugin{
+    background-color:#000;
+}
+
 
 </style>
 </head>
@@ -117,7 +119,19 @@ iframe{
      <div class="social_item"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
     <div class="social_item last"><a href="#" id="social_itunes" target="_blank">itunes</a></div>
 </div>
+ <div id="fbplugin">
+ <div id="fb-root"></div>
+ 
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=284190808302685";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ 
+ <div class="fb-comments" data-href="http://dvbbs.com" data-num-posts="2" data-width="500" data-colorscheme="dark"></div>
 
-
+ </div>
 </body>
 </html>
