@@ -21,7 +21,7 @@ iframe{
 
 
 .social{
-    width:190px;
+    width:186px;
     height:18px;
     position:absolute;
     float:left;
@@ -37,6 +37,10 @@ iframe{
     float:left;
     margin-right: 4px;
     text-align:center;
+}
+
+.social .social_item.last{
+    margin-right:0px;
 }
 
 .social .social_item a{
