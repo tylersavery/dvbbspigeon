@@ -105,7 +105,7 @@ iframe{
 #fbplugin{
     background-color:#000;
     position:relative;
-    margin-top:30px;
+    margin-top:26px;
 }
 
 
@@ -132,7 +132,7 @@ iframe{
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
  
- <div class="fb-comments" data-href="http://dvbbs.com" data-num-posts="2" data-width="500" data-colorscheme="dark"></div>
+ <div class="fb-comments" data-href="http://dvbbs.com" data-num-posts="2" data-width="520" data-colorscheme="dark"></div>
 
  </div>
 </body>
