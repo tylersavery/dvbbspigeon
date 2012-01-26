@@ -566,3 +566,7 @@ body.facebook .logo{
 body.facebook .track_menu .menu_item .menu_foot .hayley{
     top:18px;
 }
+
+body.facebook .strikethrough{
+    top:12px !important;
+}
