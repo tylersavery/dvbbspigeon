@@ -1266,7 +1266,7 @@ function load_credits() {
             
             $(".credits").animate({
     
-                top: '-500px'
+                top: '-400px'
     
             }, 15000, 'easeInOutQuad', function () {
     
