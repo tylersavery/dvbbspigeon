@@ -104,6 +104,8 @@ iframe{
 
 #fbplugin{
     background-color:#000;
+    position:relative;
+    margin-top:30px;
 }
 
 
