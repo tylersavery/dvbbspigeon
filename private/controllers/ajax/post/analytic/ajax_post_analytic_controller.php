@@ -9,6 +9,7 @@ class Ajax_Post_Analytic_Controller extends Post_Controller {
         $value = $_POST['value'];
         $time = time();
 		$mobile = $_POST['mobile'];
+		$facebook = $_POST['facebook'];
         
         $a = new Analytic_Model;
         $a->set_ip($ip);
@@ -16,6 +17,7 @@ class Ajax_Post_Analytic_Controller extends Post_Controller {
         $a->set_thevalue($value);
         $a->set_time($time);
 		$a->set_mobile($mobile);
+		$a->set_facebook($facebook);
         $a->save();
         
     

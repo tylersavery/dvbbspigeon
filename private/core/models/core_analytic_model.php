@@ -8,7 +8,8 @@ class Core_Analytic_Model extends Core_Model {
         'ip',
         'thekey',
         'thevalue',
-		'mobile'
+		'mobile',
+		'facebook'
 	);
 
 	protected $id;
@@ -17,6 +18,7 @@ class Core_Analytic_Model extends Core_Model {
     protected $thekey;
     protected $thevalue;
 	protected $mobile;
+	protected $facebook;
 
 	function __construct() {
 		parent::__construct();
@@ -68,6 +70,14 @@ class Core_Analytic_Model extends Core_Model {
 
 	public function set_mobile($value) {
 		$this->mobile = $value;
+	}
+	
+	public function get_facebook() {
+		return $this->facebook;
+	}
+
+	public function set_facebook($value) {
+		$this->facebook = $value;
 	}
     
 }

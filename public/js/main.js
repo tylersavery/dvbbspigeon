@@ -258,10 +258,35 @@ $(document).ready(function () {
     });
 
     $(".download_stem").click(function () {
-
-        window.location = '/downloads/stems.zip';
+        var rel = $(this).attr('rel');
         
-        push_analytic('download', 'stems');
+        switch(rel){
+            case '1':
+                var location = '/downloads/DVBBS - Dance Bitch [Stems].zip';
+                break;
+            case '2':
+                var location = '/downloads/DVBBS - DRVGS [Stems].zip';
+                break;
+            case '3':
+                var location = '/downloads/DVBBS - Come Alive [Stems].zip';
+                break;
+            case '4':
+                var location = '/downloads/DVBBS - Sugar Coated [Stems].zip';
+                break;
+            case '5':
+                var location = '/downloads/DVBBS - Till I Die [Stems].zip';
+                break;
+            case '6':
+                var location = '/downloads/DVBBS - Here We Go [Stems].zip';
+                break;
+            default:
+                var location = '/downloads/DVBBS - DVBBS EP [Stems].zip';
+                break;
+        }
+
+        window.location = location;
+        
+        push_analytic('download', 'stem' + rel);
 
     });
 
@@ -395,11 +420,6 @@ $(document).ready(function () {
 
     });
 
-
-
-
-
-
     $(".player_volume_icon").click(function () {
 
         if ($(this).hasClass('mute')) {
@@ -458,24 +478,34 @@ $(document).ready(function () {
 
     });
     
+    /*
+    
      $("#mixtape_download_digital").click(function () {
      
           push_analytic('download', 'mixtape');
           
      });
-     
+    */
+    
+    
      $("#mixtape_download_stems").click(function () {
+     
+          window.location = '/downloads/DVBBS - DVBBS EP [Stems].zip';
      
           push_analytic('download', 'stems');
           
      });
      
      $("#mixtape_download_dj").click(function () {
-     
+          window.location = '/downloads/DVBBS - DVBBS EP [Mix].zip';
           push_analytic('download', 'dj');
           
      });
-
+     
+     $("#mixtape_buy").click(function(){
+        window.location = 'http://itunes.com';
+        
+     });
 
      $(".header .logo").mouseenter(function(){
         
@@ -1317,7 +1347,7 @@ function load_downloads() {
                 var date = new Date();
                 date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
             
-                window.location = '/downloads/mixtape.zip';
+                window.location = '/downloads/DVBBS - DVBBS EP [Mix].zip';
                 $.cookie('downloaded', 1, { expires: date });
                
                }
@@ -1518,7 +1548,13 @@ function share_track(track){
 
 function push_analytic(key, value){
      
-     var datastring = "key=" + key + "&value=" + value + "&mobile=false";
+     if(facebook){
+        var fb = 1;
+     } else {
+        var fb = 0;
+     }
+     
+     var datastring = "key=" + key + "&value=" + value + "&mobile=false" + "&facebook=" + fb;
      
      $.ajax({
             url: "/ajax/post/analytic",
