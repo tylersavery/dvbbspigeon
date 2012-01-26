@@ -581,8 +581,20 @@ body.facebook .contact p.spacer{
 }
 
 body.facebook .contact {
-    margin-top:10px !important;
+    margin-top:30px !important;
     top:0px !important;
+}
+
+
+body.facebook .contact .close{
+    margin-right:100px;
+
+}
+
+body.facebook .close{
+    position:fixed !important;
+    left: 500px !important;
+    top: 20px !important;
 }
 
 body.facebook .contact h4{
