@@ -138,9 +138,9 @@
                 <div class="menu_head" id="menu_head_1" rel="1">Dance Bitch</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="1" id="play_track_1">Play</div>
-                    <div class="menu_foot_item download_stem"  rel="1">Stems</div>
                     <div class="menu_foot_item share_track" rel="1">Share</div>
                     <div class="menu_foot_item itunes"  rel="1">iTunes</div>
+                    <div class="menu_foot_item download_stem"  rel="1">Stems</div>
                     
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
@@ -151,9 +151,9 @@
                 <div class="menu_head" id="menu_head_2" rel="2">DRVGS</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
-                    <div class="menu_foot_item download_stem"  rel="2">Stems</div>
                     <div class="menu_foot_item share_track" rel="2">Share</div>
                     <div class="menu_foot_item itunes"  rel="2">iTunes</div>
+                    <div class="menu_foot_item download_stem"  rel="2">Stems</div>
                     <div class="hayley">Ft. Hayley Gene</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
@@ -164,9 +164,9 @@
                 <div class="menu_head" id="menu_head_3" rel="3">Come Alive</div>
                <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="3" id="play_track_3">Play</div>
-                    <div class="menu_foot_item download_stem"  rel="3">Stems</div>
                     <div class="menu_foot_item share_track" rel="3">Share</div>
                     <div class="menu_foot_item itunes"  rel="3">iTunes</div>
+                    <div class="menu_foot_item download_stem"  rel="3">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -177,9 +177,9 @@
                 <div class="menu_head" id="menu_head_4" rel="4">Sugar Coated</div>
                <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="4" id="play_track_4">Play</div>
-                    <div class="menu_foot_item download_stem"  rel="4">Stems</div>
                     <div class="menu_foot_item share_track" rel="4">Share</div>
                     <div class="menu_foot_item itunes"  rel="4">iTunes</div>
+                    <div class="menu_foot_item download_stem"  rel="4">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -190,9 +190,9 @@
                 <div class="menu_head" id="menu_head_6" rel="6">Here We Go</div>
                <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
-                    <div class="menu_foot_item download_stem"  rel="6">Stems</div>
                     <div class="menu_foot_item share_track" rel="6">Share</div>
                     <div class="menu_foot_item itunes"  rel="6">iTunes</div>
+                    <div class="menu_foot_item download_stem"  rel="6">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
             
@@ -202,9 +202,9 @@
                 <div class="menu_head" id="menu_head_5" rel="5">Till I Die</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
-                    <div class="menu_foot_item download_stem" rel="5">Stems</div>
                     <div class="menu_foot_item share_track" rel="5">Share</div>
                     <div class="menu_foot_item itunes" rel="5">iTunes</div>
+                    <div class="menu_foot_item download_stem" rel="5">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
 
