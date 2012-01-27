@@ -140,7 +140,7 @@ $(document).ready(function () {
 
                             }, 120, 'easeInOutCirc', function () {
                               
-                              console.log($($items[3]));
+                              
                               
                                 $($items[3]).show();
     
@@ -759,9 +759,7 @@ function init_bg() {
                IMG_WIDTH = 900;
                IMG_HEIGHT = 600;
                IMAGE_SIZE = 'small'; 
-               console.log("IS SLOW - using small");
           }
-          console.log("IS INT:" + speed_bps );
      }
 
     BG_SRC = '/images/backgrounds/track' + current_track + '/' + IMAGE_SIZE + '.gif' + '?time=' + TIME_NOW;;
@@ -1122,20 +1120,33 @@ function init_splash() {
     var w = new Array();
     var s = new Array();
 
-    src[0] = '/images/splash/dvbbs1.gif';
-    h[0] = 192;
-    w[0] = 500;
-    s[0] = 168103;
-/*
-    src[1] = '/images/splash/dvbbs2.gif';
-    h[1] = 1280;
-    w[1] = 1280;
-    s[1] = 171486;
-*/
-    src[1] = '/images/splash/dvbbs3.gif';
-    h[1] = 144;
-    w[1] = 989;
-    s[1] = 78893;
+    if(facebook){
+         
+        src[0] = '/images/splash/dvbbs1f.gif';
+        h[0] = 115;
+        w[0] = 300;
+        s[0] = 76000;
+
+        src[1] = '/images/splash/dvbbs3f.gif';
+        h[1] = 159;
+        w[1] = 700;
+        s[1] = 54000;  
+         
+    } else {
+        
+        src[0] = '/images/splash/dvbbs1.gif';
+        h[0] = 192;
+        w[0] = 500;
+        s[0] = 168103;
+
+        src[1] = '/images/splash/dvbbs3.gif';
+        h[1] = 144;
+        w[1] = 989;
+        s[1] = 78893;   
+        
+    }
+
+
 
     var download_start = (new Date()).getTime();  
     
