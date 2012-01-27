@@ -79,6 +79,12 @@ $(document).ready(function () {
     /* events */
 
     $(".menu_item .menu_head").mouseenter(function() {
+        
+        $("#share_widget_container_1").fadeOut(500);
+        $("#share_widget_container_2").fadeOut(500);
+        $("#share_widget_container_3").fadeOut(500);
+        $("#share_widget_container_4").fadeOut(500);
+        $("#share_widget_container_5").fadeOut(500);
      
         $(".hayley").hide();
 
