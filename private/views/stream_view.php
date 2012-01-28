@@ -54,7 +54,7 @@
 
 <div class="credits">
     <h3 class="credits_title">Music by DVBBS</h3>
-    <h4><a href="https://twitter.com/#!/dvbbsdvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbsdvbbs</a>
+    <h4><a href="https://twitter.com/#!/dvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbs</a>
     | <a href="https://twitter.com/#!/alexdvbbs" target="_blank" class="twitter"><span class="up">@</span>alexdvbbs</a>
     | <a href="https://twitter.com/#!/chrisdvbbs" target="_blank" class="twitter"><span class="up">@</span>chrisdvbbs</a>
     </h4>
@@ -242,7 +242,7 @@
         <div class="close">x</div>
          <div id="share_widgets">
             <div id="share_widget_twitter" class="share_widget">
-                <a href="https://twitter.com/share" data-count="none" data-text="D V B B S - Dance Bitch http://www.dvbbs.com/#1" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <a href="https://twitter.com/share" data-count="none" data-text="D V B B S - Dance Bitch http://www.dvbbs.com/#1" class="twitter-share-button" data-related="dvbbs" data-hashtags="dvbbs">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div id="share_widget_facebook" class="share_widget">
@@ -256,7 +256,7 @@
         <div class="close">x</div>
          <div id="share_widgets">
             <div id="share_widget_twitter" class="share_widget">
-                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - DRVGS http://www.dvbbs.com/#2" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - DRVGS http://www.dvbbs.com/#2" class="twitter-share-button" data-related="dvbbs" data-hashtags="dvbbs">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div id="share_widget_facebook" class="share_widget">
@@ -270,7 +270,7 @@
         <div class="close">x</div>
          <div id="share_widgets">
             <div id="share_widget_twitter" class="share_widget">
-                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - Come Alive http://www.dvbbs.com/#3" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - Come Alive http://www.dvbbs.com/#3" class="twitter-share-button" data-related="dvbbs" data-hashtags="dvbbs">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div id="share_widget_facebook" class="share_widget">
@@ -284,7 +284,7 @@
         <div class="close">x</div>
          <div id="share_widgets">
             <div id="share_widget_twitter" class="share_widget">
-                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - Sugar Coated http://www.dvbbs.com/#4" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - Sugar Coated http://www.dvbbs.com/#4" class="twitter-share-button" data-related="dvbbs" data-hashtags="dvbbs">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div id="share_widget_facebook" class="share_widget">
@@ -312,7 +312,7 @@
         <div class="close">x</div>
          <div id="share_widgets">
             <div id="share_widget_twitter" class="share_widget">
-                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - Here We Go http://www.dvbbs.com/#6" class="twitter-share-button" data-related="dvbbsdvbbs" data-hashtags="dvbbs">Tweet</a>
+                <a href="https://twitter.com/share" data-count="none"  data-text="D V B B S - Here We Go http://www.dvbbs.com/#6" class="twitter-share-button" data-related="dvbbs" data-hashtags="dvbbs">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
             <div id="share_widget_facebook" class="share_widget">

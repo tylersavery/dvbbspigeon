@@ -89,7 +89,7 @@
 <div id="credits_content">
     <div class="credits_content_scroller">
         <h3 class="credits_title">Music by DVBBS</h3>
-        <h4><a href="https://twitter.com/#!/dvbbsdvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbsdvbbs</a>
+        <h4><a href="https://twitter.com/#!/dvbbs" target="_blank" class="twitter"><span class="up">@</span>dvbbs</a>
         <br><a href="https://twitter.com/#!/alexdvbbs" target="_blank" class="twitter"><span class="up">@</span>alexdvbbs</a>
         <br><a href="https://twitter.com/#!/chrisdvbbs" target="_blank" class="twitter"><span class="up">@</span>chrisdvbbs</a>
         </h4>
