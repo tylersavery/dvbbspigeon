@@ -18,13 +18,15 @@
 	
 		<div class="post_content" rel="a<?= $i;?>">
 			<div class="post_date"><?= time_to_friendly_date($this->post['time']); ?></div>
-			<div class="post_caption">&nbsp;</div>
 			<div class="photo">
-				<?= $this->post['content']['player']; ?>
+				<div class="post_caption"><a href="<?=$this->post['url'];?>" target="_blank"><?= ucwords($this->post['type']);?></a></div>
+			
+				<?= $this->post['content']['player']; ?><br>
+				<?= $this->post['content']['caption']; ?>
 			</div>
 		</div>
 		
-		<div class="post_title"><?= $this->post['content']['caption']; ?></div>
+		<div class="post_title"></div>
 		
 	</div>
 	

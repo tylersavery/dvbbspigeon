@@ -50,7 +50,7 @@ class Read_Tumblr {
 		return true;
 	}
 	
-	public function getPosts($nStart = 0,$mNum = 20,$sType = null,$nID = null,$sTagged = null, $sSearch = null) {
+	public function getPosts($nStart = 0,$mNum = 20,$sType = null,$nID = null,$sTagged = null, $sSearch = null, $notes = true) {
 		$aParams = array();
 		
 		if (is_numeric($nID)) {
@@ -76,6 +76,19 @@ class Read_Tumblr {
 		if (!is_null($sSearch)) {
 			$aParams['search'] = $sSearch;
 			if ($mNum == 'all' || (is_numeric($mNum) && $mNum > 50)) { $aParams['num'] = 50; } else { $aParams['num'] = $mNum; }
+			
+			$this->__apiRead($aParams);
+			$this->__orderResults();
+			return true;
+		}
+		
+		if($notes){
+			$aParams['notes_info'] = 'true';
+			if ($mNum == 'all' || (is_numeric($mNum) && $mNum > 50)) {
+				$aParams['num'] = 50;
+			} else {
+				$aParams['num'] = $mNum;
+			}
 			
 			$this->__apiRead($aParams);
 			$this->__orderResults();
@@ -146,6 +159,8 @@ class Read_Tumblr {
 	protected function __apiRead($aParams = array()) {
 		if (isset($aParams['type']) && $aParams['type'] == 'all') { unset($aParams['type']); }
 		$aParams['json'] = 1;
+		$aParams['notes_info'] = 'true';
+		
 
 		$oNetHttp = &$this->oNetHttp;
 		$oNetHttp->get('/api/read',$aParams);
@@ -194,6 +209,7 @@ class Read_Tumblr {
 			
 			if ($k == 'posts') {
 				foreach ($v as $post) {
+					
 					if ($this->bIgnorePosts) { break; }
 					$pid = $post['unix-timestamp'].'|'.$post['id'];
 					$aPosts[$pid]['id'] = $post['id'];

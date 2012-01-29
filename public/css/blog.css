@@ -92,12 +92,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', e
 
 
 
-.post.dvbbs .post_top, .post.dvbbs .post_bottom{
-    background-color: #ece94e;
+.post.dvbbs .post_top, .post.dvbbs .post_bottom, .post.dvbbs .post_middle{
 
+background:none;
 
 
 }
+
+.post.dvbbs{
+    background-image:url(/images/blog_pattern_blur.gif);
+
+}
+
+
+
+
 .post_middle{
     position:relative;
     height:140px;
@@ -112,6 +121,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', e
 
 }
 
+.post.alex .post_top, .post.alex .post_middle, .post.alex .post_bottom, .post.chris .post_top,  .post.chris .post_middle, .post.chris .post_bottom{
+    background:none;
+}
+
+.post.alex{
+    background-image:url(/images/blog_alex_bg.jpg);
+}
+
+.post.chris{
+    background-image:url(/images/blog_chris_bg.jpg);
+}
+
 
 .post_content{
     position:relative;
@@ -122,12 +143,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', e
 }
 
 
-.post_content{
+.post.alex .post_content{
+    left:-20px;
+}
 
+.post.chris .post_content{
+    right:-60px;
 }
 
 .post.dvbbs .post_content{
-    left:210px;
+    left:260px;
 }
 
 .post.dvbbs .post_title{
@@ -135,7 +160,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', e
 }
 
 .post.chris .post_content{
-    left:420px;
+    left:550px;
 }
 
 
@@ -145,27 +170,68 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', e
     left:0px;
     top:0px;
     font-size:10px;
-    color: #fff;
+    color: #000;
     font-family: sans-serif;
     width:200px;
+    background-color:#fff;
+    height:20px;
+    padding-left:9px;
+    padding-top:7px;
+    text-transform:uppercase;  
     
-    
+}
+
+.post.video .post_date{
+    width:409px;
 }
 
 .post_caption{
     position:absolute;
     right:0px;
-    top:0px;
+    top:-20px;
+    
     font-size:10px;
-    color: #fff;
+    color: #000;
     font-family: sans-serif;
     
+}
+
+.post_caption a{
+    text-decoration:none;
+    color:#000;
+}
+
+.post_caption a:hover{
+    text-decoration:underline;
 }
 
 .photo{
     position:absolute;
     top:12px;
     border:9px solid #fff;
+    background-color:#fff;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:16px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+.post.image .photo{
+    top:16px;
+}
+
+.post.image .post_date{
+    width:409px;
+}
+
+.post.audio .post_date{
+    width:216px;
+}
+
+.photo img{
+    position:relative;
+    margin-bottom:5px;
 }
 
 
@@ -219,7 +285,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', e
     line-height:20px;
     width:450px;
     right:0px;
-    top:200px;
+    top:162px;
     text-align:center;
     font-weight:lighter;
     text-transform:uppercase;

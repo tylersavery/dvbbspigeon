@@ -84,8 +84,6 @@
     
 </div>
 
-
-
 <div id="credits_content">
     <div class="credits_content_scroller">
         <h3 class="credits_title">Music by DVBBS</h3>
@@ -114,8 +112,6 @@
         </h4>
         
         <div class="kanary">Kanary</div>
-        
-
             <img src="/images/uologo_white.png" /><br />
        <br>
         

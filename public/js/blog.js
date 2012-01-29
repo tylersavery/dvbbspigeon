@@ -103,7 +103,7 @@ function parallax(){
 	var min_margin = -500;
 	
 	var container_height = 420;
-	var centering_y = Math.round((window_height - container_height) / 2) - 80;
+	var centering_y = Math.round((window_height - container_height) / 2) + 60;
 
 	var scroll_y = $(window).scrollTop();
 	

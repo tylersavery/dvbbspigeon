@@ -129,9 +129,9 @@ class netHttp extends netSocket
 		$this->method = 'GET';
 		
 		if ($data) {
-			$this->path .= '?'.$this->buildQueryString($data);
+			$this->path .= '?'.$this->buildQueryString($data) . '&notes_info=true';
 		}
-		
+        
 		return $this->doRequest();
 	}
 	
@@ -284,6 +284,7 @@ class netHttp extends netSocket
 			$this->debug('Content is gzip encoded, unzipping it');
 			# See http://www.php.net/manual/en/function.gzencode.php
 			$this->content = gzinflate(substr($this->content, 10));
+            
 		}
 		
 		# If $persist_cookies, deal with any cookies
@@ -409,6 +410,7 @@ class netHttp extends netSocket
 			$headers[] = '';
 			$headers[] = $this->postdata;
 		}
+        
 		
 		return $headers;
 	}
@@ -843,6 +845,7 @@ class netHttp extends netSocket
 	public static function readURL($url,&$ssl,&$host,&$port,&$path,&$user,&$pass)
 	{
 		$bits = parse_url($url);
+        
 		
 		if (empty($bits['host'])) {
 			return false;
