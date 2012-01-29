@@ -314,3 +314,13 @@ background:none;
     margin-top:45px;
 }
 
+
+
+
+body.mobile .post_content, body.mobile .post.alex .post_content,body.mobile .post.chris .post_content {
+    position:relative;
+    margin:auto;
+    left:auto !important;
+    right:auto !important;
+    
+}

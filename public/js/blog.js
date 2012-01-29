@@ -11,10 +11,12 @@ var can_play = true;
 var is_playing = false;
 var play_from = false;
 var audio_initialized = false;
+var is_mobile = false;;
 
 
 $(document).ready(function () {
     set_constants();
+	check_if_mobile();
     show_header();
     set_sizes_and_positions();
     check_audio_from_session();
@@ -335,4 +337,20 @@ function getUrlVars() {
         vars[hash[0]] = hash[1];
     }
     return vars;
+}
+
+function check_if_mobile() {
+
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+        is_mobile = true;
+    
+		$("body").addClass('mobile');
+	    return true;
+	
+    }
+
+    is_mobile = false;
+
+    return false;
+
 }
