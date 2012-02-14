@@ -444,7 +444,7 @@ $(document).ready(function () {
 
 
     $('.player_volume_gutter').slider({
-        value: .8,
+        value: .9,
         step: 0.01,
         orientation: "horizontal",
         range: "min",
