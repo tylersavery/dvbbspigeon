@@ -520,6 +520,7 @@ $(document).ready(function () {
      });
      
      $(".header .logo").click(function(){
+        
         /*
         if(keep_vimeo_up){
           keep_vimeo_up = false;
