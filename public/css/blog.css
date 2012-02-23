@@ -152,8 +152,8 @@ background:none;
     position:relative;
     width:1366px;
     margin:auto;
-    border-left:3px solid rgba(255,255,255,.6);
-    border-right:3px solid rgba(255,255,255,.6);
+    border-left:8px solid #fff;
+    border-right:8px solid #fff;
 }
 
 
