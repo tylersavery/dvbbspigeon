@@ -18,4 +18,9 @@
         
     </div>
 
-<div style="height:200px; position:relative;"></div>
+<div style="height:200px; position:relative; border-top:8px solid #fff;">
+    
+    <center>
+    <img id="kanary" src="/images/kanarylogo.png" style="margin:80px auto;" />
+    </center>
+</div>
