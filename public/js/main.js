@@ -515,12 +515,12 @@ $(document).ready(function () {
 
      $(".header .logo").mouseenter(function(){
         
-        load_vimeo(); 
+       // load_vimeo(); 
           
      });
      
      $(".header .logo").click(function(){
-        
+        /*
         if(keep_vimeo_up){
           keep_vimeo_up = false;
           $(this).removeClass("active");
@@ -530,16 +530,20 @@ $(document).ready(function () {
           $(this).addClass("active");
           use_vimeo_audio();
         }
-        
+        */
         
         
      });
      
      $(".header .logo").mouseout(function(){
         
+        /*
         if(!keep_vimeo_up){
           hide_vimeo();
         }
+        */
+          
+          
           
      });
      
