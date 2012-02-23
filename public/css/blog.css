@@ -6,7 +6,7 @@ body{
     width:960px;
     position:relative;
     margin:auto;
-        top:-420px;
+        top:-410px;
         overflow:visible;
 }
 .blog_header{
@@ -58,7 +58,7 @@ body{
 
 .post{
     position:relative;
-    height:420px;
+    height:410px;
     overflow:hidden;
 
 
@@ -101,6 +101,8 @@ background:none;
 
 .post.dvbbs{
     background-image:url(/images/blog_pattern_blur.gif);
+    width:1366px;
+    margin:auto;
 
 }
 
@@ -126,10 +128,14 @@ background:none;
 }
 
 .post.alex{
+    background-repeat:no-repeat;
+    background-position:center center;
     background-image:url(/images/blog_alex_bg.jpg);
 }
 
 .post.chris{
+    background-repeat:no-repeat;
+    background-position:center center;
     background-image:url(/images/blog_chris_bg.jpg);
 }
 
@@ -140,6 +146,12 @@ background:none;
     height: 364px;
     top:14px;
 
+}
+
+.post{
+    position:relative;
+    width:1366px;
+    margin:auto;
 }
 
 
