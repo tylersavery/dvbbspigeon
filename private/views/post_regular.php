@@ -5,7 +5,7 @@
 		<div class="post_author">
 			<div class="post_name"></div>
 			<div class="post_social">
-				<a href="<?=$this->facebook_url;?>"><img src="/images/facebook.gif" /></a><br />
+				<a href="<?=$this->facebook_url;?>"><img src="/images/facebook.gif" /></a>
 				<a href="<?=$this->twitter_url;?>"><img src="/images/twitter.gif" /></a>
 			</div>  
 		</div>
