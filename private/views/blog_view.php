@@ -22,6 +22,6 @@
 <div style="height:400px; position:relative; max-width:1382px; margin: auto;border-top:8px solid #fff;">
     
     <center>
-    <img id="kanary" src="/images/kanarylogo.png" style="margin:180px auto;" />
+    <img id="kanary" src="/images/kanary_blog.png" style="margin:100px auto;" />
     </center>
 </div>
