@@ -504,7 +504,8 @@ $(document).ready(function () {
     
     
      $("#mixtape_download_stems").click(function () {
-     
+        
+            
           window.location = '/downloads/DVBBS - DVBBS EP [Stems].zip';
      
           push_analytic('download', 'stems');
@@ -512,9 +513,17 @@ $(document).ready(function () {
      });
      
      $("#mixtape_download_dj").click(function () {
+          
+          
+          $(".mix_coming_soon").fadeIn(600);
+       
+            var t = window.setTimeout('hide_mix_coming_soon()', 5000);
+          
+          return false;
+          /*
           window.location = '/downloads/DVBBS - DVBBS EP [Mix].zip';
           push_analytic('download', 'dj');
-          
+          */
      });
      
      $("#mixtape_buy").click(function(){
@@ -1359,9 +1368,9 @@ function load_downloads() {
 
     $(".close").hide();
 
-    $(".blind").fadeTo(500, .8, function () {
+    $(".blind").fadeTo(500, .8, function() {
 
-        $(".download_lightbox").fadeIn(300, function () {
+        $(".download_lightbox").fadeIn(300, function() {
 
             var offset = $(".download_lightbox").offset();
             var x = offset.left + $(".download_lightbox").width() - 50;
@@ -1371,6 +1380,7 @@ function load_downloads() {
 
             $('.close').fadeIn(300);
             
+            /*
             
                if($.cookie('downloaded') == 1){
                 
@@ -1384,6 +1394,9 @@ function load_downloads() {
                }
                
                push_analytic('download', 'mixtape');
+               
+            */
+            
 
         });
 
@@ -1689,5 +1702,11 @@ function check_for_hash(){
 function hide_itunes_coming_soon(){
     
     $(".itunes_coming_soon").fadeOut(500);
+    
+}
+
+function hide_mix_coming_soon(){
+    
+    $(".mix_coming_soon").fadeOut(500);
     
 }

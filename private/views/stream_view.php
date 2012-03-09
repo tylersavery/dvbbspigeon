@@ -103,6 +103,10 @@
   <span style="color:#fff;">Coming to iTunes</span> March <span style="font-size:23px">20</span>th
 </div>
 
+<div class="mix_coming_soon">
+  <span style="color:#fff;">Free EP Mix Available</span> March <span style="font-size:23px">20</span>th
+</div>
+
 <div class="download_lightbox">
     <!--<a href="#" class="mixtape_download" id="mixtape_download_digital">Free Digital Download</a>-->
     <a href="#" class="mixtape_download" id="mixtape_download_stems">Download Stems</a>

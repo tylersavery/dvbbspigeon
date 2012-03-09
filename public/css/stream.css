@@ -395,6 +395,28 @@
     display:none;
 }
 
+.mix_coming_soon{
+    position:absolute;
+    width:280px;
+
+    left:50%;
+    margin-left:-135px;
+    top:50%;
+    margin-top: -180px;
+
+    height: 24px;
+
+    line-height: 24px;
+    font-size: 18px;
+    color: #ECE94E;
+    background-color: rgba(17,17,17, .5);
+    text-transform:uppercase;
+    text-align:center;
+    font-weight:100;
+    z-index:1000;
+    display:none;
+}
+
 
 
 
