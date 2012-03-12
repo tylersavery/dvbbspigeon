@@ -3,6 +3,7 @@
 // define enviroment specific constants
 switch(ENVIROMENT) {
 	case 'dvbbs.com':
+		case 'www.dvbbs.com':
         define('MODE', 'DEVELOPMENT');
         define('DB_HOST', '127.0.0.1');
         define('DB_USER', 'dvbbs');
