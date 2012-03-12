@@ -224,7 +224,7 @@ $(document).ready(function () {
 
     });
 
-    $(".menu_foot_item.itunes, #social_itunes").click(function(){
+    $(".menu_foot_item.itunes, #social_itunes, #mixtape_buy").click(function(){
        
        $(".itunes_coming_soon").fadeIn(600);
        
@@ -526,10 +526,7 @@ $(document).ready(function () {
           */
      });
      
-     $("#mixtape_buy").click(function(){
-        window.location = 'http://itunes.com';
-        
-     });
+   
 
      $(".header .logo").mouseenter(function(){
         
@@ -976,7 +973,6 @@ function init_audio() {
         loaded = false;
 
 
-
         if ($(".player_volume_icon").hasClass('mute')) {
 
             audio.volume = 0;
@@ -1028,16 +1024,18 @@ function init_audio() {
                 });
 
             }
+            
 
-
+         
         });
 
 
 
         $(audio).bind('ended', function () {
-            next_track();
-
+           next_track();     
         });
+
+
 
 
         audio.play();
@@ -1049,11 +1047,23 @@ function init_audio() {
         push_analytic('play', current_track);
 
     } else {
+        
+        
+     var sound_cloud_urls = new Array();
+     sound_cloud_urls[0] = null;
+     sound_cloud_urls[1] = 'http://soundcloud.com/dvbbs/dvbbs-dance-bitch';
+     sound_cloud_urls[2] = 'http://soundcloud.com/dvbbs/dvbbs-ft-hayley-gene-drvgs';
+     sound_cloud_urls[3] = 'http://soundcloud.com/dvbbs/dvbbs-come-alive';
+     sound_cloud_urls[4] = 'http://soundcloud.com/dvbbs/dvbbs-sugar-coated';
+     sound_cloud_urls[5] = 'http://soundcloud.com/dvbbs/dvbbs-till-i-die';
+     sound_cloud_urls[6] = 'http://soundcloud.com/dvbbs/dvbbs-here-we-go';
      
+    // $(".sc-stratus").remove();
      
      $.stratus({
       color: '000000',
-      links: [ { url: 'http://soundcloud.com/foofighters' } ]
+      links: [ { url: sound_cloud_urls[current_track] } ],
+      auto_play: true
      });
      
      
@@ -1406,6 +1416,7 @@ function load_downloads() {
 }
 
 function next_track() {
+
 
     if (current_track == 4){
      current_track = 6

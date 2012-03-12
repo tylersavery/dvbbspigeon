@@ -8,7 +8,7 @@ class Mobile_Controller extends Static_Main_Controller {
         $this->css[] = '/css/reset.css';
         
         $this->js_head[] = JS_ROOT . 'jquery.ui.touch.js';
-        $this->js_head[] = JS_ROOT . 'mobile.js';
+        $this->js_head[] = JS_ROOT . 'mobile.js?time=' . time();
         $this->css[] = '/css/mobile.css';
 
         $this->meta[] = 'name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"';    

@@ -17,7 +17,7 @@ switch(ENVIROMENT) {
         define('PLEASE_CACHE', false);
 		define('FFMPEG', null);
         break;
-	case '192.168.1.111':
+	case '192.168.1.113':
         define('MODE', 'DEVELOPMENT');
         define('DB_HOST', '127.0.0.1');
         define('DB_USER', 'root');

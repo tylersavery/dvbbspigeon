@@ -18,10 +18,9 @@ var track_lengths = new Array();
 var IMG_ASPECT;
 
 $(document).ready(function(){
-    
-   set_constants();
    
-    
+   set_constants();
+     
    push_analytic('visit', '');
 
    var t = window.setTimeout('hide_menu_bar()', 300);
@@ -93,10 +92,7 @@ $(document).ready(function(){
    $("#footer_link_download").click(function(){
 
 		set_blind_size();
-		
 
-	
-		
 		$("#download_content").height(screen.height);
         $("#blind").fadeTo(300, .8);
         $("#download_content").fadeIn(500);
@@ -228,6 +224,7 @@ function hide_menu_bar() {
 }
 
 function init_audio() {
+
 	
     if ($("#audio_player").length > 0) {
             audio.pause();
@@ -247,6 +244,7 @@ function init_audio() {
     loaded = false;
 
     $(audio).bind('timeupdate', function () {
+      
 
         var rem = parseInt(audio.currentTime, 10),
             pos = (audio.currentTime / audio.duration) * 100,
@@ -288,12 +286,32 @@ function init_audio() {
 			
 
         }
+        
+        /*
+        if(parseFloat(audio.currentTime) >= parseFloat(track_lengths[current_track])){
+         
+         alert("NEXT3");
+         next_track();
+         
+        }
+        */
+        
+   
 
     });
     
-    $(audio).bind('ended', function () {
+    $(audio).live('ended', function () {
         next_track();
     });
+    
+    /*
+    audio.onend = function(){
+      
+      alert("next");
+      next_track();
+      
+    }
+    */
     
     $(audio).bind('play', function () {
         
@@ -313,10 +331,13 @@ function init_audio() {
     });
 
 	var t = window.setTimeout(function(){
-		
+        playing = true;
 		audio.play();
+        
 		
-	}, 1000);
+	}, 500);
+    
+    
 }
 
 
@@ -360,12 +381,29 @@ function next_track() {
         current_track++;
     }
 
-    init_bg();
-	
-    init_audio();
+    
+    
+    var t = window.setTimeout(function(){
+      
 
-	audio.play();
-}
+      init_audio();
+      init_bg();
+      
+      
+    }, 1000);
+    
+    
+    var zzzz = window.setTimeout(function(){
+      //$(".player_play").trigger('click');
+      //alert("click");
+      
+      
+      
+    }, 5000);
+    
+	
+    
+	}
 
 function previous_track() {
      if(current_track == 1){

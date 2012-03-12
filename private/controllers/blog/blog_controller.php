@@ -3,6 +3,8 @@ class Blog_Controller extends Static_Main_Controller {
     
     function __construct($uri, $data) {
         parent::__construct($uri, $data);
+		
+		die("Coming soon...");
         
         if(PLEASE_CACHE){
             $alex_tumblr = new Read_Tumblr_Cache('tylerdevelopment','phpTumblr', CACHE_DIRECTORY, CACHE_TIME);

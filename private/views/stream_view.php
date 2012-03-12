@@ -231,7 +231,7 @@
     <?= $this->player;?>
     
     <ul class="top_menu">
-        <li id="blog_link">Blog</li>
+       <!-- <li id="blog_link">Blog</li>--> 
         <li id="contact_link">Contact</li>
         <li id="credits_link">Credits</li>
     </ul>
