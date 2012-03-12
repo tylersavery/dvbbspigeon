@@ -11,7 +11,6 @@ switch(ENVIROMENT) {
 	case 'dvbbs.com':
 	case 'www.dvbbs.com':
         define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'dvbbs.com'.DS);
-		die("Coming VERY soon!");
         break;
     case 'dvbbs':
         define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'dvbbspigeon'.DS);
