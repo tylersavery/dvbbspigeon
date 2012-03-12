@@ -13,7 +13,7 @@ switch(ENVIROMENT) {
         define('DEBUG', TRUE);
         define('MIN_JS', FALSE);
         define('URL', 'http://dvbbs.com/');
-        define('FB_APP_ID', '');
+        define('FB_APP_ID', '405862306094461');
         define('PLEASE_CACHE', false);
 		define('FFMPEG', null);
         break;
