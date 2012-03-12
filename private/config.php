@@ -2,7 +2,20 @@
 
 // define enviroment specific constants
 switch(ENVIROMENT) {
-
+	case 'dvbbs.com':
+        define('MODE', 'DEVELOPMENT');
+        define('DB_HOST', '127.0.0.1');
+        define('DB_USER', 'dvbbs');
+        define('DB_PASS', 'wiiPei9ienah');
+        define('DB_NAME', 'dvbbs');
+        define('DB_SALT', '184eb8106b887c6928b11c6d29b5cda4');
+        define('DEBUG', TRUE);
+        define('MIN_JS', FALSE);
+        define('URL', 'http://dvbbs.com/');
+        define('FB_APP_ID', '');
+        define('PLEASE_CACHE', false);
+		define('FFMPEG', null);
+        break;
     case 'dvbbs':
         define('MODE', 'DEVELOPMENT');
         define('DB_HOST', '127.0.0.1');
@@ -59,6 +72,7 @@ switch(ENVIROMENT) {
         define('PLEASE_CACHE', false);
 		define('FFMPEG', null);
         break;
+
 }
 
 // define ROOT directories
