@@ -1621,6 +1621,8 @@ function push_analytic(key, value){
             }
         });
      
+    _gaq.push(['_trackEvent("foo", key, "", value, false)']); 
+     
 }
 
 function preload() {
