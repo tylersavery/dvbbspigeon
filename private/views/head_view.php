@@ -19,7 +19,7 @@
     
     <meta property="og:title" content="DVBBS" />
     <meta property="og:description" content="DVBBS" />
-    <meta property="og:image" content="http://www.dvbbs.com/images/dvbbs_facebook.jpg" />
+    <meta property="og:image" content="http://www.dvbbs.com/images/dvbbsfacebook.jpg" />
     
     
     <? if ($this->css): ?>
