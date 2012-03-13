@@ -1626,6 +1626,8 @@ function push_analytic(key, value){
 }
 
 function preload() {
+    
+    return false;
 
      for(i=1; i<=6; i++){
          var src = '/images/backgrounds/track'+ i +'/first_frame_'+ IMAGE_SIZE +'.gif';
