@@ -11,7 +11,8 @@ define('DS', DIRECTORY_SEPARATOR);
 // define DOCUMENT_ROOT
 switch(ENVIROMENT) {
 	case 'www.dvbbs.com':
-		header('Location http://dvbbs.com');
+		define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'dvbbs.com'.DS);
+		//header('Location http://dvbbs.com');
 		break;
 	case 'dvbbs.com':
         define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'dvbbs.com'.DS);
