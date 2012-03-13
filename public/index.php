@@ -6,10 +6,14 @@ define('ENVIROMENT', $_SERVER['SERVER_NAME']);
 // define DS
 define('DS', DIRECTORY_SEPARATOR);
 
+
+
 // define DOCUMENT_ROOT
 switch(ENVIROMENT) {
-	case 'dvbbs.com':
 	case 'www.dvbbs.com':
+		header('Location http://dvbbs.com');
+		break;
+	case 'dvbbs.com':
         define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'dvbbs.com'.DS);
         break;
     case 'dvbbs':
