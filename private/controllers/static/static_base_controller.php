@@ -26,6 +26,11 @@ class Static_Base_Controller extends Core_Controller {
         $this->header_view = new Savant3($this->view_config);
         $this->footer_view = new Savant3($this->view_config);
 		
+		if(ENVIROMENT == 'www.dvbbs.com'){
+			redirect_to('http://dvbbs.com');
+			die();
+		}
+		
     }
     
     public function render_view() {
