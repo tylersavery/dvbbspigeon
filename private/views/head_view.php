@@ -2,6 +2,8 @@
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
     <title><?= $this->title; ?></title>
+    <meta name="description" content="DVBBS Initio - Stream and Download" />
+    <meta name="keywords" content="DVBBS, initio, music, gifs, dance bitch, drvgs, sugar coated, come alive, here we go, till i die" />
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
     <META HTTP-EQUIV="Expires" CONTENT="-1" />
