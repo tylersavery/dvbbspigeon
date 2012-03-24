@@ -94,9 +94,6 @@
         <img src="/images/ya.png" />
     </a>
     
-   
-
-    
     
 </div>
 
@@ -113,7 +110,7 @@
     <a href="#" class="mixtape_download" id="mixtape_download_stems">Download Stems</a>
     <a href="#" class="mixtape_download" id="mixtape_download_dj">Download DVBBS EP Mix</a>
    <!-- <a href="http://www.itunes.com" target="_blank" class="mixtape_download">iTunes TRX</a>-->
-    <a href="http://www.universal.com" target="_blank" class="mixtape_download" id="mixtape_buy">Buy Mixtape</a>
+    <a href="http://itunes.apple.com/ca/artist/dvbbs/id510436077" target="_blank" class="mixtape_download" id="mixtape_buy">Buy Mixtape</a>
     <a href="#" class="mixtape_download share_title">Share Mixtape</a>
     
     <!-- AddThis Button BEGIN -->
@@ -148,7 +145,7 @@
                 <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="1" id="play_track_1">Play</div>
                     <div class="menu_foot_item share_track" rel="1">Share</div>
-                    <div class="menu_foot_item itunes"  rel="1">iTunes</div>
+                    <div class="menu_foot_item itunes"  rel="1"><a href="http://itunes.apple.com/ca/album/dance-bitch/id510436052?i=510436080" target="_blank">iTunes</a></div>
                     <div class="menu_foot_item download_stem"  rel="1">Stems</div>
                     
                 </div><!-- /.menu_foot -->
@@ -161,7 +158,7 @@
                 <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="2" id="play_track_2">Play</div>
                     <div class="menu_foot_item share_track" rel="2">Share</div>
-                    <div class="menu_foot_item itunes"  rel="2">iTunes</div>
+                    <div class="menu_foot_item itunes"  rel="2"><a href="http://itunes.apple.com/ca/album/drvgs-feat.-hayley-gene-medeuxa/id510436052?i=510436090" target="_blank">iTunes</a></div>
                     <div class="menu_foot_item download_stem"  rel="2">Stems</div>
                     <div class="hayley">Ft. Hayley Gene</div>
                 </div><!-- /.menu_foot -->
@@ -174,7 +171,7 @@
                <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="3" id="play_track_3">Play</div>
                     <div class="menu_foot_item share_track" rel="3">Share</div>
-                    <div class="menu_foot_item itunes"  rel="3">iTunes</div>
+                    <div class="menu_foot_item itunes"  rel="3"><a href="http://itunes.apple.com/ca/album/come-alive/id510436052?i=510436094" target="_blank">iTunes</a></div>
                     <div class="menu_foot_item download_stem"  rel="3">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
@@ -187,7 +184,7 @@
                <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="4" id="play_track_4">Play</div>
                     <div class="menu_foot_item share_track" rel="4">Share</div>
-                    <div class="menu_foot_item itunes"  rel="4">iTunes</div>
+                    <div class="menu_foot_item itunes"  rel="4"><a href="http://itunes.apple.com/ca/album/sugar-coated/id510436052?i=510436095" target="_blank">iTunes</a></div>
                     <div class="menu_foot_item download_stem"  rel="4">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
@@ -200,7 +197,7 @@
                <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="6" id="play_track_6">Play</div>
                     <div class="menu_foot_item share_track" rel="6">Share</div>
-                    <div class="menu_foot_item itunes"  rel="6">iTunes</div>
+                    <div class="menu_foot_item itunes"  rel="6"><a href="http://itunes.apple.com/ca/album/here-we-go/id510436052?i=510436096" target="_blank">iTunes</a></div>
                     <div class="menu_foot_item download_stem"  rel="6">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
@@ -212,7 +209,7 @@
                 <div class="menu_foot">
                     <div class="menu_foot_item play_track" rel="5" id="play_track_5">Play</div>
                     <div class="menu_foot_item share_track" rel="5">Share</div>
-                    <div class="menu_foot_item itunes" rel="5">iTunes</div>
+                    <div class="menu_foot_item itunes" rel="5"><a href="http://itunes.apple.com/ca/album/till-i-die-flashing-lights/id510436052?i=510436097" target="_blank">iTunes</a></div>
                     <div class="menu_foot_item download_stem" rel="5">Stems</div>
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->

@@ -223,15 +223,25 @@ $(document).ready(function () {
         $preview.stop().fadeOut(500, function(){ });
 
     });
+    
+    $(".menu_foot_item.itunes").click(function(){
+       
+        
+        
+    });
 
     $(".menu_foot_item.itunes, #social_itunes, #mixtape_buy").click(function(){
        
+       return true;
+       
+       /*
        $(".itunes_coming_soon").fadeIn(600);
        
        var t = window.setTimeout('hide_itunes_coming_soon()', 5000);
        
        return false;
-        
+       */
+       
     });
 
     $(".download_track").click(function () {
@@ -486,10 +496,8 @@ $(document).ready(function () {
 
         $(this).addClass("clicked");
         
-        
-
-
-        return false;
+    
+        return true;
 
     });
     

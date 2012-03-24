@@ -22,7 +22,7 @@
             <div class="social_item"><a href="http://youtube.com/dvbbs" id="social_youtube" target="_blank">youtube</a></div>
             <div class="social_item"><a href="http://soundcloud.com/DVBBS" id="social_soundcloud" target="_blank">soundcloud</a></div>
              <div class="social_item"><a href="#" id="social_tumblr" target="_blank">tumblr</a></div>
-            <div class="social_item last"><a href="#" id="social_itunes" target="_blank">itunes</a></div>
+            <div class="social_item last"><a href="http://itunes.apple.com/ca/artist/dvbbs/id510436077" id="social_itunes" target="_blank">itunes</a></div>
         </div>
         
 </div><!-- /.player -->

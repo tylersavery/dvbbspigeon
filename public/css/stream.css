@@ -132,6 +132,15 @@
     
 }
 
+.track_menu .menu_foot_item a{
+    color: rgba(236, 233, 78, .5);
+    text-decoration:none;
+}
+
+.track_menu .menu_foot_item a:hover{
+    color: rgba(236, 233, 78, 1);
+}
+
 .track_menu .menu_foot.coming .menu_foot_item{
     width: 94px;
     color:rgba(255,255,255, .5);
