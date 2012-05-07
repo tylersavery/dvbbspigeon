@@ -351,8 +351,6 @@ $(document).ready(function () {
             if (current_video_id == 1) {
                 current_video_id = 2;
             } else if (current_video_id == 2) {
-                current_video_id = 3;
-            } else if (current_video_id == 3) {
                 current_video_id = 4;
             } else {
                 current_video_id = 1;
@@ -371,7 +369,7 @@ $(document).ready(function () {
             } else if (current_video_id == 3) {
                 current_video_id = 2;
             } else {
-                current_video_id = 3;
+                current_video_id = 2;
             }
             load_vimeo(current_video_id);
             return;
