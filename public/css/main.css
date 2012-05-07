@@ -231,7 +231,7 @@ span.up{
     color: #fff;
     text-align:center;
     line-height: 24px;
-    z-index: 95;
+    z-index: 5000;
     text-transform:uppercase;
     height:280px;
     margin-top: -220px;
@@ -293,7 +293,7 @@ span.up{
     color: #fff;
     text-align:center;
     line-height: 22px;
-    z-index: 95;
+    z-index: 5000;
     text-transform:uppercase;
     padding-top:30px;
 }
