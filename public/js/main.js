@@ -952,6 +952,7 @@ function enter_player() {
 
 function load_contact() {
     $(".close").hide();
+    $(".credits").fadeOut(300);
     $(".blind").fadeTo(1000, .8, function () {
         $(".contact").fadeIn(300, function () {
             var offset = $(".contact").offset();
@@ -964,6 +965,8 @@ function load_contact() {
 }
 
 function load_credits() {
+    
+    $(".contact").fadeOut(300);
     $(".credits").css('top', window_height - 10 + 'px');
     $(".close").hide();
     $(".blind").fadeTo(800, .8, function () {
