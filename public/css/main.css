@@ -429,7 +429,7 @@ ul.top_menu{
     top:4px;
     right:4px;
     color:#fff;
-    z-index:2000;
+    z-index:5000;
     text-align:right;
 }
 
@@ -441,7 +441,7 @@ ul.top_menu li {
     cursor:pointer;
     text-transform:uppercase;
     opacity:.5;
-    z-index:2;
+    z-index:5001;
 }
 
 ul.top_menu li:hover{
