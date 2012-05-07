@@ -17,7 +17,7 @@ switch(ENVIROMENT) {
         define('DOCUMENT_ROOT', DS.'data'.DS.'web'.DS.'dvbbs.com'.DS);
         break;
     case 'dvbbs':
-        define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'dvbbspigeon'.DS);
+        define('DOCUMENT_ROOT', DS.'Users'.DS.'tyler'.DS.'Sites'.DS.'dvbbspigeon'.DS);
         break;
     case '192.168.1.113':
         define('DOCUMENT_ROOT', DS.'Users'.DS.'admin'.DS.'Sites'.DS.'dvbbspigeon'.DS);

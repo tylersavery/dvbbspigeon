@@ -4,6 +4,7 @@ class Stream_Controller extends Static_Main_Controller {
     function __construct($uri, $data) {
         parent::__construct($uri, $data);
         
+        $this->js_head[] = JS_ROOT . 'swfobject.js';
         $this->js_head[] = JS_ROOT . 'main.js';
         //$this->css[] = '/css/mobile.css';
         

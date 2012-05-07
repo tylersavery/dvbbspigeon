@@ -171,7 +171,7 @@
     background-color:rgba(50, 50, 50, .8);
     position:fixed;
     bottom:-65px;
-    z-index:100;
+    z-index:10000;
     padding-top:2px;
 
 }
@@ -404,7 +404,7 @@
     display:none;
 }
 
-.mix_coming_soon{
+.mix_coming_soon, .video_coming_soon{
     position:absolute;
     width:280px;
 
@@ -426,6 +426,35 @@
     display:none;
 }
 
+
+
+
+/* VIDEO STUFF */
+
+
+#video_links{
+    position: absolute;
+    width:100%;
+    top:10px;
+    text-align: center;
+    z-index: 100000;
+}
+
+
+#video_links a{
+    font-size: 14px;
+    text-decoration: none;
+    color:#ece94e;
+    font-weight: bold;
+}
+
+#video_links a.disabled{
+    color:#989898;
+}
+
+#video_links a:hover{
+    text-decoration: line-through;
+}
 
 
 

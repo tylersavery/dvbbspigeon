@@ -2,9 +2,12 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="http://stratus.heroku.com/js/soundcloud.player.api.js"></script>
 <script type="text/javascript" src="http://stratus.heroku.com/js/stratus.js"></script>
+
 <link type="text/css" rel="stylesheet" href="http://stratus.heroku.com/css/stratus.css"/>
 <link rel="stylesheet" type="text/css" href="/css/ie.css" />
 <![endif]-->
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fa8515330fc9014"></script>
 
 <div id="fb-root"></div>
 <script>
@@ -32,7 +35,9 @@
 
 <div id="loader"><img src="/images/loader.gif" width="16" height="16" /></div>
 <div class="blind"><div class="close">x</div></div>
-
+<div id="vimeo_player_container">
+  <div id="vimeo_player"></div>
+</div>
 <div class="contact">
     
     <h3>D V B B S</h3>
@@ -72,7 +77,7 @@
     <h4>Nev Todorovic
     </h4>
     
-    <h3>Production</h3>
+    <h3>Visual Production</h3>
     <h4>Greg Decaire<br>
     Alex Andre<br>
     Chris Andre<br>
@@ -95,6 +100,8 @@
     </a>
     
     
+    
+    
 </div>
 
 <div class="itunes_coming_soon">
@@ -102,8 +109,13 @@
 </div>
 
 <div class="mix_coming_soon">
-  <span style="color:#fff;">Free EP Mix Available</span> March <span style="font-size:23px">20</span>th
+  <span style="color:#fff;">Free EP Mix Available Soon</span>
 </div>
+
+<div class="video_coming_soon">
+  <span style="color:#fff;">Part III Coming </span> Sunday May <span style="font-size:23px">13</span>th
+</div>
+
 
 <div class="download_lightbox">
     <!--<a href="#" class="mixtape_download" id="mixtape_download_digital">Free Digital Download</a>-->
@@ -128,11 +140,32 @@
         
 </div>
 
+<div id="video_links">
+  <a href="#" id="video4">LIVE</a>  <a href="#" id="video1">I</a> <a href="#" id="video2">II</a> <a href="#" id="video3" class="disabled">III</a> 
+</div>
+
+
 
 <img src="#" id="splash_img" />
 
 
 <img src="#" id="preview" />
+
+
+<div id="addthis_container">
+
+  <div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+
+    <a class="addthis_button_compact"></a>
+  </div>
+
+  
+
+</div>
+
 
 <div class="page">
     <div class="wrap">
@@ -237,13 +270,9 @@
     <div class="header">
         <div class="logo">DVBBS</div>
     </div><!-- ./header -->
-    <div style="display:none;">
-        <div id="vimeo_player_container">
-            <iframe id="vimeo_player" src="http://player.vimeo.com/video/28242065?api=1&amp;player_id=vimeo_player" width="100%" frameborder="0"></iframe>
-            
-        </div>
 
-    </div>
+        
+
     <div id="share_widget_container_1">
         <div class="close">x</div>
          <div id="share_widgets">
