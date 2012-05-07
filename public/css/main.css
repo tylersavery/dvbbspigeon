@@ -429,7 +429,7 @@ ul.top_menu{
     top:4px;
     right:4px;
     color:#fff;
-    z-index:2;
+    z-index:2000;
     text-align:right;
 }
 
