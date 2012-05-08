@@ -457,6 +457,11 @@
 }
 
 
+.menu_foot_item.disabled{
+    color:#989898;
+}
+
+
 
 /* Smartphones (portrait and landscape) ----------- */
 

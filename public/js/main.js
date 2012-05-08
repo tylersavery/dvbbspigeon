@@ -401,21 +401,21 @@ $(document).ready(function () {
           push_analytic('download', 'dj');
           */
     });
-    $("#video1").click(function () {
+    $("#video1, .menu_foot_item.play_i").click(function () {
         current_video_id = 1;
         load_vimeo(current_video_id);
     });
-    $("#video2").click(function () {
+    $("#video2, .menu_foot_item.play_ii").click(function () {
         current_video_id = 2;
         load_vimeo(current_video_id);
     });
-    $("#video3").click(function () {
+    $("#video3, .menu_foot_item.play_iii").click(function () {
         video_coming_soon();
         return false;
         // current_video_id = 3;
         //load_vimeo(current_video_id); 
     });
-    $("#video4").click(function () {
+    $("#video4, .menu_foot_item.play_live").click(function () {
         current_video_id = 4;
         load_vimeo(current_video_id);
     });
