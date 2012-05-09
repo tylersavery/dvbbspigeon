@@ -940,6 +940,9 @@ function enter_player() {
                             $(items[6]).animate({
                                 left: 0
                             }, 300, 'easeOutSine', function () {
+                                $(items[7]).animate({
+                                    left: 0
+                                });
                                 check_for_hash();
                             });
                         });
