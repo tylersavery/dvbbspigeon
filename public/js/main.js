@@ -235,6 +235,11 @@ $(document).ready(function () {
         return false;
     });
     $(".play_track, .menu_head").click(function () {
+        
+        if($(this).attr('id') == 'menu_head_0'){
+            return false;
+        }
+        
         if ($(this).hasClass('menu_head')) {
             control_type = 'audio';
             kill_vimeo();
@@ -351,6 +356,8 @@ $(document).ready(function () {
             if (current_video_id == 1) {
                 current_video_id = 2;
             } else if (current_video_id == 2) {
+                current_video_id = 3;
+            } else if (current_video_id == 3){
                 current_video_id = 4;
             } else {
                 current_video_id = 1;
@@ -369,7 +376,7 @@ $(document).ready(function () {
             } else if (current_video_id == 3) {
                 current_video_id = 2;
             } else {
-                current_video_id = 2;
+                current_video_id = 3;
             }
             load_vimeo(current_video_id);
             return;
@@ -410,10 +417,8 @@ $(document).ready(function () {
         load_vimeo(current_video_id);
     });
     $("#video3, .menu_foot_item.play_iii").click(function () {
-        video_coming_soon();
-        return false;
-        // current_video_id = 3;
-        //load_vimeo(current_video_id); 
+         current_video_id = 3;
+        load_vimeo(current_video_id); 
     });
     $("#video4, .menu_foot_item.play_live").click(function () {
         current_video_id = 4;
@@ -606,12 +611,12 @@ function set_video_info() {
     video_ids[0] = '';
     video_ids[1] = 'rWb_ZZ5d0MI';
     video_ids[2] = '4UXmMPyrbJI';
-    video_ids[3] = 'u6l_A2Hayoc';
+    video_ids[3] = 'HbWmH-IOpog';
     video_ids[4] = 'Qw2cdIMfIPA';
     video_lengths[0] = 0;
     video_lengths[1] = 69;
     video_lengths[2] = 56;
-    video_lengths[3] = 60;
+    video_lengths[3] = 103;
     video_lengths[4] = 156;
 }
 

@@ -141,7 +141,7 @@
 </div>
 
 <div id="video_links">
-  <a href="#" id="video4">LIVE</a>  <a href="#" id="video1">I</a> <a href="#" id="video2">II</a> <a href="#" id="video3" class="disabled">III</a> 
+  <a href="#" id="video4">LIVE</a>  <a href="#" id="video1">I</a> <a href="#" id="video2">II</a> <a href="#" id="video3">III</a> 
 </div>
 
 
@@ -175,12 +175,12 @@
             
             <div class="menu_item" id="menu_item_0" rel="0">
                 <div class="strikethrough"></div>
-                <div class="menu_head" id="menu_head_1" rel="1">Videos</div>
+                <div class="menu_head" id="menu_head_0" rel="1">Videos</div>
                 <div class="menu_foot">
                     <div class="menu_foot_item play_live_video" rel="0" id="play_live_video">Live</div>
                     <div class="menu_foot_item play_i" rel="0">I</div>
                     <div class="menu_foot_item play_ii" rel="0">II</div>
-                    <div class="menu_foot_item play_iii disabled" rel="0">III</div>
+                    <div class="menu_foot_item play_iii" rel="0">III</div>
                     
                 </div><!-- /.menu_foot -->
             </div><!-- /.menu_item -->
