@@ -383,8 +383,13 @@ $(document).ready(function () {
         }
         previous_track();
     });
+    
     $(".mixtape_download").click(function () {
         $(this).addClass("clicked");
+        window.location = '/DVBBSINITIOEP.zip';
+        
+        push_analytic('download', 'mixtape');
+        
         return true;
     });
     /*
@@ -399,6 +404,8 @@ $(document).ready(function () {
         window.location = '/downloads/DVBBS - DVBBS EP [Stems].zip';
         push_analytic('download', 'stems');
     });
+    
+    /*
     $("#mixtape_download_dj").click(function () {
         $(".mix_coming_soon").fadeIn(600);
         var t = window.setTimeout('hide_mix_coming_soon()', 5000);
@@ -406,8 +413,10 @@ $(document).ready(function () {
         /*
           window.location = '/downloads/DVBBS - DVBBS EP [Mix].zip';
           push_analytic('download', 'dj');
-          */
+          
     });
+        */
+        
     $("#video1, .menu_foot_item.play_i").click(function () {
         current_video_id = 1;
         load_vimeo(current_video_id);
@@ -1008,7 +1017,6 @@ function load_downloads() {
             var y = offset.top - 10;
             $(".blind .close").css("left", x + "px").css("top", y + "px");
             $('.close').fadeIn(300);
-            /*
             
                if($.cookie('downloaded') == 1){
                 
@@ -1016,14 +1024,14 @@ function load_downloads() {
                 var date = new Date();
                 date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
             
-                window.location = '/downloads/DVBBS - DVBBS EP [Mix].zip';
+                window.location = '/DVBBSINITIOEP.zip';
                 $.cookie('downloaded', 1, { expires: date });
                
                }
                
                push_analytic('download', 'mixtape');
                
-            */
+            
         });
     });
 }
