@@ -386,7 +386,7 @@ $(document).ready(function () {
     
     $(".mixtape_download").click(function () {
         $(this).addClass("clicked");
-        window.location = '/DVBBSINITIOEP.zip';
+       // window.location = '/DVBBSINITIOEP.zip';
         
         push_analytic('download', 'mixtape');
         
@@ -1024,7 +1024,7 @@ function load_downloads() {
                 var date = new Date();
                 date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000));
             
-                window.location = '/DVBBSINITIOEP.zip';
+               // window.location = '/DVBBSINITIOEP.zip';
                 $.cookie('downloaded', 1, { expires: date });
                
                }
