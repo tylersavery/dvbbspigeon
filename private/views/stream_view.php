@@ -44,12 +44,20 @@
     <h4>Alex Andre [ <a href="http://twitter.com/alexdvbbs" target="_blank"><span class="up">@</span>alexdvbbs</a> ]<br>
     Chris Andre [ <a href="http://twitter.com/chrisdvbbs" target="_blank"><span class="up">@</span>chrisdvbbs</a> ]
     </h4>
+    
+    
     <p class="spacer">&nbsp;</p>
-    <h3>For all media inquiries/press/interviews/support please email</h3>
-    <h4><a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a></h4>
+    <h3>Management: Josh Herman</h3>
+    <h4><a href="mailto:jherman@strvctvre.com">jherman<span class="up">@</span>strvctvre.com</a></h4>
+    
+    
     <p class="spacer">&nbsp;</p>
     <h3>For all bookings and booking inquires:</h3>
     <h4><a href="mailto:colinlewis@theagencygroup.com">colinlewis<span class="up">@</span>theagencygroup.com</a></h4>
+    
+    <p class="spacer">&nbsp;</p>
+    <h3>For all media inquiries/press/interviews/support please email</h3>
+    <h4><a href="mailto:info@dvbbs.com">info<span class="up">@</span>dvbbs.com</a></h4>
     
     <div class="legals">
         <h6>Legals</h6>
