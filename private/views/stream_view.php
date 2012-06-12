@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="/css/ie.css" />
 <![endif]-->
 
+<script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+
 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fa8515330fc9014"></script>
 
 <div id="fb-root"></div>
@@ -153,6 +155,9 @@
 </div>
 
 
+<video src="/videos/1x.mov" id="splash_video" autoplay=true controls="false" >
+  
+</video>
 
 <img src="#" id="splash_img" />
 
@@ -385,6 +390,15 @@
 
 
 <div id="fb-root"></div>
+
+<script>
+<?php if($this->canada): ?>
+var canada = true;
+<?php else: ?>
+var canada = false;
+<?php endif; ?>
+</script>
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;

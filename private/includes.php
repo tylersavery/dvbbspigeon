@@ -16,7 +16,7 @@ require_once(LIBRARY_ROOT.'tumblr/read_tumblr_cache_model.php');
 
 require_once(LIBRARY_ROOT.'audioinfo_model.php');
 
-
+require_once(LIBRARY_ROOT.'geoip.php');
 
 // include routes.php
 require_once(PRIVATE_ROOT.'routes.php');

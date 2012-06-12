@@ -47,6 +47,11 @@ var froogaloop;
 var control_type = 'audio';
 var current_video_id = 1;
 var killed = false;
+var splash_video = false;
+
+var itunes_link = 'http://itunes.apple.com/ca/album/initio-ep/id510436052';
+
+
 $(document).ready(function () {
     get_objects();
     check_if_mobile();
@@ -236,6 +241,14 @@ $(document).ready(function () {
     });
     $(".play_track, .menu_head").click(function () {
         
+        if(splash_video){
+            $("#splash_video").fadeOut(300, function(){
+               $(this).remove();
+               
+            });
+            splash_video = false;
+        }
+        
         if($(this).attr('id') == 'menu_head_0'){
             return false;
         }
@@ -386,8 +399,12 @@ $(document).ready(function () {
     
     $(".mixtape_download").click(function () {
         $(this).addClass("clicked");
-       // window.location = '/DVBBSINITIOEP.zip';
         
+        if(!canada){
+            window.location = '/DVBBSINITIOEP.zip';
+        } else {
+            window.open(itunes_link, '_blank');
+        }
         push_analytic('download', 'mixtape');
         
         return true;
@@ -429,7 +446,7 @@ $(document).ready(function () {
          current_video_id = 3;
         load_vimeo(current_video_id); 
     });
-    $("#video4, .menu_foot_item.play_live").click(function () {
+    $("#video4, .menu_foot_item.play_live_video").click(function () {
         current_video_id = 4;
         load_vimeo(current_video_id);
     });
@@ -732,6 +749,11 @@ function set_sizes_and_positions() {
     var gutter_border = 10;
     var gutter_width = window_width - padding_left - padding_right - gutter_border;
     $(".player_gutter").width(gutter_width + 'px');
+    
+    //splash video
+    var controls_height = 40;
+    $("#splash_video").height(window_height + controls_height).width(window_width);
+    
 }
 
 function init_audio() {
@@ -869,6 +891,9 @@ function hide_menu_bar() {
 }
 
 function init_splash() {
+    
+    //$("#splash_video").
+    
     var $splash_img = $("#splash_img");
     var src = new Array();
     var h = new Array();
@@ -910,9 +935,21 @@ function init_splash() {
             $splash_img.css('margin-top', margin_top + 'px');
             $splash_img.css('height', h[rand] + 'px');
             $splash_img.css('width', w[rand] + 'px');
+            splash_video = true;
+            setTimeout(enter_splash_video, 3000);
+            
+            
         });
     }
     setTimeout(enter_player, 3500);
+}
+
+function enter_splash_video(){
+    /* REMOVED FOR NOW */
+    return false;
+    
+    $("#splash_video").fadeIn(300);
+
 }
 
 function ensure_loader_is_gone() {
