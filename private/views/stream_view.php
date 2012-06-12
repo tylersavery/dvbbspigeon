@@ -130,7 +130,9 @@
 <div class="download_lightbox">
     <!--<a href="#" class="mixtape_download" id="mixtape_download_digital">Free Digital Download</a>-->
     <a href="#" class="mixtape_download" id="mixtape_download_stems">Download Stems</a>
+    <?php if($this->canada == false): ?>
     <a href="#" class="mixtape_download" id="mixtape_download_dj">Download DVBBS INITIO EP</a>
+    <? endif;?>
    <!-- <a href="http://www.itunes.com" target="_blank" class="mixtape_download">iTunes TRX</a>-->
     <a href="http://itunes.apple.com/ca/artist/dvbbs/id510436077" target="_blank" class="mixtape_download" id="mixtape_buy">Buy Mixtape</a>
     <a href="#" class="mixtape_download share_title">Share Mixtape</a>
