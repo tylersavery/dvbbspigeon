@@ -466,6 +466,7 @@
     position: absolute;
     z-index: 1;
     width: 1280px;
+    opacity: .6;
     height: 720px;
     display: none;
 }

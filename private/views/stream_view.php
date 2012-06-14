@@ -156,10 +156,11 @@
   <a href="#" id="video4">LIVE</a>  <a href="#" id="video1">I</a> <a href="#" id="video2">II</a> <a href="#" id="video3">III</a> 
 </div>
 
-
-<video src="/videos/1x.mov" id="splash_video" autoplay=true controls="false" >
+<!--
+<video src="/videos/dvbbs_introx.mov" id="splash_video" autoplay=true controls="false" loop="true" >
   
 </video>
+-->
 
 <img src="#" id="splash_img" />
 

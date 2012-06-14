@@ -899,6 +899,7 @@ function init_splash() {
     var h = new Array();
     var w = new Array();
     var s = new Array();
+    var swap = new Array();
     if (facebook) {
         src[0] = '/images/splash/dvbbs1f.gif';
         h[0] = 115;
@@ -910,16 +911,24 @@ function init_splash() {
         s[1] = 54000;
     } else {
         src[0] = '/images/splash/dvbbs1.gif';
+        swap[0] = '/images/splash/dvbbs1.png';
         h[0] = 192;
         w[0] = 500;
         s[0] = 168103;
         src[1] = '/images/splash/dvbbs3.gif';
+        swap[1] = '/images/splash/dvbbs3.png';
         h[1] = 144;
         w[1] = 989;
         s[1] = 78893;
+    
     }
+    
+    
+    
     var download_start = (new Date()).getTime();
     var rand = Math.round(Math.random());
+    rand = 0;
+    current_swap = swap[rand];
     var img_loading = new Image();
     img_loading.src = src[rand] + '?time=' + TIME_NOW;
     img_loading.onload = function () {
@@ -936,7 +945,9 @@ function init_splash() {
             $splash_img.css('height', h[rand] + 'px');
             $splash_img.css('width', w[rand] + 'px');
             splash_video = true;
-            setTimeout(enter_splash_video, 3000);
+            setTimeout(enter_splash_video, 2500);
+            
+            window.setTimeout(swap_splash_with_png, 5000);
             
             
         });
@@ -944,11 +955,27 @@ function init_splash() {
     setTimeout(enter_player, 3500);
 }
 
+var current_swap;
+
+function swap_splash_with_png(){
+    return false;
+    console.log(current_swap);
+    var png = new Image();
+    png.src = current_swap;
+    
+    png.onload = function() {
+        $("#splash_img").attr('src', png.src);
+    }
+    
+}
+
 function enter_splash_video(){
-    /* REMOVED FOR NOW */
+    
     return false;
     
     $("#splash_video").fadeIn(300);
+    
+    
 
 }
 
