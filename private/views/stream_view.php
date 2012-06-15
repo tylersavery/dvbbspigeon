@@ -152,15 +152,36 @@
         
 </div>
 
-<div id="video_links">
-  <a href="#" id="video4">LIVE</a>  <a href="#" id="video1">I</a> <a href="#" id="video2">II</a> <a href="#" id="video3">III</a> 
+
+<div class="tour_lightbox">
+  
+<p>
+<a href="http://www.infofestival.com/Artists/DVBBS/" target="_blank"><span>July 5th</span> - OTTAWA RBC Royal Bank Bluesfest</a><br />
+<a href="http://ottawabluesfest.ca/lineup/artist-bio/?id=deb575e0131850966b603d22c8d9a148" target="_blank"><span>July 6th</span> - QUEBEC CITY Festival d'&eacute;t&eacute; de Qu&eacute;bec</a><br />
+<a href="http://www.evenko.ca/en/show/event/lmfao--6136" target="_blank"><span>July 7th</span> - MONTREAL - Centre De La Nature w/ LMFAO</a><br />
+</p>
+
+<p>
+<a><span>JULY</span> NORTH AMERICAN TOUR DATES - TBA</a>
+</p>
+
+<p>
+<a href="http://veldmusicfestival.com/artists/dvvbbs/" target="_blank"><span>Aug 4th</span> - TORONTO - VELD Music Festival Toronto</a>
+</p>
+
 </div>
 
 <!--
+<div id="video_links">
+  <a href="#" id="video4">LIVE</a>  <a href="#" id="video1">I</a> <a href="#" id="video2">II</a> <a href="#" id="video3">III</a> 
+</div>
+-->
+
+
 <video src="/videos/dvbbs_introx.mov" id="splash_video" autoplay=true controls="false" loop="true" >
   
 </video>
--->
+
 
 <img src="#" id="splash_img" />
 
@@ -293,7 +314,7 @@
     <?= $this->player;?>
     
     <ul class="top_menu">
-       <!-- <li id="blog_link">Blog</li>--> 
+        <li id="tour_link" class="highlighted">Tour</li>
         <li id="contact_link">Contact</li>
         <li id="credits_link">Credits</li>
     </ul>

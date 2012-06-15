@@ -464,9 +464,8 @@
 
 #splash_video{
     position: absolute;
-    z-index: 1;
+    z-index: 201;
     width: 1280px;
-    opacity: .6;
     height: 720px;
     display: none;
 }

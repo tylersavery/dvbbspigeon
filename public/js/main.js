@@ -217,7 +217,9 @@ $(document).ready(function () {
         push_analytic('download', 'stem' + rel);
     });
     $(".close, .blind").click(function () {
+        $("#splash_video").hide();
         $(".contact").fadeOut(500);
+        $(".tour_lightbox").fadeOut(500);
         $(".download_lightbox").fadeOut(500);
         $(".credits").stop().fadeOut(500);
         $(".blind").fadeOut(500);
@@ -234,6 +236,9 @@ $(document).ready(function () {
     });
     $("#credits_link").click(function () {
         load_credits();
+    });
+    $("#tour_link").click(function () {
+        load_tour();
     });
     $("#menu_head_7").click(function () {
         load_downloads();
@@ -945,7 +950,6 @@ function init_splash() {
             $splash_img.css('height', h[rand] + 'px');
             $splash_img.css('width', w[rand] + 'px');
             splash_video = true;
-            setTimeout(enter_splash_video, 2500);
             
             window.setTimeout(swap_splash_with_png, 5000);
             
@@ -971,7 +975,6 @@ function swap_splash_with_png(){
 
 function enter_splash_video(){
     
-    return false;
     
     $("#splash_video").fadeIn(300);
     
@@ -1034,6 +1037,7 @@ function enter_player() {
 function load_contact() {
     $(".close").hide();
     $(".credits").fadeOut(300);
+    $(".tour_lightbox").fadeOut(300);
     $(".blind").fadeTo(1000, .8, function () {
         $(".contact").fadeIn(300, function () {
             var offset = $(".contact").offset();
@@ -1048,6 +1052,7 @@ function load_contact() {
 function load_credits() {
     
     $(".contact").fadeOut(300);
+    $(".tour_lightbox").fadeOut(300);
     $(".credits").css('top', window_height - 10 + 'px');
     $(".close").hide();
     $(".blind").fadeTo(800, .8, function () {
@@ -1069,6 +1074,21 @@ function load_credits() {
                 $('.close').fadeIn(300);
             });
         }
+    });
+}
+
+function load_tour(){
+    $(".credits").fadeOut(300);
+    $(".contact").fadeOut(300);
+    $(".blind").fadeTo(1000, .8, function () {
+        $(".tour_lightbox").fadeIn(300, function () {
+            var offset = $(".tour_lightbox").offset();
+            var x = offset.left + $(".tour_lightbox").width() - 40;
+            var y = offset.top - 30;
+            $(".blind .close").css("left", x + "px").css("top", y + "px");
+            $('.close').fadeIn(300);
+            enter_splash_video();
+        });
     });
 }
 
