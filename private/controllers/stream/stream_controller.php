@@ -8,7 +8,7 @@ class Stream_Controller extends Static_Main_Controller {
         parent::__construct($uri, $data);
         
         $this->js_head[] = JS_ROOT . 'swfobject.js';
-        $this->js_head[] = JS_ROOT . 'main.js?v=5';
+        $this->js_head[] = JS_ROOT . 'main.js?v=6';
         //$this->css[] = '/css/mobile.css';
         
         if(strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'], 'iPod') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'bada')){
