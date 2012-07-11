@@ -45,3 +45,6 @@ body{
 .menu_foot .menu_foot_item{
     display:none;
     }
+    
+    
+    .hide-ie{display: none;}

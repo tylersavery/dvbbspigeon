@@ -177,9 +177,9 @@
 </div>
 -->
 
-
+<div class="hide-ie">
 <video src="/videos/dvbbs_introx.mov" id="splash_video" autoplay=true controls="false" loop="true" >
-  
+  </div>
 </video>
 
 
