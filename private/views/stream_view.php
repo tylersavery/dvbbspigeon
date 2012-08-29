@@ -155,6 +155,10 @@
 
 <div class="tour_lightbox">
   
+<img src="/images/tour1.jpg" width="500" /> 
+
+
+  <!--
 <p>
 <a href="http://www.infofestival.com/Artists/DVBBS/" target="_blank"><span>July 5th</span> - OTTAWA RBC Royal Bank Bluesfest</a><br />
 <a href="http://ottawabluesfest.ca/lineup/artist-bio/?id=deb575e0131850966b603d22c8d9a148" target="_blank"><span>July 6th</span> - QUEBEC CITY Festival d'&eacute;t&eacute; de Qu&eacute;bec</a><br />
@@ -168,7 +172,7 @@
 <p>
 <a href="http://veldmusicfestival.com/artists/dvvbbs/" target="_blank"><span>Aug 4th</span> - TORONTO - VELD Music Festival Toronto</a>
 </p>
-
+-->
 </div>
 
 <!--

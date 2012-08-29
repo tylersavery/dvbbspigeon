@@ -1083,8 +1083,8 @@ function load_tour(){
     $(".blind").fadeTo(1000, .8, function () {
         $(".tour_lightbox").fadeIn(300, function () {
             var offset = $(".tour_lightbox").offset();
-            var x = offset.left + $(".tour_lightbox").width() - 40;
-            var y = offset.top - 30;
+            var x = offset.left + $(".tour_lightbox").width() + 5;
+            var y = offset.top;
             $(".blind .close").css("left", x + "px").css("top", y + "px");
             $('.close').fadeIn(300);
             enter_splash_video();
